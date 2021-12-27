@@ -10,7 +10,7 @@ function Home() {
     return (
         <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
             <Custom_Carrousel/>
-            <Box sx={{height:'100vh',flexGrow: 1, padding:0,margin:0}}>
+            <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
                 <MovieCardsChain list={list} item={LATEST_ADDITIONS}/>
                 <MovieCardsChain list={list} item={MOST_WATCHED}/>
                 <MovieCardsChain list={list} item={MOVIES}/>
