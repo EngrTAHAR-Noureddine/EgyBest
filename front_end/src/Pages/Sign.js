@@ -21,28 +21,41 @@ import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {SIGN_BUTTON} from "../Themes/Elements/Buttons";
 import {SignWith} from "../Themes/Elements/Sign_with";
 
+
+/*
+position={'absolute'}
+                             zIndex={5}
+* */
+
+/*
+position={'absolute'}
+                         zIndex={0}
+* */
 export function Sign(prop){
 
     return (
-        <Box>
+        <Box >
             <Seperator_Bar/>
-            <Box flexGrow={1} style={flex_styles.row_center}>
+            <Box flexGrow={1} style={flex_styles.row_center} >
                 <Box width={{xs: '90vw', sm: '50vw', md: '40vw', lg: '30vw'}} height={{xs:'auto',sm:'auto',md:'auto'}}>
 
-                    <Box width={'inherit'} height={{xs:'10vh', sm:'10vw', md:'6vh'}} position={'absolute'}
-                         zIndex={5} style={flex_styles.row_center}>
 
-                        <Box height={'100%'} width={'60%'} bgcolor={(prop.type === SIGN_IN)?blue_0A:green_34} borderRadius={1000}>
-                            <TYPOGRAPHY_SIGN_TITLE title={prop.type}/>
+                    <Box width={'inherit'} height={{xs:'5vh', sm:'5vw', md:'3vh'}}>
+
+                        <Box width={'inherit'} height={{xs:'10vh', sm:'10vw', md:'6vh'}}
+                             style={flex_styles.row_center} >
+
+                            <Box height={'100%'} width={'60%'} bgcolor={(prop.type === SIGN_IN)?blue_0A:green_34} borderRadius={1000}>
+                                <TYPOGRAPHY_SIGN_TITLE title={prop.type}/>
+                            </Box>
+
                         </Box>
 
                     </Box>
-                    <Box width={'inherit'} height={{xs:'5vh', sm:'5vw', md:'3vh'}}/>
 
                     <Box width={'inherit'} height={{xs:'auto', sm:'auto', md:'auto'}} bgcolor={white_05}
                          borderRadius={5}
-                         position={'absolute'}
-                         zIndex={0}>
+                         >
 
                         <Grid container direction={'column'} width={'100%'} height={'100%'} pt={5}>
                             <Grid item xs={2} width={'100%'} mb={2}>

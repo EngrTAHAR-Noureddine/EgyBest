@@ -1,5 +1,5 @@
 import Home from "./Pages/Home";
-import { Paper} from "@mui/material";
+import {Box, Paper} from "@mui/material";
 import CustomAppBar from "./Components/CustomAppBar";
 import ListMovies from "./Pages/ListMovies";
 import Search from "./Pages/Search";
@@ -11,6 +11,7 @@ import {SIGN_IN, SIGN_UP} from "./Themes/String/String";
 import {Movie_Details} from "./Pages/Movie_Details";
 import {Settings} from "./Pages/Settings";
 import {Footer} from "./Components/Footer";
+import {flex_styles} from "./Themes/Styles/styles";
 
 
 //<Sign type={SIGN_IN}/>
@@ -18,10 +19,13 @@ import {Footer} from "./Components/Footer";
 function App() {
   return (
 
-          <Paper  elevation={0} style={{width : '100%', height:'auto', backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
+          <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
+              backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
               <CustomAppBar/>
-              <ListMovies/>
+
+              <Home/>
               <Footer/>
+
           </Paper>
 
 

@@ -10,19 +10,21 @@ export function Footer() {
     const year = date.getFullYear();
 
     return(
-        <Box flexGrow={1} height={'auto'} bgcolor={grey_36} mt={5}>
-            <Box flexGrow={1} height={'auto'} display={'flex'} justifyContent={'space-between'} p={1} px={{xs:1,md:5}}>
-                <Typography variant={'h2'} color={white_100}>{LOGO}</Typography>
-                <Box width={'auto'} height={'auto'} display={'flex'} flexDirection={{xs:'column',md:'row'}} justifyContent={'center'} alignItems={{xs:'center',md:'start'}}>
+        <Box  flexGrow={1} height={'auto'} bgcolor={grey_36} mt={50}>
+            <Box flexGrow={1} height={'auto'} display={'flex'} justifyContent={'space-between'} p={1} px={{xs:1,sm:2,xl:5}}>
+                <Typography variant={'h3'} color={white_100}>{LOGO}</Typography>
+                <Box width={'auto'} height={'auto'} display={'flex'}
+                     flexDirection={{xs:'column',md:'row'}}
+                     justifyContent={'center'} alignItems={{xs:'center',md:'start'}}>
                     <Button disabled sx={{textTransform:'none',m:1}}>
                         <Typography color={white_100} fontFamily={PoppinsFont}>Follow us on:</Typography>
                     </Button>
-                    <Button variant={'outlined'} startIcon={<Facebook color={blue_0A}/>}
+                    <Button variant={'outlined'} startIcon={<Facebook sx={{color:blue_0A}}/>}
                             sx={{color:blue_0A,fontFamily:PoppinsFont, textTransform:'none',m:1}}>
                         Facebook
                     </Button>
-                    <Button variant={'outlined'} startIcon={<Twitter color={blue_0A}/>}
-                            sx={{color:blue_0A,fontFamily:PoppinsFont, textTransform:'none',m:1}}>
+                    <Button variant={'outlined'} startIcon={<Twitter sx={{color:blue_0A}}/>}
+                            sx={{color:blue_0A,fontFamily:PoppinsFont, textTransform:'none',m:1, mr:0}}>
                         Twitter
                     </Button>
                 </Box>
