@@ -1,6 +1,5 @@
-import {createTheme, responsiveFontSizes} from "@mui/material";
+import { createTheme, responsiveFontSizes} from "@mui/material";
 import {blue_36} from "../Styles/Color";
-
 export const SIGN_GROUP_THEME = createTheme({
     palette: {
         primary: {

@@ -1,1 +1,3 @@
-export const PoppinsFont = 'Poppins';
+export const Amiri = 'Amiri';//= 'Poppins';
+
+
