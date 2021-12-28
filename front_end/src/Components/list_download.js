@@ -13,7 +13,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {DOWNLOAD_BUTTON} from "../Themes/Elements/Buttons";
 import {black_30, black_60, black_80, white_100, white_30} from "../Themes/Styles/Color";
-import {Amiri} from "../Themes/Fonts/Fonts";
+import {PoppinsFont} from "../Themes/Fonts/Fonts";
 
 function List_Download (prop){
     return(
@@ -24,7 +24,7 @@ function List_Download (prop){
                     backgroundColor:black_30,
                     borderRadius:2, mb:1 , '&:hover':{backgroundColor:black_60}}}>
                         <ListItemButton>
-                        <ListItemText><Typography variant={'h6'} fontFamily={Amiri} textAlign={'center'}>{`item ${item}`}</Typography></ListItemText>
+                        <ListItemText><Typography variant={'h6'} fontFamily={PoppinsFont} textAlign={'center'}>{`item ${item}`}</Typography></ListItemText>
                         </ListItemButton>
                 </ListItem>
             ))}

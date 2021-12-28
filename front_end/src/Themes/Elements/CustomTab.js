@@ -2,7 +2,7 @@ import {themeTab} from "../Theme/Themes";
 import {Tab, Tabs} from "@mui/material";
 import {blue_36, white_100, white_EC} from "../Styles/Color";
 import {ANIME, MOVIES, SERIES, WWE} from "../String/String_eng";
-import {Amiri} from "../Fonts/Fonts";
+import {PoppinsFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import * as React from "react";
 
@@ -37,7 +37,7 @@ export function CustomTab(prop){
                 {
                     tabs_name.map((item)=>(
                         <Tab  label={`${item.tab} (${item.number})`} sx={{
-                            textTransform:'none',color:white_100,fontFamily:Amiri, fontWeight:'bolder',fontSize:'1.2rem'
+                            textTransform:'none',color:white_100,fontFamily:PoppinsFont, fontWeight:'bolder',fontSize:'1.2rem'
                         }} />
                     ))
                 }

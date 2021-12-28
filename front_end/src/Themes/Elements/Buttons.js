@@ -19,7 +19,7 @@ import {
     white_20,
     yellow_100
 } from "../Styles/Color";
-import {Amiri} from "../Fonts/Fonts";
+import {PoppinsFont} from "../Fonts/Fonts";
 import {flex_styles} from "../Styles/styles";
 
 
@@ -32,7 +32,7 @@ export const MENU_BUTTON_XL = (prop)=>(
             backgroundColor:"transparent",
         }
     }}>
-        <TYPOGRAPHY_MENU_XL  item={prop.item}/>
+        <TYPOGRAPHY_MENU_XL item={prop.item}/>
     </Button>
 );
 
@@ -99,7 +99,7 @@ export const FILTER_BUTTON = (prop) => (
                 "&,&:focus,&:hover,&:active":{
                     backgroundColor:green_34
                 },
-                fontFamily:Amiri,
+                fontFamily:PoppinsFont,
                 fontWeight:'900',
                 fontSize:'1.2rem'
             }}
@@ -149,7 +149,7 @@ export const NEXT_PLAY_BUTTON = (prop)=>(
         width:'90%',
         height:'90%',
         textTransform:'none',
-        fontFamily:Amiri,
+        fontFamily:PoppinsFont,
         fontSize:'1rem',
         borderRadius:2,
         "&, &:hover":{

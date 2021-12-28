@@ -3,7 +3,7 @@ import {blue_0A, grey_36, white_100} from "../Themes/Styles/Color";
 import {LOGO} from "../Themes/String/String_eng";
 import {flex_styles} from "../Themes/Styles/styles";
 import {Facebook, Twitter} from "@mui/icons-material";
-import {Amiri} from "../Themes/Fonts/Fonts";
+import {PoppinsFont} from "../Themes/Fonts/Fonts";
 
 export function Footer() {
     let date = new Date();
@@ -17,14 +17,14 @@ export function Footer() {
                      flexDirection={{xs:'column',md:'row'}}
                      justifyContent={'center'} alignItems={{xs:'center',md:'start'}}>
                     <Button disabled sx={{textTransform:'none',m:1}}>
-                        <Typography color={white_100} fontFamily={Amiri}>Follow us on:</Typography>
+                        <Typography color={white_100} fontFamily={PoppinsFont}>Follow us on:</Typography>
                     </Button>
                     <Button variant={'outlined'} startIcon={<Facebook sx={{color:blue_0A}}/>}
-                            sx={{color:blue_0A,fontFamily:Amiri, textTransform:'none',m:1}}>
+                            sx={{color:blue_0A,fontFamily:PoppinsFont, textTransform:'none',m:1}}>
                         Facebook
                     </Button>
                     <Button variant={'outlined'} startIcon={<Twitter sx={{color:blue_0A}}/>}
-                            sx={{color:blue_0A,fontFamily:Amiri, textTransform:'none',m:1, mr:0}}>
+                            sx={{color:blue_0A,fontFamily:PoppinsFont, textTransform:'none',m:1, mr:0}}>
                         Twitter
                     </Button>
                 </Box>
