@@ -1,22 +1,26 @@
 import {AppBar, Box, Button, ButtonGroup, Grid, Toolbar} from '@mui/material';
-import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
+import { MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 import {TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
 import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";
 import {SIGN_GROUP_THEME} from "../Themes/Theme/Themes";
 import {SearchBar} from "../Themes/Elements/SearchBar";
-import {MENU_BUTTON} from "../Themes/Elements/IconButton";
+import {LANGUAGE_BUTTON, MENU_BUTTON} from "../Themes/Elements/IconButton";
 import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
 import {useState} from "react";
 
+import { String} from "../Themes/String/String";
 
 
 
 
-function CustomAppBar() {
+
+function CustomAppBar(prop) {
     const [open, setOpen] = useState(false);
+    const string = prop.string;
+
     const handleClickOpen  = () => {
         setOpen(true);
     };
@@ -26,7 +30,7 @@ function CustomAppBar() {
     };
 
     return (
-        <Box sx={{flexGrow: 1}} bgcolor={"transparent"}>
+        <Box sx={{flexGrow: 1}} bgcolor={"transparent"} p={0}>
             <ScrollToColor>
             <AppBar position={"fixed"} sx={{backgroundColor: 'transparent'}}>
                 <Toolbar>
@@ -39,21 +43,22 @@ function CustomAppBar() {
                         </Grid>
                         <Grid item xs={4} bgcolor={'transparent'}
                               display={{xs: 'none', xl: 'flex'}}
-                              flexDirection={'column'} alignItems={'center'}
+                              flexDirection={string.ROW_REVERSE()} alignItems={'center'}
                               justifyContent={'center'}>
-                            <div>
-                                <MENU_BUTTON_XL item={MOVIES}/>
-                                <MENU_BUTTON_XL item={SERIES}/>
-                                <MENU_BUTTON_XL item={ANIME}/>
-                                <MENU_BUTTON_XL item={WWE}/>
-                            </div>
+
+                                <MENU_BUTTON_XL item={string.MOVIES()}/>
+                                <MENU_BUTTON_XL item={string.SERIES()}/>
+                                <MENU_BUTTON_XL item={string.THEATER()}/>
+                                <MENU_BUTTON_XL item={string.WWE()}/>
+
                         </Grid>
                         <Grid item xs={6} xl={4} style={flex_styles.col_center}>
                             <div>
                                 <Grid container xs={12} style={flex_styles.row_right}>
 
-                                    <Grid item xs={12} xl={9}>
+                                    <Grid item xs={12} xl={9} style={flex_styles.row_right}>
                                         <SearchBar/>
+                                        <LANGUAGE_BUTTON isArabic={prop.isArabic} click={prop.toggleLanguage}/>
                                     </Grid>
 
                                     <Grid item

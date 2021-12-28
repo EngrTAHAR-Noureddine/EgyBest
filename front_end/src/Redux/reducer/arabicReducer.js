@@ -1,7 +1,7 @@
 import {ARABIC_LANGUAGE,ENGLISH_LANGUAGE} from '../types/types';
 
 const initialState = {
-    arabic_version:true
+    isArabic:true
 }
 
 export default function darkModeReducer(state = initialState, action) {
@@ -9,12 +9,12 @@ export default function darkModeReducer(state = initialState, action) {
         case ARABIC_LANGUAGE:
             return {
                 ...state,
-                arabic_version: true,
+                isArabic: true,
             };
         case ENGLISH_LANGUAGE:
             return {
                 ...state,
-                arabic_version: false,
+                isArabic: false,
             };
         default:
             return state;
