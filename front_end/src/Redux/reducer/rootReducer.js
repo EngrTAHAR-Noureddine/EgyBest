@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import isArabic from './arabicReducer';
+import Arabic from './arabicReducer';
 
 export default combineReducers({
-    isArabic: isArabic,
+    arabic_version: Arabic,
 });
