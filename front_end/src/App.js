@@ -22,6 +22,7 @@ import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic'
 import String from "./Themes/String/String";
 
 
+
 function App(props) {
     const string = new String(props.isArabic);
 
@@ -32,6 +33,8 @@ function App(props) {
                 props.actionArabicVersion()
             }
         string.toggle(props.isArabic);
+
+
 
     }
 
