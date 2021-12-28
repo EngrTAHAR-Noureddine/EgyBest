@@ -56,6 +56,7 @@ export class String{
     COMMENT_PLACEHOLDER = (isArabic)=>((isArabic)?'تعليق...':'Comment...');
     COMMENTS_NOT_EXIST = (isArabic)=>((isArabic)?'ﻻ توجد تعليقات':'There are no comments');
     DOWNLOAD = (isArabic)=>((isArabic)?'التحميل':'Download');
+    MINUTE = (isArabic)=>((isArabic)?'دقيقة':'min');
     //**************************************************************************
     NAME_MOVIE = (isArabic)=>((isArabic)?'الاسم بالعربي: ':'Name: ');
     CLASSIFICATION = (isArabic)=>((isArabic)?'التصنيف: ':'Classification: ');

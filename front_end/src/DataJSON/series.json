@@ -1,0 +1,326 @@
+[
+  {
+    "name": "Drark",
+    "nameAR": "ظلام",
+    "rate": "8.8",
+    "year": "2017",
+    "seasons": "3",
+    "episodes": "10",
+    "story": "When two children go missing in a small German town, its sinful past is exposed along with the double lives and fractured relationships that exist among four families as they search for the kids.",
+    "storyAR": ".عندما يفقد طفلان في بلدة ألمانية صغيرة ، ينكشف ماضيها الخاطئ جنبًا إلى جنب مع الحياة المزدوجة والعلاقات الممزقة الموجودة بين أربع عائلات أثناء بحثهم عن الأطفال",
+    "classification": "PG-13",
+    "country": "Germany",
+    "countryAR": "المانيا",
+    "language": "German",
+    "languageAR": "الماني",
+    "type": [
+      "Sci-fi"
+    ],
+    "typeAR": [
+      "خيال علمي"
+    ],
+    "quality:": [
+      "480p",
+      "720p",
+      "1080p"
+    ],
+    "duration": "45min",
+    "translate": [
+      "Arabic",
+      "English"
+    ],
+    "translateAR": [
+      "العربية",
+      "انجليزية"
+    ],
+    "actors": [
+      {
+        "name": "Louis Hofmann",
+        "cast": "Jonas Kahnwald",
+        "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRYVFRUSGBUZGBgYGBIYGBISGBgYGBgZGhgYGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIARMAtwMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAIFAAEGB//EADgQAAIBAwIEAwUHAwQDAAAAAAECAAMRIQQxBRJBYVFxkQYigaGxEzJCUsHR8GJy4RQjgvEVkqL/xAAZAQADAQEBAAAAAAAAAAAAAAAAAgMBBAX/xAAhEQADAQACAgMBAQEAAAAAAAAAAQIRITEDQRIiUTIEE//aAAwDAQACEQMRAD8AaLGDPeTMG0Qci0E0wiRF4ARvNc8xlM1yGAA2mlS8IEhlS3c9BMppdmzLfQv9lJrTMIHxc2Pfp8B1mi7n8AA/q5gfgoyInzb6K/BLsiAR1t5qxmuc9j8GBkX0yH7wcHxBx6byr1ulUZVx5c7qf/U4M1NmNItlhQJzFLXOhKs4ceN7Ovw/EJZabilyAQWv+JRuP0jfIVz+F5TWMjaJq+LnHmc+kC/FkBsLHzNhNVIVwx8yCDMQbitiA6EA7EG9/lb5x/TOGFxkfzB8I0tMVpoK5xFzDuIuWmsEaIgqkKXgajTDRWot5kMVvMgBcvpZA6eWFSAaBgl9jNPSAjJgasAFTNTHi+p1QQdz06xKpStHiXTwYNh/d9P54QJbxvbqNyfP9tpS6niljYva/wCEDmPy2jGir3yU93xckH4L1nHVVTOuZmVhd0qnXlH1NvoJJtT/AEXHl/mVramsfuKqL+dxy+ijJ+UWrc9iXrMR1Pu01H6xp0ysH9RqR+Rbef8AmVlXU0zutu4s37Sn1fFqaYQs5te4vb4s28pq3G6jbAL6n9peUyVVKOi1dMPlbP4AGzDyvn0vEdLxFqbHNkzc2sR2I6GVFPVux979oyanMCGySLE+I8D3HSDX6Lv4dBp+MK+7AA367wj6lCDykEDdgcA+Hn2nPcM4erNZmcWbNlJl3reGBwArsEGy8pIJO5JO59IJDNtohR11MkrkHqCLgjy6y44VqgrWvj1uuwIPb6TmX4YFtdtuhDW9bQ2nDIRZiR4ftDcFzTvXbEUqrBaDVhwPG20aZZVPVpJrHgFUmGneTKyNiJoGvsJklzzIAXTmCeSZ4F2gYRYRepCu0A5imgz1nIa7XNWcqgsPz33A8D0XuN5ccbr3ApA259yM48InRVKYCIBz4J627sc57Tn8la8Ojxzi0Lw/hRFi7Ii7iwux73baGqcSoU7hffYdR7zfFjgfASk13vmxZm8QpIv5noIquMKOwtjPb95PCm4WNf2gdieRLdySfmf8SprGpWcKx5iTYLbA72louiKpc7nYeJMuOA8NClnbJA379vlKTwK02czxDhLcy01O2WwMsdh5AQ9P2bNhvf0nXaTQXJYjJJMuaGiHhKY2ZiRw6+z1htE6/ByAfHfwnpJ0Yimo4cD0jYHBydPSKEWoQbkAEjFyPG3wganElp9ajL4GzfMm86jUaK1LlHgfp/icTxGoE94gkYBO5Xw5vEZMVGUhhuLUnwVqDzUW9cxTU6i33UBHiSWI8MecqdRVQm4C3/tN/l/MROprjsosO4UX9JrW9E/lnZ2XANUftFBFsAjurjFvlOqJnn3svqWaugY3GVXysWtft+s9AEaViYtPWjcjUmyZBo4oIzc003FAtGEgYe0gwjCizQTRhxFtRgEjex79IoyOb4rqgKnu8osLM+FzboT1vK6nqkUZZD2LAnz6yor1KpY5Y3JuT73y2EMukH4yEUKMCwZmIuxPz8ZzuU+WzpVPpId1OuQ/cxcXtaw8+be0seFaBQPtHYbZNsAflA+vpE+F8OR/eK8qKb8zbn16bfzeyqVi9kQWQHc4GOpiNpdDym+WOaal9o/PY8owinAHiTL2nSsoQbbmIaGnyqq9T/M/zpLzR0hbx/WNHLGpYgunoACNolrSVNYWwlyXshA1Rgi28YKkwLp0m6ApXQEHyP0nDe0Gk5CXXY7/AB3+E72oMTnfaChzI3lEa4DTzSuACfdv3U8lx4EWIB+AiZ5LnlRjjq1x6KoPzhnqMrN+UdDn0mM4YAg2HhYcp8wOsZaiLxlp7KIW1CHGCfdGAo5cnufu5/g9DaU/sxw5EpI4A5iCS3U3/SXLR0IzVoNhDSDTQAETckRMigWvNIkzCZoxjATmBcQzQDxTTgfaBQlcqBdbAkXIAv8AKRp16ZsxSwHcG52P0B+MvfafSqVD7NewPjticyiZsfukYyLnxA8N9+lpCl6OiH7LJdY74tyoNrbd/wDuP6Q3tbCDJPjKpFwFGNhbwW18/P0j+nrgHIPKvY5bpf6yL7xF5/WdZw9DhiLA7A728Zd6VhOJPtNy25lPwBlpwz2mpPjIPfpLSviLVbwdj5QStmV+m4iDm47RpK9ve+MdvRMHibCLvU9TKXinGeX3V+8enhKTivtO1GyBeepYcwF/d9OsN0GsOuOZVcVS4IlHpPad3+8jL8CY0vFS+GUjpzW+sbgTk831lKz17/hIUf8AIyu0974llxc2at/VVPosBwKkHr01b7pYAxl0Srs9Y0NMLSQD8i/SbjDrYAeAtF4whuRaTtIOIACMyYxmRTSwYyJaFcSBWMLoJjAuYZhBEQNKfj2m56eMFSG9JyAcX5jki4tbbPj0noFeldSO04TiOn+zcqQd7+YkfKi3iZaaeldUxkm58c4UfOS1KuihQvUkmxY3ycKJ2vBOAryI56qPhce6R5S11PCVbZR3NhOeUzrdLo8g4g+oW3MrDmUMoFjgm3S2R8dxMoUKwUVCcEkfm2Pr6Gen63ggccrICBsCqkeeYkvBPeAKqQNgQDttYdJ0amsSIKaVa3wVnA6LuVuCL27jtYztOI6QrT92xsL37yWh0PKVBAAUXsOn8zLbX2KZwvLttFmeWNVdHkvEa7UgX3rNheoQt1Pi3bpOS1lKqrAsWYsA17sb3J7gb/Wei67h5N7AFc7i9u8Sp8NDABkDKMiwU/8AyZSZU9iVtdPDmtI1ZER25gGJsRd1wSPeU5A7gzpuFKXF2A+GQZZ0NCMDlNh+a23leOppFQYFoNLdRibSx8nk3HaJ+2K2/Ex9TOq9lvZxOQVHAuSOW+4t1lZxPRmpq3VRe3Tx8Z2nA6XJSC5x4m5HaE88CWs5GqzRcQ1aAAlCIUQbiTE08DQDCZNtMgBYEwZMIxgmMDDTGK1XtCu8WqNeBpMVMSj9o9CHRanMLghQg3Pcy2Z4uQpILC4HSJabnEP46U1ydf7J1ufToDuoCn4D/qdCbTk/Z7VqS6qLAcv8+U6VKl5zzx2dTx8o3UztNUKSrnc+MYJFu8FzACU0XAfJck95LiY/2/hN6bO/UzOIMApHabCGZzCYMmKAvcSFXDdv1jFNgZQm0YlpHUuLGTquBKvV19+XMxmYc2nD2DmspPNzEt5EzpNMLi+x622MFpvrG0pgDE2ZwjdawFXeRWbrmAV4wgZmgi00xgyYG6EYzUCWm4BpaESDrCkSLQFE6gizm0bdYnXEBgNQxdmh2MEwmAXPsuffceK/QzqKTETkOA1uWqve49Z2aCQtfY6vC/qM0SbSLISe0IrSYPhMQ2nKcTq6unWXl5Hok5tdXX43t8vSVnFPaB+ZkUHm8TedvX097liJyz8DZ3ZmAAHUwlNMr85clTwF9RUJarYLfCgG57kzoqYsIChpuQYOIR6m8tmIg3rEtY5BioHWOagXPaK1CNhMS5Et/U3TjanESptGVOJRHOwGoMXBhtRFQYAHg3kgZBoAQmTDMgaW/NBO8leCaAoNmi1SMtE6pgaLucyBM20hMNC0n5SGG4N/SdvotTzqrDqBPN+KagqhC72M9A4Ah/01FuvIL95G2m8OnxS0tfsty+MSt1p1Nv8AaemOzcw+do05PTaaZ74tETKI5evw3iDHmNekTf7p5z87j6RDX6TiDe4OXlHjUJB+WZ0mvouB7hYdt/rKSotbq7/L9pRNFf8AoswqdNpdchtz0/7edremZd0UqLl3Vj/SLCCpErvcmbeuzbCO2jnp6xmo+N4gurRtmHrIcSU/ZVDfZDt42nlNDUupBVmv5mbJK30j2CkYzzYlF7PaovTUk56y5JxGTI0seAqzRcGEqQYUwYBAZBjJcs0VgaQJmTf2ZmTMDS0AkWEiHkHeMKQcxSoIxVcAZMqdTxADAiVanspHjqukEqsBvFKmtUSv1OqJNyYm9S/WRryv0dkf5kv6Ga1UuSek9U9nKqvpkt0W08jV8Tq/Y3jopn7JzZWPu9pNPkr5J+vHo7kvyHxX6f4jlGonaJswYXGbyr1IdLlD/wAT+hjdEey/1FdR4StaqjX2nLcQ4xWtylPmv7xDTcaZL8yNc+RjqkDR1NZE3sJWV6gLcqD/AB3lYNdUqbDlHiT+kf0qgdz1PUx90m1hriVP/YcD8pnk9GgQL9Z6pxvWKlJrnJFgJ5xvBvODJnXrL/2S1VmKHrO1CTzDSVijhh0ne8K4wjqAcGNNehPLD7RYlBNBRNVX8IvzmMRG7CaxAK5kS5gAxiZFS83DTQrVANzK/VcSVdsmUtfWMxuSYuz3kK8rfR2x/lld8jOq1zP1x4RMubzTNNE3Ek+ezqSSWIypmAPzhlvA1qZ6TAf6b+siahBuNxgSKP6yT5sPjMwN1HYcB9pLAI5yOs6T/WIwuCJ5IWtzHabpcUqovuufrKJ6QqUnwd/xArnaU7qL5tOeqcacgXzAtxU82QYySJPUdhSqqBab1HFEQXJzOQ/8y2wAESr6lnuSZRNC5+jnFOKNWa5OB0iKmCUZ85IGYag3NGtPWI2MUQwyWispJ0Wi4www2RLihrFfYzjFMNQrMpwTNVNCV4pro7cGaJnO6bizDDbS60+oVxcGUVJnPXjqewxMyZMjCHHI1xNc2cn4SasOkWrNY3nHmnqt4ho+Uh5TdOpcTdrHaA2Gg9pthINNI14YCYCobTan1m6izSD0msX2Qq7bbwDJtGnzAuc+UxGUtFqy7QLbxljc3g2p5lZZCloADMko3hHAEj1m6LmGASSiEp04cUpmjKWwarC8omNiZSHjDRswkpsMSatJcsxyBMHzg0zRnSalkODEVjK2huGZvZ0+j1wYZ3mTn0e3WZH+bIPwLQbCA1Le7tGicQFdcSMs66XAPSsI8VlXpmzLNWxClyEPgAwzIDEIYMraCBkWm5pvpJKs0wkVEG9O8KFvNOPOKMxdtMN5D7K2Y0YrUfEZE6SQvUtN06d5pKdzLKjSAAjt4LM/IGlO0079IWq0TepeKuRqeGmJjFFYKknWOIBaDZkr2RY4i7QzmCC3MEa2ERdoYiZTWZVMXdY2YgZOZqZMjihL9flJutxcHpFEbaHpm4Ik3wUT1Feps28saTYldUB5vjG6TCO+USl4xgyB8pgYzZMXoo+QVryaCRK5vJIOs0xE7+E00lMAijAnXHhFGS8ZqqbzKKRlwI1rwnp9PYAyVY2EK2BK3VV+kxfZm01KIVatz1mUkv2kaSX3jSU474JSnTCpTAEn0kkXEhUMTst0hd3uZKmpkFGY1p06zW8QsrWFAtFqhN+0PWfEUQXMyVwNX4FUEzUZUTIaGFWr2xDaZyHI8R5wFRM+NpDSv76+cdrURVZWBKgN7nrDJ0kNSMzdMw9G+xq2JtM7+kgu0kpHeIyqIn+dpFHGYVrdBBv4QRjQRTeTa1u8HTWEYwYy6A9zvC05FsyLvYZM0Vccg9VVsO8rdzJ6irc4ktOkdLERp/KhukALQ6LaQRD4Yhwok2y0og7b2izPJVHJ22EgsFwDekqcf2EX0yZjDvv2i1yx5WLRauekymvKL4tBs9z5RLXas/dG8ok3wSqkuWFqaos1l6TITQacKvMdzMmPDFNNboqj8y26jBgKTWdf7hIiqAwPQ4M1UFnW35h9ZbPRB10/ws6+8Lp0wMSFUZhEOP1kfR0Jcm3XNvnNjp57yJc/OSJvtAYk4zIc3YyRP7SDNAHySpwyA9YJD5d5N2PlMZq6IObHO0Q1dbOIxqKh/wAyuqNcx5RK69G6SXMsaNMeUV01OWKJjcwqg8c+wgW2xFovWciEd4B3vESKU/SIpkximl+nxglTeN6de0xs2ZC0ktFa72vGqz4lXq6vKCb48JkLWb5KxCmr1XLcD7x6zOHULnmaI0veNzLhHsoFp0V9ViOPx/avk+gtesB0mRCs5MyIpKu3oOvRB2gUa9gdwR9Y3UQjrEqrWN5RckaXx5Lur/BMTv6SL/WYqfDwkF0dXsKVtIFesmhNpA+HzmoGS5vDwmrTTGQ5zgX3gw0Mv87yNZzn6SYFgIvWfr/2Ji5ZtPEK13JMAu83VMnREquEc3bLHSLi8PeborZRIse8lunUliBVjmDW8I4z2ExBN9C+wtJY0qgDvIU17STuBJvstKxC9d7byh19a5t6/pLPXVsE9MykBubmdHin2cX+i9+qG9BR6naM1tSNh6xNXY4G0ZoaQk5hWbrMjc+MkFOZks1oKoG0yL8iv/NgH2Mq9TMmRo7JebotU+6v9o+kkn6zcySOiQ6bSI/FMmQRrBNsJCnvMmRhF2HaKayZMmT2F9CLbxjS7iZMlK6Ix/RboMfCCcZmpkijroh1+BhafWZMmsWexoSD7/CamSa7K10UvEvu/GV1OZMnZP8AJ5nk/stdKg8Ja0kFtpkyQo7fH0BrzUyZMB9n/9k="
+      },
+      {
+        "name": "Karoline Eichhorn",
+        "cast": "Charlotte Doppler",
+        "photo": "https://cps-static.rovicorp.com/2/Open/Getty_Images_406/Person/242005/_derived_jpg_q90_310x470_m0/KarolineEichhorn34.jpg"
+      },
+      {
+        "name": "Lisa Vicari",
+        "cast": "Martha Nielsen",
+        "photo": "https://www.crew-united.com/Media/Images/1108/1108623/1108623.entity.4_3.jpg"
+      }
+    ],
+    "similar": [
+      {
+        "name": "12 Monkeys",
+        "rate": "7.7",
+        "date": "2017",
+        "coverphoto": "https://static.wikia.nocookie.net/12-monkeys-tv/images/9/97/12MS3.jpeg/revision/latest?cb=20170415214013"
+      }
+    ],
+    "bigPicture": "https://droidjournal.com/wp-content/uploads/2020/05/the-dark-poster.jpg",
+    "coverPicture": "https://i.pinimg.com/originals/67/5e/bc/675ebc2fd210a8bd5362928a51514960.jpg",
+    "linkMovie": "cq2iTHoLrt0",
+    "trailerMovie": "cq2iTHoLrt0"
+  },
+  {
+    "name": "scream",
+    "nameAR": "صرخة",
+    "rate": "7.1",
+    "year": "2015",
+    "seasons": "3",
+    "episodes": "10",
+    "story": "A serialized anthology series that follows a group of teenagers being targeted by a masked serial killer.",
+    "storyAR": "مجموعة من المراهقين يتم استهدافهم من قبل قاتل متسلسل مقنع",
+    "classification": "PG-13",
+    "country": "USA",
+    "countryAR": "الولايات",
+    "language": "English",
+    "languageAR": "انجليزي",
+    "type": [
+      "Horror"
+    ],
+    "typeAR": [
+      "رعب"
+    ],
+    "quality:": [
+      "480p",
+      "720p",
+      "1080p"
+    ],
+    "duration": "",
+    "translate": [
+      "Arabic",
+      "English"
+    ],
+    "translateAR": [
+      "العربية",
+      "انجليزية"
+    ],
+    "actors": [
+      {
+        "name": "Willa Fitzgerald",
+        "cast": "Emma Duval",
+        "photo": "https://m.media-amazon.com/images/M/MV5BNTk5MDIyMzgzOF5BMl5BanBnXkFtZTgwNTI4MzA3MDE@._V1_.jpg"
+      },
+      {
+        "name": "Bex Taylor-Klaus",
+        "cast": "Audrey Jensen",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/2/28/Bex_Taylor-Klaus_Q%26A_Panel_%2849660235817%29_%28cropped%29.jpg"
+      },
+      {
+        "name": "John Karna",
+        "cast": "Noah Foster",
+        "photo": "https://images.mubicdn.net/images/cast_member/392765/cache-621540-1608501509/image-w856.jpg?size=800x"
+      }
+    ],
+    "similar": [
+      {
+        "name": "Hannibal",
+        "rate": "8.5",
+        "date": "2013",
+        "coverphoto": "https://static.wikia.nocookie.net/hannibal/images/f/f6/HBL_Complete_Series_Poster.jpg/revision/latest?cb=20200625050724"
+      }
+    ],
+    "bigPicture": "https://netflixupdate.com/wp-content/uploads/2015/10/Scream-Season-1.jpg",
+    "coverPicture": "https://m.media-amazon.com/images/M/MV5BNjVmY2M3ZTUtMDhkZC00ODk4LTkwMjktNDRjNGRjYTIxZGZiXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg",
+    "linkMovie": "0YiOtdDnwJs",
+    "trailerMovie": "0YiOtdDnwJs"
+  },
+  {
+    "name": "suits",
+    "nameAR": "بدلة",
+    "rate": "8.4",
+    "year": "2011",
+    "seasons": "9",
+    "episodes": "16",
+    "story": "Mike Ross, a talented young college dropout, is hired as an associate by Harvey Specter, one of New York's best lawyers. They must handle cases while keeping Mike's qualifications a secret.",
+    "storyAR": ".مايك روس ، الشاب الموهوب الذي ترك الدراسة في الكلية ، تم تعيينه كشريك من قبل هارفي سبيكتر ، أحد أفضل المحامين في نيويورك. يجب عليهم التعامل مع القضايا مع الحفاظ على سرية مؤهلات مايك",
+    "classification": "PG-13",
+    "country": "USA",
+    "countryAR": "الولايات",
+    "language": "English",
+    "languageAR": "انجليزي",
+    "type": [
+      "Drama"
+    ],
+    "typeAR": [
+      "دراما"
+    ],
+    "quality:": [
+      "480p",
+      "720p",
+      "1080p"
+    ],
+    "duration": "45min",
+    "translate": [
+      "Arabic",
+      "English"
+    ],
+    "translateAR": [
+      "العربية",
+      "انجليزية"
+    ],
+    "actors": [
+      {
+        "name": "Gabriel Macht",
+        "cast": "Harvey Specter",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Gabriel_Macht_3241.jpg/800px-Gabriel_Macht_3241.jpg"
+      },
+      {
+        "name": "Patrick J. Adams",
+        "cast": "Mike Ross",
+        "photo": "https://affairpost.com/wp-content/uploads/2019/02/Patrick-J.-Adams-copy-1170x610.jpg"
+      },
+      {
+        "name": "Sarah Rafferty",
+        "cast": "Donna Paulsen",
+        "photo": "https://images2.alphacoders.com/614/thumb-1920-614425.jpg"
+      }
+    ],
+    "similar": [
+      {
+        "name": "Hannibal",
+        "rate": "8.5",
+        "date": "2013",
+        "coverphoto": "https://static.wikia.nocookie.net/hannibal/images/f/f6/HBL_Complete_Series_Poster.jpg/revision/latest?cb=20200625050724"
+      }
+    ],
+    "bigPicture": "https://flxt.tmsimg.com/assets/p8630071_b_h8_bc.jpg",
+    "coverPicture": "https://www.ubuy.co.id/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFIR2dpZ3VqbkwuX1NMMTUwMF8uanBn.jpg",
+    "linkMovie": "85z53bAebsI",
+    "trailerMovie": "85z53bAebsI"
+  },
+  {
+    "name": "Dexter",
+    "nameAR": "دكستر",
+    "rate": "8.6",
+    "year": "2006",
+    "seasons": "9",
+    "episodes": "16",
+    "story": "Dexter Morgan, a man with homicidal tendencies, lives a double life. He works as a forensic technician for the police department during the day and kills heinous perpetrators in his free time.",
+    "storyAR": ".يعيش دكستر مورغان ، وهو رجل ذو ميول قاتلة ، حياة مزدوجة. يعمل تقنيًا في الطب الشرعي في قسم الشرطة خلال النهار ويقتل الجناة في أوقات فراغه",
+    "classification": "PG-13",
+    "country": "USA",
+    "countryAR": "الولايات",
+    "language": "English",
+    "languageAR": "انجليزي",
+    "type": [
+      "Action",
+      "Thriller"
+    ],
+    "typeAR": [
+      "اكشن",
+      "تشويق"
+    ],
+    "quality:": [
+      "480p",
+      "720p",
+      "1080p"
+    ],
+    "duration": "52min",
+    "translate": [
+      "Arabic",
+      "English"
+    ],
+    "translateAR": [
+      "العربية",
+      "انجليزية"
+    ],
+    "actors": [
+      {
+        "name": "Michael C. Hall",
+        "cast": "Dexter Morgan",
+        "photo": "https://www.biography.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTUyMjU1OTY3MzM2MDgwODgw/gettyimages-533116398_michael-c-hall.jpg"
+      },
+      {
+        "name": "Jennifer Carpenter",
+        "cast": "Debra Morgan",
+        "photo": "https://static.wikia.nocookie.net/dexter/images/5/54/Jennifer_carpenter_emmy_face2.jpg/revision/latest/scale-to-width-down/402?cb=20180310023046"
+      },
+      {
+        "name": "James Remar",
+        "cast": "Harry Morgan",
+        "photo": "https://m.media-amazon.com/images/M/MV5BMTQ2ODE1MjQ0Nl5BMl5BanBnXkFtZTgwMzg0NzYyNTE@._V1_.jpg"
+      }
+    ],
+    "similar": [
+      {
+        "name": "Hannibal",
+        "rate": "8.5",
+        "date": "2013",
+        "coverphoto": "https://static.wikia.nocookie.net/hannibal/images/f/f6/HBL_Complete_Series_Poster.jpg/revision/latest?cb=20200625050724"
+      }
+    ],
+    "bigPicture": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/30ed3a09bba97344f42aca239170195ead2ee0d08a38c0f0f30495c2df106cf8._RI_V_TTW_.jpg",
+    "coverPicture": "https://m.media-amazon.com/images/M/MV5BZjkzMmU5MjMtODllZS00OTA5LTk2ZTEtNjdhYjZhMDA5ZTRhXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_.jpg",
+    "linkMovie": "YQeUmSD1c3g",
+    "trailerMovie": "YQeUmSD1c3g"
+  },
+  {
+    "name": "The Blacklist",
+    "nameAR": "القائمة السوداء",
+    "rate": "8",
+    "year": "2013",
+    "seasons": "9",
+    "episodes": "16",
+    "story": "A wanted fugitive mysteriously surrenders himself to the FBI and offers to help them capture deadly criminals. His sole condition is that he will work only with the new profiler, Elizabeth Keen.",
+    "storyAR": ".يسلم الهارب المطلوب في ظروف غامضة نفسه لمكتب التحقيقات الفيدرالي ويعرض مساعدته على القبض على المجرمين القاتلين. شرطه الوحيد هو أنه سيعمل فقط مع منسقة التعريف الجديدة ، إليزابيث كين",
+    "classification": "PG-13",
+    "country": "USA",
+    "countryAR": "الولايات",
+    "language": "English",
+    "languageAR": "انجليزي",
+    "type": [
+      "Action",
+      "Thriller"
+    ],
+    "typeAR": [
+      "اكشن",
+      "تشويق"
+    ],
+    "quality:": [
+      "480p",
+      "720p",
+      "1080p"
+    ],
+    "duration": "42min",
+    "translate": [
+      "Arabic",
+      "English"
+    ],
+    "translateAR": [
+      "العربية",
+      "انجليزية"
+    ],
+    "actors": [
+      {
+        "name": "James Spader",
+        "cast": "Raymond Reddington",
+        "photo": "https://m.media-amazon.com/images/M/MV5BMTQ3MTQ5NjY5Ml5BMl5BanBnXkFtZTgwMTY0NzU5MDE@._V1_.jpg"
+      },
+      {
+        "name": "Megan Boone",
+        "cast": "Elizabeth Keen",
+        "photo": "https://i.pinimg.com/originals/d3/9b/35/d39b357d468c0b6920fd690f43e6e566.jpg"
+      },
+      {
+        "name": "Ryan Eggold",
+        "cast": "Tom Keen",
+        "photo": "https://musicimage.xboxlive.com/catalog/video.contributor.072a6500-0200-11db-89ca-0019b92a3933/image?locale=fr-fr&target=circle"
+      }
+    ],
+    "similar": [
+      {
+        "name": "Hannibal",
+        "rate": "8.5",
+        "date": "2013",
+        "coverphoto": "https://static.wikia.nocookie.net/hannibal/images/f/f6/HBL_Complete_Series_Poster.jpg/revision/latest?cb=20200625050724"
+      }
+    ],
+    "bigPicture": "https://ntvb.tmsimg.com/assets/p9972804_b_h8_bg.jpg?w=1280&h=720",
+    "coverPicture": "https://movieposters2.com/images/1261245-b.jpg",
+    "linkMovie": "JGBIimq1I3A",
+    "trailerMovie": "JGBIimq1I3A"
+  }
+]
