@@ -1,4 +1,5 @@
 import {AppBar, Box, Button, ButtonGroup, Grid, Toolbar} from '@mui/material';
+import { MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 import {TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
 import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";
@@ -9,12 +10,16 @@ import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
 import {useState} from "react";
+
 import { String} from "../Themes/String/String";
+
+
+
 
 
 function CustomAppBar(prop) {
     const [open, setOpen] = useState(false);
-    const string = String(prop.isArabic);
+    const string = prop.string;
 
     const handleClickOpen  = () => {
         setOpen(true);
@@ -65,10 +70,10 @@ function CustomAppBar(prop) {
                                             <ThemeProvider theme={SIGN_GROUP_THEME}>
                                                 <ButtonGroup variant="text">
                                                     <Button sx={{textTransform: 'none'}}>
-                                                        <TYPOGRAPHY_MENU_XL item={string.SIGNIN()}/>
+                                                        <TYPOGRAPHY_MENU_XL item={SIGNIN}/>
                                                     </Button>
                                                     <Button sx={{textTransform: 'none'}}>
-                                                        <TYPOGRAPHY_MENU_XL item={string.SIGNUP()}/>
+                                                        <TYPOGRAPHY_MENU_XL item={SIGNUP}/>
                                                     </Button>
                                                 </ButtonGroup>
                                             </ThemeProvider>
@@ -79,7 +84,8 @@ function CustomAppBar(prop) {
                             </div>
                         </Grid>
                     </Grid>
-                    <CustomDrawerMenuAppBar isArabic={prop.isArabic} click={prop.toggleLanguage} handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
+                    <CustomDrawerMenuAppBar isArabic={prop.isArabic} click={prop.toggleLanguage}
+                                            handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
                 </Toolbar>
             </AppBar>
             </ScrollToColor>

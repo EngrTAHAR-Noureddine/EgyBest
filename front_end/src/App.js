@@ -41,10 +41,10 @@ function App(props) {
       <Router>
           <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
               backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
-              <CustomAppBar isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
+              <CustomAppBar string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
               <Switch>
                   <Route exact path="/">
-                      <Home isArabic={props.isArabic}/>
+                      <Home />
                   </Route>
                   <Route exact path="/list-movies">
                       <ListMovies/>

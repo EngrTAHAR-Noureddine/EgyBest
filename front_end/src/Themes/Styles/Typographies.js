@@ -1,14 +1,14 @@
 import {Box, Typography} from "@mui/material";
-import {AMIRI, Katibeh, Noto, Amiri, Pushster} from "../Fonts/Fonts";
-import {COMMENTS_NOT_EXIST, FORGET_PASSWORD, LOGO, YOUR_RATING} from "../String/String_eng";
+import {Amiri} from "../Fonts/Fonts";
+import { FORGET_PASSWORD} from "../String/String_eng";
 import {ThemeProvider} from "@emotion/react";
-import {FAMILY_H6, RESPONSIVE_THEME, themeH6, themeTyp, themeTypH6} from "../Theme/Themes";
+import { RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
 import {blue_0A, white_100, white_7070, white_EC} from "./Color";
 import {flex_styles} from "./styles";
 import {String} from "../String/String";
 
-const string = new String();
+const string = new String(true);
 
 
 export const  TYPOGRAPHY_LOGO = ()=>(
