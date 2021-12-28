@@ -18,12 +18,12 @@ import {
 } from "react-router-dom";
 
 import { connect } from 'react-redux';
-import {actionArabicVersion, actionEnglishVersion} from '../src/Redux/actions/arabic';
-import {String} from "./Themes/String/String";
+import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic';
+import String from "./Themes/String/String";
 
 
 function App(props) {
-    const string = new  String(props.isArabic);
+    const string = new String(props.isArabic);
 
     const ToggleArabic = ()=>{
             if(props.isArabic){
@@ -32,6 +32,7 @@ function App(props) {
                 props.actionArabicVersion()
             }
         string.toggle(props.isArabic);
+
     }
 
 
@@ -41,10 +42,10 @@ function App(props) {
       <Router>
           <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
               backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
-              <CustomAppBar isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
+              <CustomAppBar string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
               <Switch>
                   <Route exact path="/">
-                      <Home isArabic={props.isArabic}/>
+                      <Home/>
                   </Route>
                   <Route exact path="/list-movies">
                       <ListMovies/>

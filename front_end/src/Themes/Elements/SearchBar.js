@@ -1,12 +1,12 @@
 import {alpha, Box, Collapse, InputBase} from "@mui/material";
 import {useState} from "react";
 import {SEARCH_BUTTON} from "./IconButton";
-import {String} from '../String/String';
+import String from '../String/String';
 
 
 export const SearchBar = function (prop){
     const [state, setState] = useState(false);
-    const string = String(prop.isArabic);
+    const string = new String(prop.isArabic);
 
     const onClicked = () => {
       setState(!state)

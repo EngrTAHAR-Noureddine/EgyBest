@@ -25,5 +25,6 @@ export const white_7070 = '#707070';
 export const green_34 = '#34C85A';
 export const black_1212 = '#121212';
 export const grey_36 = '#363638';
+export const red_e5 = '#e50914';
 
 

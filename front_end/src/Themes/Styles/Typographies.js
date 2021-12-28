@@ -1,19 +1,26 @@
 import {Box, Typography} from "@mui/material";
 import {PoppinsFont} from "../Fonts/Fonts";
-import {COMMENTS_NOT_EXIST, FORGET_PASSWORD, LOGO, YOUR_RATING} from "../String/String_eng";
+import {FORGET_PASSWORD} from "../String/String_eng";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
-import {blue_0A, white_100, white_7070, white_EC} from "./Color";
+import {blue_0A, red_e5, white_100, white_7070, white_EC} from "./Color";
 import {flex_styles} from "./styles";
+import Strings from '../String/String';
 
+
+const string = new Strings();
 
 export const  TYPOGRAPHY_LOGO = ()=>(
-
+    <ThemeProvider theme={RESPONSIVE_THEME}>
         <Typography fontFamily={PoppinsFont} fontWeight={900} fontStyle={'italic'} variant="h3" component="div"
-                    sx={{flexGrow: 1}} color={'#e50914'}>
-            {LOGO}
+                    sx={{flexGrow: 1}} style={flex_styles.row_left} >
+            <Typography fontFamily={'inherit'} fontWeight={'inherit'} fontStyle={'inherit'} variant='inherit'
+                color={red_e5}>{string.LOGO_EGY}</Typography>
+            <Typography fontFamily={'inherit'} fontWeight={'inherit'} fontStyle={'inherit'} variant='inherit'
+                color={blue_0A}>{string.LOGO_BEST}</Typography>
         </Typography>
+    </ThemeProvider>
 
 );
 

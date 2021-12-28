@@ -9,12 +9,16 @@ import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
 import {useState} from "react";
-import { String} from "../Themes/String/String";
+
+import String from "../Themes/String/String";
+
+
+
 
 
 function CustomAppBar(prop) {
     const [open, setOpen] = useState(false);
-    const string = String(prop.isArabic);
+    const string = new String(prop.isArabic);
 
     const handleClickOpen  = () => {
         setOpen(true);
@@ -41,10 +45,10 @@ function CustomAppBar(prop) {
                               flexDirection={string.ROW_REVERSE()} alignItems={'center'}
                               justifyContent={'center'}>
 
-                                <MENU_BUTTON_XL item={string.MOVIES()}/>
-                                <MENU_BUTTON_XL item={string.SERIES()}/>
-                                <MENU_BUTTON_XL item={string.THEATER()}/>
-                                <MENU_BUTTON_XL item={string.WWE()}/>
+                                <MENU_BUTTON_XL  item={string.MOVIES()}/>
+                                <MENU_BUTTON_XL  item={string.SERIES()}/>
+                                <MENU_BUTTON_XL  item={string.THEATER()}/>
+                                <MENU_BUTTON_XL  item={string.WWE()}/>
 
                         </Grid>
                         <Grid item xs={6} xl={4} style={flex_styles.col_center}>
@@ -53,7 +57,7 @@ function CustomAppBar(prop) {
 
                                     <Grid item xs={12} xl={9} style={flex_styles.row_right}>
                                         <SearchBar isArabic={prop.isArabic}/>
-
+                                        <LANGUAGE_BUTTON isArabic={prop.isArabic} click={prop.toggleLanguage}/>
                                     </Grid>
 
                                     <Grid item
@@ -79,7 +83,7 @@ function CustomAppBar(prop) {
                             </div>
                         </Grid>
                     </Grid>
-                    <CustomDrawerMenuAppBar handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
+                    <CustomDrawerMenuAppBar isArabic={prop.isArabic} click={prop.toggleLanguage} handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
                 </Toolbar>
             </AppBar>
             </ScrollToColor>
