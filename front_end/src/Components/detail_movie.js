@@ -10,7 +10,7 @@ import {
     QUALITY,
     SUBTITLES,
     TYPE
-} from "../Themes/String/String";
+} from "../Themes/String/String_eng";
 import React from "react";
 import {PlayVideo} from "../Themes/Elements/play_video";
 

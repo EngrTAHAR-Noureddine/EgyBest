@@ -1,7 +1,7 @@
 import {Box, Grid} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
 import {NEXT_PLAY_BUTTON} from "../Themes/Elements/Buttons";
-import {NEXT, PREVIOUS} from "../Themes/String/String";
+import {NEXT, PREVIOUS} from "../Themes/String/String_eng";
 import {PlayVideo} from "../Themes/Elements/play_video";
 export function VideoPlay() {
     return(

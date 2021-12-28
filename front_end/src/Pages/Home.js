@@ -2,7 +2,7 @@ import React from 'react';
 import {Box} from '@mui/material'
 import {Custom_Carrousel} from "../Themes/Elements/Carousel";
 import {MovieCardsChain} from "../Components/MovieCardsChain";
-import {ANIME, LATEST_ADDITIONS, MOST_WATCHED, MOVIES, SERIES, WWE} from "../Themes/String/String";
+import {ANIME, LATEST_ADDITIONS, MOST_WATCHED, MOVIES, SERIES, WWE} from "../Themes/String/String_eng";
 
 
 function Home() {

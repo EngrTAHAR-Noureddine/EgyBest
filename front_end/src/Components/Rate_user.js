@@ -1,7 +1,7 @@
 import {Box, Typography} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
 import {TYPOGRAPHY_YOUR_RATING} from "../Themes/Styles/Typographies";
-import {HATE_IT, LIKE_IT, YOUR_RATING} from "../Themes/String/String";
+import {HATE_IT, LIKE_IT, YOUR_RATING} from "../Themes/String/String_eng";
 import {PoppinsFont} from "../Themes/Fonts/Fonts";
 import {white_10, white_100, white_30} from "../Themes/Styles/Color";
 import {RatingBar} from "../Themes/Elements/rating_bar";

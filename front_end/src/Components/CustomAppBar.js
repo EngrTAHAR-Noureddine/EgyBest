@@ -1,5 +1,5 @@
 import {AppBar, Box, Button, ButtonGroup, Grid, Toolbar} from '@mui/material';
-import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String";
+import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 import {TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
 import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";

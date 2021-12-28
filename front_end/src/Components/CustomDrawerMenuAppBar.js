@@ -2,7 +2,7 @@
 import {Box, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from "@mui/material";
 import { black_60, black_80, blue_0A, green_34, white_100} from "../Themes/Styles/Color";
 import {PoppinsFont} from "../Themes/Fonts/Fonts";
-import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String";
+import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 
 
 function List_Menu(prop){

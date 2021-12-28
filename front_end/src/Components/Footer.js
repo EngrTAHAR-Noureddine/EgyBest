@@ -1,6 +1,6 @@
 import {Box, Button, Typography} from "@mui/material";
 import {blue_0A, grey_36, white_100} from "../Themes/Styles/Color";
-import {LOGO} from "../Themes/String/String";
+import {LOGO} from "../Themes/String/String_eng";
 import {flex_styles} from "../Themes/Styles/styles";
 import {Facebook, Twitter} from "@mui/icons-material";
 import {PoppinsFont} from "../Themes/Fonts/Fonts";

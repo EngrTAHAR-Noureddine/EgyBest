@@ -7,7 +7,7 @@ import {
 } from "../Styles/Typographies";
 import {ArrowDropDown, ArrowDropUp, ArrowForwardIosOutlined, Star} from "@mui/icons-material";
 import React from "react";
-import {MORE, SIGN_IN} from "../String/String";
+import {MORE, SIGN_IN} from "../String/String_eng";
 import {
     black_20,
     black_30, black_60, black_80,

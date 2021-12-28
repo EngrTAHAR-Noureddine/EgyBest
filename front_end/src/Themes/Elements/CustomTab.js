@@ -1,7 +1,7 @@
 import {themeTab} from "../Theme/Themes";
 import {Tab, Tabs} from "@mui/material";
 import {blue_36, white_100, white_EC} from "../Styles/Color";
-import {ANIME, MOVIES, SERIES, WWE} from "../String/String";
+import {ANIME, MOVIES, SERIES, WWE} from "../String/String_eng";
 import {PoppinsFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import * as React from "react";

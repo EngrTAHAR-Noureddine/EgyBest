@@ -8,7 +8,7 @@ import {
     EPISODES,
     SEASONS,
     STORY,
-} from "../Themes/String/String";
+} from "../Themes/String/String_eng";
 import {Header_Movie_Details} from "../Components/Header_Movie_Details";
 import {Detail_movie} from "../Components/detail_movie";
 import {AvatarActor} from "../Themes/Elements/Avatar_Actor";

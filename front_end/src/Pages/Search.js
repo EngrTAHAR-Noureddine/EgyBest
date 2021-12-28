@@ -2,7 +2,7 @@ import {Box, Grid} from "@mui/material";
 import {Seperator_Bar} from "../Themes/Elements/Seperator_Bar";
 import Result_List from "../Components/Result_List";
 import {flex_styles} from "../Themes/Styles/styles";
-import {SEARCH} from "../Themes/String/String";
+import {SEARCH} from "../Themes/String/String_eng";
 import {TYPOGRAPHY_SEARCH_RESULT} from "../Themes/Styles/Typographies";
 import {white_EC} from "../Themes/Styles/Color";
 

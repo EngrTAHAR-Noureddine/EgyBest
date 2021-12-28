@@ -15,7 +15,7 @@ import {
     PASSWORD,
     SIGN_IN,
     SIGN_UP
-} from "../Themes/String/String";
+} from "../Themes/String/String_eng";
 import {blue_0A, green_34, white_05} from "../Themes/Styles/Color";
 import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {SIGN_BUTTON} from "../Themes/Elements/Buttons";

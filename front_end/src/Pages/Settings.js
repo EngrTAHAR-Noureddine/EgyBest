@@ -1,7 +1,7 @@
 import {Seperator_Bar} from "../Themes/Elements/Seperator_Bar";
 import {Avatar, Box, Button, Grid, IconButton, Typography} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
-import {NAME, REMOVE_ACCOUNT, SIGN_IN} from "../Themes/String/String";
+import {NAME, REMOVE_ACCOUNT, SIGN_IN} from "../Themes/String/String_eng";
 import {black_30, blue_0A, green_34, white_05, white_100, white_EC} from "../Themes/Styles/Color";
 import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {Edit} from '@mui/icons-material';

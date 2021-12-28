@@ -7,7 +7,7 @@ import {
     ListItemText,
     ListSubheader,Typography
 } from "@mui/material";
-import {DOWNLOAD} from "../Themes/String/String";
+import {DOWNLOAD} from "../Themes/String/String_eng";
 import { useState} from "react";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';

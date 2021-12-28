@@ -1,7 +1,7 @@
 import {flex_styles} from "../Themes/Styles/styles";
 import {Box, Grid} from "@mui/material";
 import {black_10, white_10} from "../Themes/Styles/Color";
-import {FILTER_LIST, LIST_SHORTCUTS} from "../Themes/String/String";
+import {FILTER_LIST, LIST_SHORTCUTS} from "../Themes/String/String_eng";
 import React, {useState} from "react";
 import {SHORTCUT_LIST_BUTTON} from "../Themes/Elements/Buttons";
 import {CustomPopUpMenu} from "../Themes/Elements/CustomPopUpMenu";

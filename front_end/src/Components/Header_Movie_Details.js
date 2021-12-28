@@ -5,7 +5,7 @@ import dark from "../Asset/dark.jpg";
 import {black_60} from "../Themes/Styles/Color";
 import {TYPOGRAPHY_STORY, TYPOGRAPHY_TITLE_MOVIE} from "../Themes/Styles/Typographies";
 import {RATING_DISABLED_BUTTON} from "../Themes/Elements/Buttons";
-import {STORY} from "../Themes/String/String";
+import {STORY} from "../Themes/String/String_eng";
 import React from "react";
 
 export function Header_Movie_Details(prop) {

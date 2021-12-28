@@ -1,6 +1,6 @@
 import {Box, Typography} from "@mui/material";
 import {PoppinsFont} from "../Fonts/Fonts";
-import {COMMENTS_NOT_EXIST, FORGET_PASSWORD, LOGO, YOUR_RATING} from "../String/String";
+import {COMMENTS_NOT_EXIST, FORGET_PASSWORD, LOGO, YOUR_RATING} from "../String/String_eng";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";

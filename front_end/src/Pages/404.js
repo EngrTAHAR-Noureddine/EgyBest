@@ -4,7 +4,7 @@ import {flex_styles} from "../Themes/Styles/styles";
 import {IMAGE} from "../Themes/Elements/IMAGE";
 import pageNotFound from '../Asset/404.jpg';
 import {TYPOGRAPHY_PAGE_NOT_FOUND} from "../Themes/Styles/Typographies";
-import {PAGE_NOT_FOUND} from "../Themes/String/String";
+import {PAGE_NOT_FOUND} from "../Themes/String/String_eng";
 
 export function PageNotFound() {
     return(
