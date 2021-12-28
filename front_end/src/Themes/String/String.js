@@ -1,5 +1,4 @@
 import {flex_styles} from "../Styles/styles";
-import {AMIRI, Katibeh, Amiri} from "../Fonts/Fonts";
 
 export class String{
 
@@ -35,7 +34,7 @@ export class String{
     MOST_WATCHED = ()=> ((this.isArabic)?'الاكثر مشاهدة':'Most Watched');
     //*********************************************************************************************
     SEARCH = ()=> ((this.isArabic)?'البحث :':'Search :');
-    SEARCH_PLACEHOLDER = ()=> ((this.isArabic)?'بحث...':'Search...');
+    SEARCH_PLACEHOLDER = ()=> ((this.isArabic)?'بحث':'Search...');
     //******************************************************************************************
     PAGE_NOT_FOUND = ()=> ((this.isArabic)?'الصفحة غير موجودة':'Page not found');
     //******************************************************************************************

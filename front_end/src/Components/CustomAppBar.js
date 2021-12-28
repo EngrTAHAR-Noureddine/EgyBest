@@ -1,5 +1,4 @@
 import {AppBar, Box, Button, ButtonGroup, Grid, Toolbar} from '@mui/material';
-import { MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 import {TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
 import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";
@@ -10,16 +9,12 @@ import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
 import {useState} from "react";
-
 import { String} from "../Themes/String/String";
-
-
-
 
 
 function CustomAppBar(prop) {
     const [open, setOpen] = useState(false);
-    const string = prop.string;
+    const string = String(prop.isArabic);
 
     const handleClickOpen  = () => {
         setOpen(true);
@@ -57,7 +52,7 @@ function CustomAppBar(prop) {
                                 <Grid container xs={12} style={flex_styles.row_right}>
 
                                     <Grid item xs={12} xl={9} style={flex_styles.row_right}>
-                                        <SearchBar/>
+                                        <SearchBar isArabic={prop.isArabic}/>
                                         <LANGUAGE_BUTTON isArabic={prop.isArabic} click={prop.toggleLanguage}/>
                                     </Grid>
 
@@ -70,10 +65,10 @@ function CustomAppBar(prop) {
                                             <ThemeProvider theme={SIGN_GROUP_THEME}>
                                                 <ButtonGroup variant="text">
                                                     <Button sx={{textTransform: 'none'}}>
-                                                        <TYPOGRAPHY_MENU_XL item={SIGNIN}/>
+                                                        <TYPOGRAPHY_MENU_XL item={string.SIGNIN()}/>
                                                     </Button>
                                                     <Button sx={{textTransform: 'none'}}>
-                                                        <TYPOGRAPHY_MENU_XL item={SIGNUP}/>
+                                                        <TYPOGRAPHY_MENU_XL item={string.SIGNUP()}/>
                                                     </Button>
                                                 </ButtonGroup>
                                             </ThemeProvider>

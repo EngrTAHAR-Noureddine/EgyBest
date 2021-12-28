@@ -1,10 +1,12 @@
 import {alpha, Box, Collapse, InputBase} from "@mui/material";
 import {useState} from "react";
 import {SEARCH_BUTTON} from "./IconButton";
+import {String} from '../String/String';
 
 
-export const SearchBar = function (){
+export const SearchBar = function (prop){
     const [state, setState] = useState(false);
+    const string = String(prop.isArabic);
 
     const onClicked = () => {
       setState(!state)
@@ -30,7 +32,7 @@ export const SearchBar = function (){
                     sx={{height:"100%",width:"100%", color:'white', backgroundColor:'transparent'}}
                     inputMode={"search"}
                     autoFocus={true}
-                    placeholder="Search…"
+                    placeholder={string.SEARCH_PLACEHOLDER()}
                 />
             </Box>
         </Collapse>

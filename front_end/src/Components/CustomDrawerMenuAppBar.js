@@ -1,8 +1,6 @@
-
 import {Box, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from "@mui/material";
 import { black_60, black_80, blue_0A, green_34, white_100} from "../Themes/Styles/Color";
 import {Amiri} from "../Themes/Fonts/Fonts";
-import {ANIME, MOVIES, SERIES, SIGNIN, SIGNUP, WWE} from "../Themes/String/String_eng";
 import {String} from "../Themes/String/String";
 
 function List_Menu(prop){
