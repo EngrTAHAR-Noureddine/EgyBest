@@ -1,7 +1,7 @@
 
 import {Box, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from "@mui/material";
 import { black_60, black_80, blue_0A, green_34, white_100} from "../Themes/Styles/Color";
-import {PoppinsFont} from "../Themes/Fonts/Fonts";
+import {AmiriFont} from "../Themes/Fonts/Fonts";
 
 import String from "../Themes/String/String";
 
@@ -14,7 +14,7 @@ function List_Menu(prop){
                     backgroundColor:(index===7)?green_34:(index===6)?blue_0A:'transparent',
                     borderRadius:2, mb:1 , '&:hover':{backgroundColor:black_60}}}>
                     <ListItemButton onClick={(index===5)?prop.click:()=>{}}>
-                        <ListItemText><Typography variant={'h6'} fontFamily={PoppinsFont} textAlign={'center'}>{`${item}`}</Typography></ListItemText>
+                        <ListItemText><Typography variant={'h6'} fontFamily={AmiriFont} textAlign={'center'}>{`${item}`}</Typography></ListItemText>
                     </ListItemButton>
                 </ListItem>
             ))}

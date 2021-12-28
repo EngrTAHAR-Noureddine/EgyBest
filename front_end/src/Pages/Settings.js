@@ -5,20 +5,10 @@ import {NAME, REMOVE_ACCOUNT, SIGN_IN} from "../Themes/String/String_eng";
 import {black_30, blue_0A, green_34, white_05, white_100, white_EC} from "../Themes/Styles/Color";
 import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {Edit} from '@mui/icons-material';
-import {PoppinsFont} from "../Themes/Fonts/Fonts";
+import {AmiriFont} from "../Themes/Fonts/Fonts";
 import actorPhoto from '../Asset/Actor.jpg';
-import uploadImage from '../Asset/edit.png';
 import React, {useState} from "react";
 
-
-/*
- <Box
-                                                                    component="img"
-                                                                    height={"50%"}
-                                                                    width={"50%"}
-                                                                    alt="img"
-                                                                    src={uploadImage}/>
-* */
 
 export function Settings(prop){
 
@@ -91,13 +81,13 @@ export function Settings(prop){
                                                             <Button disabled={disable} onClick={saveEdit} sx={{
                                                                         textTransform:'none',
                                                                         "&,&:hover":{backgroundColor:green_34, color:white_100},
-                                                                        fontFamily:PoppinsFont, fontWeight:'bolder',
+                                                                        fontFamily:AmiriFont, fontWeight:'bolder',
                                                                         p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                                                     Save
                                                             </Button>
                                                             <Button onClick={enableEdit} sx={{       textTransform:'none',
                                                                                 "&,&:hover":{backgroundColor:blue_0A, color:white_100},
-                                                                                fontFamily:PoppinsFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
+                                                                                fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                                                     Edit
                                                             </Button>
 
@@ -113,7 +103,7 @@ export function Settings(prop){
                                     </Typography>
                                     <Button sx={{       textTransform:'none',
                                         "&,&:hover":{backgroundColor:'red', color:white_100},
-                                        fontFamily:PoppinsFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
+                                        fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                         Remove Account
                                     </Button>
 
