@@ -39,9 +39,6 @@ function App() {
                   <Route exact path="/profile">
                       <Profile/>
                   </Route>
-                  <Route exact path="/page-not-found">
-                      <PageNotFound/>
-                  </Route>
                   <Route exact path="/details">
                       <Movie_Details/>
                   </Route>
@@ -53,6 +50,9 @@ function App() {
                   </Route>
                   <Route exact path="/sign-up">
                       <Sign type={SIGN_UP}/>
+                  </Route>
+                  <Route path="/">
+                      <PageNotFound/>
                   </Route>
               </Switch>
               <Footer/>
