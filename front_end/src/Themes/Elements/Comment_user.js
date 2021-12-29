@@ -3,9 +3,9 @@ import {black_80, white_05, white_10, white_100} from "../Styles/Color";
 import {flex_styles} from "../Styles/styles";
 import React from "react";
 
-export function CommentUser (){
+export function CommentUser (prop){
     return(
-        <Box flexGrow={1} height={'10vh'} display={'flex'} borderRadius={5} mt={2}
+        <Box flexGrow={1} height={'10vh'} display={(prop.signedIn)?'flex':'none'} borderRadius={5} mt={2}
              justifyContent={'space-between'} alignItems={'center'} bgcolor={white_10} mx={5} px={5}>
 
             <Box
@@ -18,7 +18,6 @@ export function CommentUser (){
                 <InputBase
                     sx={{height:"100%",width:"100%", color:'white',px:2, backgroundColor:'transparent'}}
                     inputMode={"text"}
-                    autoFocus={true}
                     placeholder="Comment…"
                 />
             </Box>

@@ -45,7 +45,7 @@ export function Detail_movie(prop){
                             </Grid>
                             <Grid item xs={1} width={'100%'} height={'100%'}>
                                 <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                                    item={(prop.isArabic)?prop.item.typeAR.join(','):prop.item.type.join(',')}/>
+                                                    item={(prop.item.typeAR && prop.item.type)?(prop.isArabic)?prop.item.typeAR.join(','):prop.item.type.join(','):'-------'}/>
                             </Grid>
                             <Grid item xs={1} width={'100%'} height={'100%'}>
                                 <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.DURATION()}
@@ -57,7 +57,7 @@ export function Detail_movie(prop){
                             </Grid>
                             <Grid item xs={1} width={'100%'} height={'100%'}>
                                 <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                                    item={(prop.isArabic)?prop.item.TranslateMovieAR.join(','):prop.item.TranslateMovie.join(',')} />
+                                                    item={(prop.item.TranslateMovieAR && prop.item.TranslateMovie)?(prop.isArabic)?prop.item.TranslateMovieAR.join(','):prop.item.TranslateMovie.join(','):'-----'} />
                             </Grid>
 
                         </Grid>

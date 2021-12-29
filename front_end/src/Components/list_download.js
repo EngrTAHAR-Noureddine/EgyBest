@@ -24,7 +24,7 @@ function List_Download (prop){
                     backgroundColor:black_30,
                     borderRadius:2, mb:1 , '&:hover':{backgroundColor:black_60}}}>
                         <ListItemButton>
-                        <ListItemText><Typography variant={'h6'} fontFamily={AmiriFont} textAlign={'center'}>{`item ${item}`}</Typography></ListItemText>
+                        <ListItemText><Typography variant={'h6'} fontFamily={AmiriFont} textAlign={'center'}>{`${item}`}</Typography></ListItemText>
                         </ListItemButton>
                 </ListItem>
             ))}
@@ -70,7 +70,7 @@ export function ListDownload(prop) {
                 sx={{width:'90%', height:'auto', p:2}}
                 subheader={
                     <ListSubheader sx={{ color:white_100, backgroundColor:black_80, borderRadius:2, p:0}}>
-                        <DOWNLOAD_BUTTON  title={DOWNLOAD} handleClickOpen={handleClickOpen} matches={matches}/>
+                        <DOWNLOAD_BUTTON  title={prop.download} handleClickOpen={handleClickOpen} matches={matches}/>
                     </ListSubheader>}>
                     <CustomDrawer list={prop.list} handleClose={handleClose} open={open}  />
 

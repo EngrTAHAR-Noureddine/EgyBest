@@ -1,6 +1,5 @@
 import { Box} from "@mui/material";
-import dark from "../Asset/dark.jpg";
-import React from "react";
+import React, {useEffect} from "react";
 import {
     ACTOR,
     COMMENTS,
@@ -18,10 +17,54 @@ import {WatchDownloadMovie} from "../Themes/Elements/movie_watch_&_ download_sec
 import {TYPOGRAPHY_NOT_EXIST} from "../Themes/Styles/Typographies";
 import {RatingUser} from "../Components/Rate_user";
 import {CommentUser} from "../Themes/Elements/Comment_user";
+import String from '../Themes/String/String';
+
+
 
 
 export function Movie_Details(prop) {
+    const string = new String(prop.isArabic);
     const list  = [1,2,3,4,5,6];
+
+
+    const funActor = ()=>{
+        console.log('Movie detail : ',prop.selector);
+        if(prop.selector.actors){
+        return(
+            prop.selector.actors.map((item)=>(
+
+                <AvatarActor item={item} floatIt={string.JUSTIFY_DIRECTION()}/>
+
+            ))
+        )}else return (<div></div>)
+    }
+    const mapListItems = (list) => (
+        list.map((cusItem)=>(
+
+            <CONTAINER_NUMBER_BUTTON item={cusItem} floatIt={string.JUSTIFY_DIRECTION()}/>
+
+        ))
+    )
+    const funSeason = ()=>{
+        if(prop.selector.seasons){
+            return(
+                <SectionDetail title={string.SEASONS()}
+                               alignement={string.JUSTIFY_DIRECTION()}>
+                    {mapListItems(prop.selector.seasons)}
+
+                </SectionDetail>
+            )
+        }else return (<div></div>)
+    }
+    const funEpisode = ()=>{
+        if(prop.selector.episodes){
+            return(
+                <SectionDetail  title={string.EPISODES()} alignement={string.JUSTIFY_DIRECTION()}>
+                    {mapListItems(prop.selector.episodes)}
+                </SectionDetail>
+            )}else return (<div></div>)
+    }
+
     return(
         <Box flexGrow={1} width={'100%'} height={'100%'}>
             <Header_Movie_Details
@@ -33,41 +76,37 @@ export function Movie_Details(prop) {
             <RatingUser signedIn={prop.signedIn}/>
 
 
-
-
             <Detail_movie isArabic={prop.isArabic} item={prop.selector}/>
-
-            <SectionDetail title={ACTOR}>
-                {list.map((item)=>(
-
-                    <AvatarActor item={item}/>
-
-                ))}
+            <SectionDetail title={string.ACTOR()} alignement={string.JUSTIFY_DIRECTION()}>
+                {funActor()}
             </SectionDetail>
 
-            <SectionDetail title={SEASONS}>
-                {list.map((item)=>(
 
-                   <CONTAINER_NUMBER_BUTTON item={item}/>
+                {funSeason()}
 
-                ))}
+
+
+                {funEpisode()}
+
+
+            <WatchDownloadMovie isArabic={prop.isArabic} items={['1080p','720p','480p']} movie={prop.selector.linkMovie}/>
+            <CommentUser signedIn={prop.signedIn} alignement={string.JUSTIFY_DIRECTION()}/>
+            <SectionDetail title={string.COMMENTS()} alignement={string.JUSTIFY_DIRECTION()}>
+                <TYPOGRAPHY_NOT_EXIST text={string.COMMENTS_NOT_EXIST()}/>
             </SectionDetail>
-            <SectionDetail title={EPISODES}>
-                {list.map((item)=>(
-
-                    <CONTAINER_NUMBER_BUTTON item={item}/>
-
-                ))}
-            </SectionDetail>
-
-            <WatchDownloadMovie/>
-
-           <CommentUser/>
-
-            <SectionDetail title={COMMENTS}>
-                <TYPOGRAPHY_NOT_EXIST text={COMMENTS_NOT_EXIST}/>
-            </SectionDetail>
-
         </Box>
     )
 }
+//isDisplay={(prop.selector.episodes)?'flex':'none'}
+
+/*
+
+
+
+
+
+
+
+
+
+* */

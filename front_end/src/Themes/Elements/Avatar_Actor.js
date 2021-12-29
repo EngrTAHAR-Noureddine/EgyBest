@@ -20,7 +20,7 @@ export function AvatarActor(prop) {
              onMouseEnter={onMouseEnter}
              onMouseLeave={onMouseLeave}
              borderRadius={1000} bgcolor={grey_36}
-             sx={{display:'inline-flex', float:'left'}}
+             sx={{display:'inline-flex', float:prop.floatIt}}
                 m={1}
         >
 
@@ -31,14 +31,14 @@ export function AvatarActor(prop) {
                  alignItems={'center'} px={1}
                  width={{xs:150,sm:250,lg:300}} height={{xs:50,lg:100}} borderRadius={1000}>
 
-               <TYPOGRAPHY_NAME_ACTOR name={`James Spader ${prop.item}`} />
+               <TYPOGRAPHY_NAME_ACTOR name={`${prop.item.name}`} />
                 <Box width={'90%'} height={5}/>
-                <TYPOGRAPHY_PLAY_ACTOR name={'Raymound Redington'}/>
+                <TYPOGRAPHY_PLAY_ACTOR name={`${prop.item.cast}`}/>
             </Box>
 
             <Avatar sx={{
                         width:{xs:50,lg:100}, height:{xs:50,lg:100}, boxShadow:(state)?0:10,
-                        }} src={actor}/>
+                        }} src={prop.item.photo}/>
             </Box>
         </Box>
 

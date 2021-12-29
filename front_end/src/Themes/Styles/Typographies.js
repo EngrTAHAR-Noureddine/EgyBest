@@ -80,7 +80,7 @@ export const TYPOGRAPHY_POPUP_MENU = (prop) => (
 
 export const TYPOGRAPHY_SEARCH_RESULT = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-    <Typography variant={'h5'} width={'inherit'} height={'auto'} textAlign={'left'}
+    <Typography variant={'h5'} width={'inherit'} height={'auto'} textAlign={prop.alignement}
                 color={white_EC}
                 fontFamily={AmiriFont}
                 fontWeight={prop.Weight}
@@ -246,7 +246,7 @@ export const TYPOGRAPHY_PLAY_ACTOR = prop =>(
 );
 
 export const TYPOGRAPHY_NOT_EXIST = (prop) =>(
-    <Typography p={1} variant={'h6'} color={white_100} textAlign={'center'}> {prop.text} </Typography>
+    <Typography p={1} variant={'h6'} color={white_100} fontFamily={AmiriFont} sx={{wordWrap: "break-word" }} textAlign={'center'}> {prop.text} </Typography>
 )
 export const TYPOGRAPHY_YOUR_RATING = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
