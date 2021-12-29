@@ -3,7 +3,7 @@ import {flex_styles} from "../Styles/styles";
 import {useState} from "react";
 import { grey_36} from "../Styles/Color";
 
-import actor from "../../Asset/Actor.jpg";
+
 import {TYPOGRAPHY_NAME_ACTOR, TYPOGRAPHY_PLAY_ACTOR} from "../Styles/Typographies";
 export function AvatarActor(prop) {
     const [state, setState] = useState(false);
@@ -28,10 +28,10 @@ export function AvatarActor(prop) {
             <Box display={(state)?'flex':'none'}
                  justifyContent={'center'}
                  flexDirection={'column'}
-                 alignItems={'center'} px={1}
+                 alignItems={'center'}
                  width={{xs:150,sm:250,lg:300}} height={{xs:50,lg:100}} borderRadius={1000}>
 
-               <TYPOGRAPHY_NAME_ACTOR name={`${prop.item.name}`} />
+               <TYPOGRAPHY_NAME_ACTOR item={prop.item} selectorActor={prop.selectorActor} name={`${prop.item.name}`} />
                 <Box width={'90%'} height={5}/>
                 <TYPOGRAPHY_PLAY_ACTOR name={`${prop.item.cast}`}/>
             </Box>

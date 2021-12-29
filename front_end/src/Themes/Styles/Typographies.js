@@ -230,12 +230,15 @@ export const TYPOGRAPHY_DETAILS = (prop)=>(
 );
 
 export const TYPOGRAPHY_NAME_ACTOR = (prop)=>(
+    <Link href={'/actor'} width={'inherit'} onClick={()=>prop.selectorActor(prop.item)}>
     <ThemeProvider theme={themeTyp}>
-    <Typography variant={'h5'} width={'90%'} textAlign={'center'} color={blue_0A}
-                fontFamily={AmiriFont} fontWeight={'bold'} sx={{textDecoration:'underline'}} style={{ wordWrap: "break-word" }}>
+    <Typography  variant={'h5'} width={'90%'} textAlign={'center'} color={blue_0A}
+                fontFamily={AmiriFont} fontWeight={'bold'} sx={{textDecoration:'underline',width:'90%',px:1}}
+                style={{ wordWrap: "break-word" }}>
         {prop.name}
     </Typography>
     </ThemeProvider>
+    </Link>
 );
 export const TYPOGRAPHY_PLAY_ACTOR = prop =>(
     <ThemeProvider theme={themeTypH6}>

@@ -1,13 +1,5 @@
 import { Box} from "@mui/material";
-import React, {useEffect} from "react";
-import {
-    ACTOR,
-    COMMENTS,
-    COMMENTS_NOT_EXIST,
-    EPISODES,
-    SEASONS,
-    STORY,
-} from "../Themes/String/String_eng";
+import React from "react";
 import {Header_Movie_Details} from "../Components/Header_Movie_Details";
 import {Detail_movie} from "../Components/detail_movie";
 import {AvatarActor} from "../Themes/Elements/Avatar_Actor";
@@ -24,7 +16,6 @@ import String from '../Themes/String/String';
 
 export function Movie_Details(prop) {
     const string = new String(prop.isArabic);
-    const list  = [1,2,3,4,5,6];
 
 
     const funActor = ()=>{
@@ -33,7 +24,7 @@ export function Movie_Details(prop) {
         return(
             prop.selector.actors.map((item)=>(
 
-                <AvatarActor item={item} floatIt={string.JUSTIFY_DIRECTION()}/>
+                <AvatarActor selectorActor={prop.selectorActor} item={item} floatIt={string.JUSTIFY_DIRECTION()}/>
 
             ))
         )}else return (<div></div>)

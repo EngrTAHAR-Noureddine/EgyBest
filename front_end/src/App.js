@@ -30,12 +30,17 @@ function App(props) {
     const [listWWE,setListWWE] = useState([]);
     const [listSearch,setListSearch] = useState([]);
     const [SignedIN, setSignIn] = useState(false);
+    const [actorState, setActor] = useState({});
 
     const [selectorForDetails, setSelectorForDetails] = useState({});
 
     const selectorClicker = (obj)=>{ // may be serie, movie , theater or wwe selector
         localStorage.setItem('selector', JSON.stringify(obj));
         setSelectorForDetails(obj)
+    }
+    const selectorActor = (obj)=>{ // may be serie, movie , theater or wwe selector
+        localStorage.setItem('actor', JSON.stringify(obj));
+        setActor(obj)
     }
 
     useEffect(()=>{
@@ -53,8 +58,9 @@ function App(props) {
             .then(data => setListWWE(data))
 
         const obj = localStorage.getItem('selector');
-
         setSelectorForDetails(JSON.parse(obj));
+        const obj1 = localStorage.getItem('actor');
+        setActor(JSON.parse(obj1));
 
     },[])
 
@@ -103,13 +109,13 @@ function App(props) {
                       <Search isArabic={props.isArabic} list={listSearch}/>
                   </Route>
                   <Route exact path="/actor">
-                      <Actor/>
+                      <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>
                   </Route>
                   <Route exact path="/profile">
                       <Profile/>
                   </Route>
                   <Route exact path="/details">
-                      <Movie_Details signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
+                      <Movie_Details selectorActor={selectorActor} signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
                   </Route>
                   <Route exact path="/settings">
                       <Settings/>
