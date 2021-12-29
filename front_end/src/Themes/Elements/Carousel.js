@@ -10,35 +10,36 @@ import hannibal from '../../Asset/hannibal.jpg';
 import {IMAGE} from "./IMAGE";
 import {black_60} from "../Styles/Color";
 
-export  const Custom_Carrousel = () => {
+export  const Custom_Carrousel = (prop) => {
 
     const items = [
         {
-            url: dark,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         },
         {
-            url: hannibal,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         },
         {
-            url: suits,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         },
         {
-            url: hitman,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         },
         {
-            url: notime,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         },
         {
-            url: suits02,
+            bigPicture: "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
 
         }
     ]
 
+    console.log('caroussel : ',prop.list);
     return (
         <Carousel animation={'slide'} autoPlay={true}>
             {
@@ -69,7 +70,7 @@ function Item(props)
                     flexGrow: 1,
                     backgroundColor:black_60,
                 }}  />
-            <IMAGE url={props.item.url}/>
+            <IMAGE url={props.item.bigPicture}/>
 
         </Paper>
     )

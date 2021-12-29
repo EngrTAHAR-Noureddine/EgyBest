@@ -6,16 +6,13 @@ import {ANIME, LATEST_ADDITIONS, MOST_WATCHED, MOVIES, SERIES, WWE} from "../The
 
 
 
-function Home() {
+function Home(prop) {
     const list = [1,2,3,4,5,6];
-    useEffect(()=>{
-        const data = require("../DataJSON/movies.json");
-        console.log(data);
-    },[])
+    const listCarrousel = [prop.listMovies[0],prop.listSeries[0],prop.listMovies[1],prop.listSeries[1],prop.listMovies[2],prop.listSeries[2]];
 
     return (
         <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
-            <Custom_Carrousel/>
+            <Custom_Carrousel list={listCarrousel}/>
             <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
                 <MovieCardsChain list={list} item={LATEST_ADDITIONS}/>
                 <MovieCardsChain list={list} item={MOST_WATCHED}/>

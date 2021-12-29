@@ -20,10 +20,50 @@ import {
 import { connect } from 'react-redux';
 import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic';
 import String from "./Themes/String/String";
+import {useEffect, useState} from "react";
+import dataM from "./DataJSON/movies.json";
+
 
 
 
 function App(props) {
+    const [listMovies, setListMovies] = useState([]);
+    const [listSeries,setListSeries] = useState([]);
+    const [listTheaters,setListTheaters] = useState([]);
+    const [listWWE,setListWWE] = useState([]);
+    const [listSearch,setListSearch] = useState([]);
+
+    const [selectorForDetails, setSelectorForDetails] = useState({});
+
+    const selectorClicker = (obj)=>{ // may be serie, movie , theater or wwe selector
+        setSelectorForDetails(obj)
+    }
+
+    let fetchingMovies =async ()=>{
+        const data = require("./DataJSON/movies.json");
+        return data
+    }
+    let fetchingSeries =async ()=>{
+        const data = require("./DataJSON/series.json");
+        return data
+    }
+
+    useEffect(()=>{
+        //const dataM = require("./DataJSON/movies.json");
+        fetchingMovies().then((res)=>setListMovies(res));
+        fetchingSeries().then((res)=>setListSeries(res));
+        //setListMovies(dataM);
+        //const dataS = require("./DataJSON/series.json");
+        //setListSeries(dataS);
+        //const dataTH =  require("./DataJSON/theater.json");
+        //setListTheaters(dataTH);
+        //const dataW = require("./DataJSON/wwe.json");
+        //setListWWE(dataW);
+
+
+        //console.log('list movies : ',listMovies);
+    },[])
+
     const string = new String(props.isArabic);
 
     const ToggleArabic = ()=>{
@@ -33,9 +73,6 @@ function App(props) {
                 props.actionArabicVersion()
             }
         string.toggle(props.isArabic);
-
-
-
     }
 
 
@@ -48,13 +85,28 @@ function App(props) {
               <CustomAppBar string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
               <Switch>
                   <Route exact path="/">
-                      <Home/>
+                      <Home isArabic={props.isArabic}
+                            listMovies={listMovies}
+                            listSeries={listSeries}
+                            listTheaters={listTheaters}
+                            listWWE={listWWE}
+                            selectorClicker={selectorClicker}
+                      />
                   </Route>
                   <Route exact path="/list-movies">
-                      <ListMovies/>
+                      <ListMovies  isArabic={props.isArabic} list={listMovies}/>
+                  </Route>
+                  <Route exact path="/list-series">
+                      <ListMovies  isArabic={props.isArabic} list={listSeries}/>
+                  </Route>
+                  <Route exact path="/list-theaters">
+                      <ListMovies  isArabic={props.isArabic} list={listTheaters}/>
+                  </Route>
+                  <Route exact path="/list-wwe">
+                      <ListMovies  isArabic={props.isArabic} list={listWWE}/>
                   </Route>
                   <Route exact path="/search">
-                      <Search/>
+                      <Search isArabic={props.isArabic} list={listSearch}/>
                   </Route>
                   <Route exact path="/actor">
                       <Actor/>
@@ -63,7 +115,7 @@ function App(props) {
                       <Profile/>
                   </Route>
                   <Route exact path="/details">
-                      <Movie_Details/>
+                      <Movie_Details selector={selectorForDetails}/>
                   </Route>
                   <Route exact path="/settings">
                       <Settings/>
