@@ -39,29 +39,19 @@ function App(props) {
         setSelectorForDetails(obj)
     }
 
-    let fetchingMovies =async ()=>{
-        const data = require("./DataJSON/movies.json");
-        return data
-    }
-    let fetchingSeries =async ()=>{
-        const data = require("./DataJSON/series.json");
-        return data
-    }
-
     useEffect(()=>{
-        //const dataM = require("./DataJSON/movies.json");
-        fetchingMovies().then((res)=>setListMovies(res));
-        fetchingSeries().then((res)=>setListSeries(res));
-        //setListMovies(dataM);
-        //const dataS = require("./DataJSON/series.json");
-        //setListSeries(dataS);
-        //const dataTH =  require("./DataJSON/theater.json");
-        //setListTheaters(dataTH);
-        //const dataW = require("./DataJSON/wwe.json");
-        //setListWWE(dataW);
-
-
-        //console.log('list movies : ',listMovies);
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/movies.json")
+            .then(res => res.json())
+            .then(data => setListMovies(data))
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/series.json")
+            .then(res => res.json())
+            .then(data => setListSeries(data))
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/theater.json")
+            .then(res => res.json())
+            .then(data => setListTheaters(data))
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/wwe.json")
+            .then(res => res.json())
+            .then(data => setListWWE(data))
     },[])
 
     const string = new String(props.isArabic);

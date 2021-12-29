@@ -8,11 +8,10 @@ import {ANIME, LATEST_ADDITIONS, MOST_WATCHED, MOVIES, SERIES, WWE} from "../The
 
 function Home(prop) {
     const list = [1,2,3,4,5,6];
-    const listCarrousel = [prop.listMovies[0],prop.listSeries[0],prop.listMovies[1],prop.listSeries[1],prop.listMovies[2],prop.listSeries[2]];
 
     return (
         <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
-            <Custom_Carrousel list={listCarrousel}/>
+            <Custom_Carrousel list={prop.listMovies.slice(0,6)}/>
             <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
                 <MovieCardsChain list={list} item={LATEST_ADDITIONS}/>
                 <MovieCardsChain list={list} item={MOST_WATCHED}/>

@@ -43,7 +43,7 @@ export  const Custom_Carrousel = (prop) => {
     return (
         <Carousel animation={'slide'} autoPlay={true}>
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                prop.list.map( (item, i) => <Item key={i} item={item} /> )
             }
         </Carousel>
     );
@@ -62,6 +62,7 @@ function Item(props)
                 backgroundColor:'transparent',
             }}>
             <Box
+
                 position={'absolute'}
                 zIndex={5}
                 height={"100%"}
