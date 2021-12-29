@@ -30,6 +30,8 @@ function App(props) {
     const [listSearch,setListSearch] = useState([]);
     const [SignedIN, setSignIn] = useState(false);
     const [actorState, setActor] = useState({});
+    const [selectorForDetails, setSelectorForDetails] = useState({});
+    const [wordSearch,setWordSearch] = useState('');
 
     const setUser = ()=>{
         if(SignedIN){
@@ -43,7 +45,20 @@ function App(props) {
 
     }
 
-    const [selectorForDetails, setSelectorForDetails] = useState({});
+    const setResearch = (name)=>{
+        const l1 = listMovies.filter((item)=>(item.name.toLowerCase()===name.toLowerCase()));
+        const l2 = listSeries.filter((item)=>(item.name.toLowerCase()===name.toLowerCase()));
+        const l3 = listTheaters.filter((item)=>(item.name.toLowerCase()===name.toLowerCase()));
+        const l4 = listWWE.filter((item)=>(item.name.toLowerCase()===name.toLowerCase()));
+
+        let list = (l1.length>0)?l1.concat(l2):l2;
+        list = (list.length>0)?list.concat(l3):l3;
+        list = (list.length>0)?list.concat(l4):l4;
+        localStorage.setItem('search', JSON.stringify(list));
+        localStorage.setItem('wordSearch',name);
+        setListSearch(list);
+        setWordSearch(name);
+    }
 
     const selectorClicker = (obj)=>{ // may be serie, movie , theater or wwe selector
         localStorage.setItem('selector', JSON.stringify(obj));
@@ -74,8 +89,10 @@ function App(props) {
         setActor(JSON.parse(obj1));
         const obj2 = localStorage.getItem('user');
         if(obj2==='true'){ setSignIn(true)} else setSignIn(false);
-
-
+        const obj3 = localStorage.getItem('search');
+        setListSearch(JSON.parse(obj3));
+        const obj4= localStorage.getItem('wordSearch');
+        setWordSearch(obj4);
     },[])
 
     const string = new String(props.isArabic);
@@ -96,7 +113,7 @@ function App(props) {
       <Router>
           <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
               backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
-              <CustomAppBar SignedIN={SignedIN} string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
+              <CustomAppBar setResearch={setResearch} SignedIN={SignedIN}  string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
               <Switch>
                   <Route exact path="/">
                       <Home isArabic={props.isArabic}
@@ -120,7 +137,7 @@ function App(props) {
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listWWE}/>
                   </Route>
                   <Route exact path="/search">
-                      <Search isArabic={props.isArabic} list={listSeries}/>
+                      <Search isArabic={props.isArabic} list={listSearch} wordSearch={wordSearch}/>
                   </Route>
                   <Route exact path="/actor">
                       <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>

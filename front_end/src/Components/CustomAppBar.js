@@ -56,7 +56,7 @@ function CustomAppBar(prop) {
                                 <Grid container xs={12} style={flex_styles.row_right}>
 
                                     <Grid item xs={12} xl={9} style={flex_styles.row_right}>
-                                        <SearchBar isArabic={prop.isArabic}/>
+                                        <SearchBar setResearch={prop.setResearch} isArabic={prop.isArabic}/>
                                         <LANGUAGE_BUTTON isArabic={prop.isArabic} click={prop.toggleLanguage}/>
                                     </Grid>
 
