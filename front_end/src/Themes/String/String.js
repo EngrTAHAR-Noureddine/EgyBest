@@ -30,6 +30,9 @@ export default class String{
     WWE = ()=> ((this.isArabic)?'مصارعة':'Wwe');
     SIGNUP = ()=> ((this.isArabic)?'إشتراك':'SignUp');
     SIGNIN = ()=> ((this.isArabic)?'تسجيل':'SignIn');
+    SIGNOUT = ()=>((this.isArabic)?'الخروج':'SignOut');
+    LIBRARY = ()=>((this.isArabic)?'مكتبتي':'Library');
+    SETTINGS=()=>((this.isArabic)?'اعدادات':'Settings');
     HOME = ()=> ((this.isArabic)?'الرئيسية':'Home');
     //**************************************************************************************************
     MORE = ()=> ((this.isArabic)?'المزيد':'MORE');
@@ -38,6 +41,7 @@ export default class String{
     //*********************************************************************************************
     SEARCH = ()=> ((this.isArabic)?': البحث':'Search :');
     SEARCH_PLACEHOLDER = ()=> ((this.isArabic)?'بحث':'Search...');
+    NOT_FOUND=()=>((this.isArabic)?'ﻻ يوجد':'There is no');
     //******************************************************************************************
     PAGE_NOT_FOUND = ()=> ((this.isArabic)?'الصفحة غير موجودة':'Page not found');
     //******************************************************************************************

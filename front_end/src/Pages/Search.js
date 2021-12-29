@@ -29,7 +29,7 @@ export default function Search(prop) {
             </Grid>
             </Box>
             {
-                (prop.list && (prop.list.length>0))?<Result_List list={prop.list}/>:<TYPOGRAPHY_PAGE_NOT_FOUND title={'not found'}/>
+                (prop.list && (prop.list.length>0))?<Result_List list={prop.list}/>:<TYPOGRAPHY_PAGE_NOT_FOUND title={string.NOT_FOUND()}/>
             }
 
 

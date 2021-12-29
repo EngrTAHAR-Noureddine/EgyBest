@@ -45,10 +45,10 @@ function CustomAppBar(prop) {
                               flexDirection={string.ROW_REVERSE()} alignItems={'center'}
                               justifyContent={'center'}>
 
-                                <MENU_BUTTON_XL  item={string.MOVIES()}/>
-                                <MENU_BUTTON_XL  item={string.SERIES()}/>
-                                <MENU_BUTTON_XL  item={string.THEATER()}/>
-                                <MENU_BUTTON_XL  item={string.WWE()}/>
+                                <MENU_BUTTON_XL link={'/list-movies'} item={string.MOVIES()}/>
+                                <MENU_BUTTON_XL link={'/list-series'} item={string.SERIES()}/>
+                                <MENU_BUTTON_XL link={'/list-theaters'} item={string.THEATER()}/>
+                                <MENU_BUTTON_XL link={'/list-wwe'} item={string.WWE()}/>
 
                         </Grid>
                         <Grid item xs={6} xl={4} style={flex_styles.col_center}>
@@ -83,7 +83,7 @@ function CustomAppBar(prop) {
                             </div>
                         </Grid>
                     </Grid>
-                    <CustomDrawerMenuAppBar isArabic={prop.isArabic} click={prop.toggleLanguage} handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
+                    <CustomDrawerMenuAppBar setUser={prop.setUser} SignedIN={prop.SignedIN} isArabic={prop.isArabic} click={prop.toggleLanguage} handleClickOpen={handleClickOpen} handleClose={handleClose} open={open} />
                 </Toolbar>
             </AppBar>
             </ScrollToColor>

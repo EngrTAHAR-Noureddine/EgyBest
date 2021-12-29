@@ -6,7 +6,6 @@ import {
     TYPOGRAPHY_SHORTCUT_LIST, TYPOGRAPHY_SIGN_TITLE, TYPOGRAPHY_SIGN_WITH
 } from "../Styles/Typographies";
 import {
-    ArrowBack,
     ArrowBackIosOutlined,
     ArrowDropDown,
     ArrowDropUp,
@@ -14,7 +13,6 @@ import {
     Star
 } from "@mui/icons-material";
 import React from "react";
-import {MORE, SIGN_IN} from "../String/String_eng";
 import {
     black_20,
     black_30, black_60, black_80,
@@ -31,7 +29,7 @@ import {flex_styles} from "../Styles/styles";
 
 
 export const MENU_BUTTON_XL = (prop)=>(
-    <Button
+    <Button href={prop.link}
         sx={{
         color:white_100,
         textTransform: 'none',
