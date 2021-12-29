@@ -8,11 +8,11 @@ import {RatingBar} from "../Themes/Elements/rating_bar";
 import {ScoreCounter} from "../Themes/Elements/Score_counter";
 import React from "react";
 
-export function RatingUser() {
+export function RatingUser(prop) {
 
 
     return(
-        <Box flexGrow={1} height={'10vh'} display={'flex'} borderRadius={5} mt={2}
+        <Box flexGrow={1} height={'10vh'} display={(prop.signedIn)?'flex':'none'} borderRadius={5} mt={2}
              justifyContent={'space-between'} alignItems={'center'} bgcolor={white_10} mx={5}>
 
             <Box width={{xs:'40%', lg:'20%'}} height={'100%'}

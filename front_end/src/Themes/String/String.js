@@ -98,6 +98,73 @@ export default class String{
     //***********************************************************************
     FILTER = ()=> ((this.isArabic)?'بحث':'Filter');
     CLEAR = ()=> ((this.isArabic)?'مسح':'Clear');
+
+    ARABIC_INITIAL_FILTER=()=>({
+        Language:'اللغة',
+        Status:'الدقة',
+        Quality:'الجودة',
+        Year:'العام',
+        Country:'الدولة',
+        Category:'الفئة',
+        Type:'النوع',
+        Translate:'الترجمة'
+    });
+
+    ARABIC_FILTER_LIST=()=>([
+
+        {
+            type:'اللغة',
+            list:['إنجليزي','العربية','فرنسي','ألماني','ياباني','صيني','إسباني']
+        },
+        {
+            type:'الدقة',
+            list:['360px','480px','720px','1080px','2k','4k','8k']
+        },
+        {
+            type:'الجودة',
+            list:['BluRay','WEB-DL','DVDRip','HDRip','HDTC','HDTS','HDTV']
+        },
+        {
+            type:'العام',
+            list:['2021','2020','2019','2018','2017','2016','2015']
+        },
+        {
+            type:'الدولة',
+            list:['الولايات','انجلترا','فرنسا','هند','يابان','ايطاليا','روسيا']
+        },
+        {
+            type:'الفئة',
+            list:['R','PG-13','TV-14','TV-MA','TV-PG','TV-Y','TV-Y7']
+        },
+        {
+            type:'النوع',
+            list:['Action','History','Crime','Drama','War','Sci-fi','Romantic']
+        },
+        {
+            type:'الترجمة',
+            list:['إنجليزي','العربية','فرنسي','ألماني','ياباني','صيني','إسباني']
+        }
+    ]);
+
+    INITIAL_FILTER = ()=>((this.isArabic)?{
+        Language:'اللغة',
+        Status:'الدقة',
+        Quality:'الجودة',
+        Year:'العام',
+        Country:'الدولة',
+        Category:'الفئة',
+        Type:'النوع',
+        Translate:'الترجمة'
+    }:{
+        Language:'Language',
+        Status:'Status',
+        Quality:'Quality',
+        Year:'Year',
+        Country:'Country',
+        Category:'Category',
+        Type:'Type',
+        Translate:'Translate'
+    });
     FILTER_LIST = ()=> ((this.isArabic)?[
 
         {

@@ -64,7 +64,7 @@ export function CustomDialogOfFilter(prop){
                     <Button autoFocus color="inherit" onClick={prop.onClear}>
                         Clear
                     </Button>
-                    <Button autoFocus color={'info'} onClick={prop.handleClose}>
+                    <Button autoFocus color={'info'} onClick={()=>{prop.handleClose(); prop.onFilter(prop.selector);}}>
                         Filter
                     </Button>
                 </Toolbar>

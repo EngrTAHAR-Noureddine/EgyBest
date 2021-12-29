@@ -19,9 +19,7 @@ export function FilterButton (prop){
         setOpen(false);
     };
 
-    const onFilter = () => {
 
-    }
 
     const onClear = ()=>{
         prop.setSelect({
@@ -38,8 +36,11 @@ export function FilterButton (prop){
 
     return(
         <Box width={'inherit'} height={'inherit'} style={flex_styles.col_center}>
-            <FILTER_BUTTON onClicked={()=>(matches)?onFilter():handleClickOpen()}/>
-            <CustomDialogOfFilter onClear={onClear} setSelect={prop.setSelect} open={open} handleClose={handleClose} selector={prop.selector}
+            <FILTER_BUTTON onClicked={()=>(matches)?()=>prop.onFilter(prop.selector):handleClickOpen()}/>
+            <CustomDialogOfFilter onClear={onClear} setSelect={prop.setSelect}
+                                  open={open} handleClose={handleClose}
+                                  onFilter={prop.onFilter}
+                                  selector={prop.selector}
                                   FilterList={prop.FilterList}/>
         </Box>
     )

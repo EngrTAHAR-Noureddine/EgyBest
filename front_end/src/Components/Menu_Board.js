@@ -7,8 +7,11 @@ import {SHORTCUT_LIST_BUTTON} from "../Themes/Elements/Buttons";
 import {CustomPopUpMenu} from "../Themes/Elements/CustomPopUpMenu";
 import {FilterButton} from "./filter_for_mobile";
 
-export default function Menu_Board() {
+
+export default function Menu_Board(prop) {
+
     const FilterList = FILTER_LIST;
+
     const [selector,setSelect]=useState({
         Language:'Language',
         Status:'Status',
@@ -33,8 +36,13 @@ export default function Menu_Board() {
                       direction={{xs:'column-reverse',lg:'row'}}
                       justifyContent='center'
                       alignItems='center'>
-                    <Filter_List  filterList={FilterList} selector={selector} setSelect={setSelect} />
-                    <ListMenu list={LIST_SHORTCUTS} setSelect={setSelect} selector={selector} FilterList={FilterList}/>
+                    <Filter_List   filterList={FilterList} selector={selector} setSelect={setSelect} />
+
+                    <ListMenu onFilter={prop.onFilter}
+                              list={LIST_SHORTCUTS}
+                              setSelect={setSelect}
+                              selector={selector}
+                              FilterList={FilterList}/>
                 </Grid>
             </Box>
         </Box>
@@ -75,7 +83,7 @@ function ListMenu(prop){
 
                     <Grid item xs={2} height={'100%'} width={'100%'} >
 
-                            <FilterButton setSelect={prop.setSelect} selector={prop.selector} FilterList={prop.FilterList}/>
+                            <FilterButton onFilter={prop.onFilter} setSelect={prop.setSelect} selector={prop.selector} FilterList={prop.FilterList}/>
 
                     </Grid>
 

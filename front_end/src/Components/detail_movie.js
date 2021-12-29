@@ -14,7 +14,7 @@ import {
 import React from "react";
 import {PlayVideo} from "../Themes/Elements/play_video";
 
-export function Detail_movie(){
+export function Detail_movie(prop){
     return(
         <Box flexGrow={1} m={1} mx={5} height={{xs:'70vh', md:'50vh'}}
              borderRadius={5} bgcolor={white_05}>
@@ -26,7 +26,7 @@ export function Detail_movie(){
             >
                 <Grid item  xs={5} width={'100%'} height={'100%'} p={1}  >
                     <Box width={'100%'} height={'100%'} >
-                        <PlayVideo url={"https://www.youtube.com/embed/IeiJO1eUEiU"}/>
+                        <PlayVideo url={prop.trailerMovie}/>
                     </Box>
                 </Grid>
                 <Grid item  xs ={6} width={'100%'} height={'100%'}  p={1}>

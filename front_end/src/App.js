@@ -32,6 +32,7 @@ function App(props) {
     const [listTheaters,setListTheaters] = useState([]);
     const [listWWE,setListWWE] = useState([]);
     const [listSearch,setListSearch] = useState([]);
+    const [SignedIN, setSignIn] = useState(false);
 
     const [selectorForDetails, setSelectorForDetails] = useState({});
 
@@ -84,16 +85,16 @@ function App(props) {
                       />
                   </Route>
                   <Route exact path="/list-movies">
-                      <ListMovies  isArabic={props.isArabic} list={listMovies}/>
+                      <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listMovies}/>
                   </Route>
                   <Route exact path="/list-series">
-                      <ListMovies  isArabic={props.isArabic} list={listSeries}/>
+                      <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listSeries}/>
                   </Route>
                   <Route exact path="/list-theaters">
-                      <ListMovies  isArabic={props.isArabic} list={listTheaters}/>
+                      <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listTheaters}/>
                   </Route>
                   <Route exact path="/list-wwe">
-                      <ListMovies  isArabic={props.isArabic} list={listWWE}/>
+                      <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listWWE}/>
                   </Route>
                   <Route exact path="/search">
                       <Search isArabic={props.isArabic} list={listSearch}/>
@@ -105,7 +106,7 @@ function App(props) {
                       <Profile/>
                   </Route>
                   <Route exact path="/details">
-                      <Movie_Details selector={selectorForDetails}/>
+                      <Movie_Details signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
                   </Route>
                   <Route exact path="/settings">
                       <Settings/>

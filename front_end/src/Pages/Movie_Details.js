@@ -20,19 +20,22 @@ import {RatingUser} from "../Components/Rate_user";
 import {CommentUser} from "../Themes/Elements/Comment_user";
 
 
-export function Movie_Details() {
+export function Movie_Details(prop) {
     const list  = [1,2,3,4,5,6];
     return(
         <Box flexGrow={1} width={'100%'} height={'100%'}>
-            <Header_Movie_Details title={'Dark'} rating={'9.7'} story={STORY} image={dark}/>
+            <Header_Movie_Details
+                                    title={prop.selector.name} rating={prop.selector.rate}
+                                    story={(prop.isArabic)?prop.selector.storyAR:prop.selector.story}
+                                    image={prop.selector.bigPicture}/>
 
 
-            <RatingUser/>
+            <RatingUser signedIn={prop.signedIn}/>
 
 
 
 
-            <Detail_movie/>
+            <Detail_movie />
 
             <SectionDetail title={ACTOR}>
                 {list.map((item)=>(
