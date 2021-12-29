@@ -24,7 +24,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "2h 18min",
+    "DurationMovie": "2h 18min",
     "translate": [
       "Arabic",
       "English"
@@ -103,7 +103,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 58min",
+    "DurationMovie": "1h 58min",
     "translate": [
       "Arabic",
       "English"
@@ -180,7 +180,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "2h 7m",
+    "DurationMovie": "2h 7m",
     "translate": [
       "Arabic",
       "English",
@@ -262,7 +262,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 49m",
+    "DurationMovie": "1h 49m",
     "translate": [
       "Arabic",
       "English"
@@ -341,7 +341,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 30m",
+    "DurationMovie": "1h 30m",
     "translate": [
       "Arabic",
       "English",
@@ -422,7 +422,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 47m",
+    "DurationMovie": "1h 47m",
     "translate": [
       "Arabic",
       "English"
@@ -501,7 +501,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 52m",
+    "DurationMovie": "1h 52m",
     "translate": [
       "Arabic",
       "English"
@@ -579,7 +579,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 30m",
+    "DurationMovie": "1h 30m",
     "translate": [
       "Arabic",
       "English"
@@ -658,7 +658,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 55m",
+    "DurationMovie": "1h 55m",
     "translate": [
       "Arabic",
       "English"
@@ -737,7 +737,7 @@
       "720p",
       "1080p"
     ],
-    "duration": "1h 25m",
+    "DurationMovie": "1h 25m",
     "translate": [
       "Arabic",
       "English"
