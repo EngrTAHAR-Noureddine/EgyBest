@@ -200,13 +200,30 @@ export const TYPOGRAPHY_STORY = (prop)=>(
 );
 export const TYPOGRAPHY_DETAILS = (prop)=>(
     <ThemeProvider theme={themeTypH6}>
-        <Typography variant={'h6'} width={'inherit'} textAlign={'left'}
+        <Typography variant={'h6'} width={'inherit'}
+                    display={'flex'}
+                    flexDirection={prop.rowRev}
+                    justifyContent={prop.alignement}
                     color={white_EC}
                     fontFamily={AmiriFont}
                     fontWeight={'normal'}
-                    style={{ wordWrap: "break-word" }}
+                    sx={{ wordWrap: "break-word" }}
         >
-            {prop.item}
+            <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
+                        color={white_EC}
+                        fontFamily={AmiriFont}
+                        fontWeight={'normal'}
+                        style={{ wordWrap: "break-word" }}>
+                {prop.title}
+            </Typography>
+            <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
+                        color={white_EC}
+                        fontFamily={AmiriFont}
+                        fontWeight={'normal'}
+                        style={{ wordWrap: "break-word" }}>
+                {prop.item}
+            </Typography>
+
         </Typography>
     </ThemeProvider>
 );

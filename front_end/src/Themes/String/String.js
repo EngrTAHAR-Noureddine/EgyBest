@@ -17,6 +17,7 @@ export default class String{
 
     JUSTIFY_DIRECTION = ()=> ((this.isArabic)?'right':'left');
     ROW_REVERSE = ()=> ((this.isArabic)?'row-reverse':'row');
+    REVERSE_ROW = ()=> ((this.isArabic)?'row':'row-reverse');
     FLEX_STYLE_ROW_DIRECTION =()=> ((this.isArabic)?flex_styles.row_right:flex_styles.row_left);
 
 
@@ -78,14 +79,14 @@ export default class String{
     DOWNLOAD = ()=> ((this.isArabic)?'التحميل':'Download');
     MINUTE = ()=> ((this.isArabic)?'دقيقة':'min');
     //**************************************************************************
-    NAME_MOVIE = ()=> ((this.isArabic)?'الاسم بالعربي: ':'Name: ');
-    CLASSIFICATION = ()=> ((this.isArabic)?'التصنيف: ':'Classification: ');
-    COUNTRY = ()=> ((this.isArabic)?'الدولة: ':'Country: ');
-    LANGUAGE = ()=> ((this.isArabic)?'اللغة: ':'Language: ');
-    TYPE = ()=> ((this.isArabic)?'النوع: ':'Type: ');
-    QUALITY = ()=> ((this.isArabic)?'الجودة: ':'Quality: ');
-    DURATION = ()=> ((this.isArabic)?'المدة: ':'Duration: ');
-    SUBTITLES = ()=> ((this.isArabic)?'الترجمة: ':'Subtitles: ');
+    NAME_MOVIE = ()=> ((this.isArabic)?' :الاسم بالعربي ':'Name: ');
+    CLASSIFICATION = ()=> ((this.isArabic)?':التصنيف ':'Classification: ');
+    COUNTRY = ()=> ((this.isArabic)?':الدولة':'Country: ');
+    LANGUAGE = ()=> ((this.isArabic)?':اللغة ':'Language: ');
+    TYPE = ()=> ((this.isArabic)?':النوع ':'Type: ');
+    QUALITY = ()=> ((this.isArabic)?' :الجودة ':'Quality: ');
+    DURATION = ()=> ((this.isArabic)?':المدة ':'Duration: ');
+    SUBTITLES = ()=> ((this.isArabic)?':الترجمة ':'Subtitles: ');
 
     NEXT = ()=> ((this.isArabic)?'التالي':'Next');
     PREVIOUS = ()=> ((this.isArabic)?'السابق':'Previous');

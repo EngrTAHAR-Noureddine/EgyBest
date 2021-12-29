@@ -35,7 +35,7 @@ export function Movie_Details(prop) {
 
 
 
-            <Detail_movie />
+            <Detail_movie isArabic={prop.isArabic} item={prop.selector}/>
 
             <SectionDetail title={ACTOR}>
                 {list.map((item)=>(

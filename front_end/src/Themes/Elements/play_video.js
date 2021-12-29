@@ -1,5 +1,5 @@
+import ReactPlayer from "react-player";
+
 export const PlayVideo = (prop)=>(
-    <iframe width="100%" height="100%"
-            src={prop.url}>
-    </iframe>
+    <ReactPlayer url={'https://www.youtube.com/embed/'+prop.url} width="100%" height="100%"/>
 )
