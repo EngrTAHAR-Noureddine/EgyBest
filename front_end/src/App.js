@@ -124,7 +124,7 @@ function App(props) {
                       <PageNotFound/>
                   </Route>
               </Switch>
-              <Footer/>
+              <Footer isArabic={props.isArabic}/>
 
           </Paper>
       </Router>
