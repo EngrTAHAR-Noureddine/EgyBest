@@ -21,9 +21,6 @@ import { connect } from 'react-redux';
 import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic';
 import String from "./Themes/String/String";
 import {useEffect, useState} from "react";
-import dataM from "./DataJSON/movies.json";
-
-
 
 
 function App(props) {
@@ -37,6 +34,7 @@ function App(props) {
     const [selectorForDetails, setSelectorForDetails] = useState({});
 
     const selectorClicker = (obj)=>{ // may be serie, movie , theater or wwe selector
+        localStorage.setItem('selector', JSON.stringify(obj));
         setSelectorForDetails(obj)
     }
 
@@ -53,6 +51,11 @@ function App(props) {
         fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/wwe.json")
             .then(res => res.json())
             .then(data => setListWWE(data))
+
+        const obj = localStorage.getItem('selector');
+
+        setSelectorForDetails(JSON.parse(obj));
+
     },[])
 
     const string = new String(props.isArabic);
