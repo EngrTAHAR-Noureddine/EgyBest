@@ -53,7 +53,7 @@ export default class String{
     OR_SIGN_UP_WITH = ()=> ((this.isArabic)?':أو الاشتراك ب':'or sign up with');
     HAVE_ACCOUNT = ()=> ((this.isArabic)?'هل لديك حساب؟':'do you have an account?');
     //*******************************************************************************************
-    REMOVE_ACCOUNT_ASKING = ()=> ((this.isArabic)?'؟هل تريد إزالة الحساب':'do you want to remove your account?');
+    REMOVE_ACCOUNT_ASKING = ()=> ((this.isArabic)?'هل تريد إزالة الحساب؟':'do you want to remove your account?');
     REMOVE_ACCOUNT = ()=> ((this.isArabic)?'إزالة الحساب':'Remove account');
     Old_PASSWORD = ()=> ((this.isArabic)?':كلمة المرور الحالية':'Old Password:');
     NEW_PASSWORD= ()=> ((this.isArabic)?':كلمة المرور الجديدة':'New Password:');

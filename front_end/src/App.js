@@ -133,7 +133,7 @@ function App(props) {
                       <Movie_Details selectorActor={selectorActor} signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
                   </Route>
                   <Route exact path="/settings">
-                      <Settings/>
+                      <Settings isArabic={props.isArabic}/>
                   </Route>
                   <Route exact path="/sign-in">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_IN()}/>

@@ -8,11 +8,11 @@ import {Edit} from '@mui/icons-material';
 import {AmiriFont} from "../Themes/Fonts/Fonts";
 import actorPhoto from '../Asset/Actor.jpg';
 import React, {useState} from "react";
-
+import String from '../Themes/String/String';
 
 export function Settings(prop){
 
-
+        const string = new String(prop.isArabic);
         const [disable, setDisable] = useState(true);
         const [editPhoto, setEditPhoto] = useState(false);
 
@@ -63,16 +63,22 @@ export function Settings(prop){
                                             </Box>
                                             <Grid container direction={'column'} width={'100%'} height={'100%'} pt={5}>
                                                     <Grid item xs={2} width={'100%'} mb={2}>
-                                                            <InputField disabled={disable} placeholder={'Name'} value={'name'} type={'text'} title={NAME}/>
+                                                            <InputField direction={string.JUSTIFY_DIRECTION()} disabled={disable}
+                                                                        placeholder={'Name'} value={'name'} type={'text'} title={string.NAME()}/>
                                                     </Grid>
                                                     <Grid item xs={2} width={'100%'} mb={2}>
-                                                        <PasswordField disabled={disable} placeholder={'Old Password...'} title={'Old Password:'}/>
+                                                        <PasswordField direction={string.JUSTIFY_DIRECTION()} disabled={disable}
+                                                                       placeholder={'Old Password...'} title={string.Old_PASSWORD()}/>
                                                     </Grid>
                                                     <Grid item xs={(prop.type === SIGN_IN)?2:2} width={'100%'} mb={2}>
-                                                           <PasswordField disabled={disable} placeholder={'New Password...'} title={'New Password:'}/>
+                                                           <PasswordField direction={string.JUSTIFY_DIRECTION()}
+                                                                          disabled={disable} placeholder={'New Password...'}
+                                                                          title={string.NEW_PASSWORD()}/>
                                                     </Grid>
                                                     <Grid item xs={(prop.type === SIGN_IN)?2:2} width={'100%'} mb={2}>
-                                                            <PasswordField disabled={disable} placeholder={'New Password...'} title={'Rewrite Password:'}/>
+                                                            <PasswordField direction={string.JUSTIFY_DIRECTION()}
+                                                                           disabled={disable} placeholder={'New Password...'}
+                                                                           title={string.REWRITE_PASSWORD()}/>
                                                     </Grid>
                                                     <Grid item xs={2} display={'flex'}
                                                           justifyContent={'space-between'} alignItems={'center'}
@@ -83,12 +89,12 @@ export function Settings(prop){
                                                                         "&,&:hover":{backgroundColor:green_34, color:white_100},
                                                                         fontFamily:AmiriFont, fontWeight:'bolder',
                                                                         p:2,px:{xs:2,md:5}, borderRadius:2}}>
-                                                                    Save
+                                                                {string.SAVE()}
                                                             </Button>
                                                             <Button onClick={enableEdit} sx={{       textTransform:'none',
                                                                                 "&,&:hover":{backgroundColor:blue_0A, color:white_100},
                                                                                 fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
-                                                                    Edit
+                                                                {string.EDIT()}
                                                             </Button>
 
 
@@ -97,14 +103,14 @@ export function Settings(prop){
 
                                             </Grid>
                                     </Box>
-                                <Box width={'100%'} display={'flex'} justifyContent={'space-between'} alignItems={'center'} height={'auto'}  mt={5} mb={5}>
-                                    <Typography color={white_100}>
-                                        {REMOVE_ACCOUNT}
+                                <Box width={'100%'} display={'flex'} flexDirection={string.ROW_REVERSE()} justifyContent={'space-between'} alignItems={'center'} height={'auto'}  mt={5} mb={5}>
+                                    <Typography color={white_100} fontFamily={AmiriFont}>
+                                        {string.REMOVE_ACCOUNT_ASKING()}
                                     </Typography>
                                     <Button sx={{       textTransform:'none',
                                         "&,&:hover":{backgroundColor:'red', color:white_100},
                                         fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
-                                        Remove Account
+                                        {string.REMOVE_ACCOUNT()}
                                     </Button>
 
                                 </Box>
