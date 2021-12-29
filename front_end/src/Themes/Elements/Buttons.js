@@ -5,7 +5,14 @@ import {
     TYPOGRAPHY_POPUP_MENU,
     TYPOGRAPHY_SHORTCUT_LIST, TYPOGRAPHY_SIGN_TITLE, TYPOGRAPHY_SIGN_WITH
 } from "../Styles/Typographies";
-import {ArrowDropDown, ArrowDropUp, ArrowForwardIosOutlined, Star} from "@mui/icons-material";
+import {
+    ArrowBack,
+    ArrowBackIosOutlined,
+    ArrowDropDown,
+    ArrowDropUp,
+    ArrowForwardIosOutlined,
+    Star
+} from "@mui/icons-material";
 import React from "react";
 import {MORE, SIGN_IN} from "../String/String_eng";
 import {
@@ -42,14 +49,17 @@ export const RATING_DISABLED_BUTTON = (prop) => (
     </Button>
 );
 
-export const MORE_BUTTON = () => (
+export const MORE_BUTTON = (prop) => (
     <Button
-        endIcon={<ArrowForwardIosOutlined/>}
+        href={prop.link}
+        endIcon={(prop.isArabic)?<></>:<ArrowForwardIosOutlined/>}
+        startIcon={(prop.isArabic)?<ArrowBackIosOutlined/>:<></>}
         sx={{
             color:more_AE,
             textTransform: 'none',
+            fontFamily:AmiriFont,
         }}>
-        {MORE}
+        {prop.more}
     </Button>
 );
 

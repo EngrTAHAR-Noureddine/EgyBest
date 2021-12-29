@@ -1,6 +1,5 @@
-import {Box, Card, CardContent, Grid} from "@mui/material";
+import {Box, Card, CardContent, Grid, Link} from "@mui/material";
 import React, {useState} from "react";
-import nightTeeth from '../../Asset/night_teeth.jpg';
 import {RATING_DISABLED_BUTTON} from "./Buttons";
 import {TYPOGRAPHY_CONTENT_CARD_MOVIE} from "../Styles/Typographies";
 import {IMAGE} from "./IMAGE";
@@ -11,7 +10,7 @@ import {flex_styles} from "../Styles/styles";
 
 
 
-export function MovieCard() {
+export function MovieCard(prop) {
     const [state, setState] = useState(false)
 
     const MouseEnter = () => {
@@ -22,12 +21,15 @@ export function MovieCard() {
     }
 
     return(
+        <Link href={'/details'}>
         <Card sx={{ width:250, height:400, borderRadius:5 }}>
             <CardContent sx={{height:"inherit", width:"inherit", padding:0, borderRadius:5 }}
                 onMouseEnter={MouseEnter}
                 onMouseLeave={MouseLeave}
             >
+
                 <Box
+                    onClick={()=>prop.selectorClicker(prop.item)}
                     display={(state)?'flex':'none'}
                     borderRadius={5}
                     position={'absolute'}
@@ -45,23 +47,25 @@ export function MovieCard() {
                           borderRadius={5}
                     >
                         <Grid item xs={2} width={'inherit'} style={flex_styles.row_right} px={1}>
-                            <RATING_DISABLED_BUTTON item={9.7}/>
+                            <RATING_DISABLED_BUTTON item={prop.item.rate}/>
                         </Grid>
                         <Grid item xs={8} width={'inherit'}
                               style={flex_styles.col_center}
                               p={1}>
 
-                            <TYPOGRAPHY_CONTENT_CARD_MOVIE item={'The Blacklist'}/>
+                            <TYPOGRAPHY_CONTENT_CARD_MOVIE item={prop.item.name}/>
                         </Grid>
                         <Grid item xs={2} width={'inherit'} style={flex_styles.row_center}>
-                            <TYPOGRAPHY_CONTENT_CARD_MOVIE item={2021}/>
+                            <TYPOGRAPHY_CONTENT_CARD_MOVIE item={prop.item.year}/>
                         </Grid>
 
                     </Grid>
                 </Box>
-                <IMAGE url={nightTeeth}/>
+
+                <IMAGE url={prop.item.coverPicture}/>
             </CardContent>
 
         </Card>
+        </Link>
     )
 }

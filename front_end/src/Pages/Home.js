@@ -1,24 +1,41 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Box} from '@mui/material'
 import {Custom_Carrousel} from "../Themes/Elements/Carousel";
 import {MovieCardsChain} from "../Components/MovieCardsChain";
-import {ANIME, LATEST_ADDITIONS, MOST_WATCHED, MOVIES, SERIES, WWE} from "../Themes/String/String_eng";
-
+import String from '../Themes/String/String';
 
 
 function Home(prop) {
-    const list = [1,2,3,4,5,6];
+    const string = new String(prop.isArabic);
 
     return (
         <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
-            <Custom_Carrousel list={prop.listMovies.slice(0,6)}/>
+            <Custom_Carrousel list={prop.listMovies.slice(0,6)} selectorClicker={prop.selectorClicker}/>
             <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
-                <MovieCardsChain list={list} item={LATEST_ADDITIONS}/>
-                <MovieCardsChain list={list} item={MOST_WATCHED}/>
-                <MovieCardsChain list={list} item={MOVIES}/>
-                <MovieCardsChain list={list} item={SERIES}/>
-                <MovieCardsChain list={list} item={ANIME}/>
-                <MovieCardsChain list={list} item={WWE}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    linkMore={'/list-movies'}
+                                    isArabic={prop.isArabic}
+                                    list={prop.listMovies.slice(4,10)} item={string.LATEST_ADDITIONS()}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    isArabic={prop.isArabic}
+                                    linkMore={'/list-movies'}
+                                    list={prop.listMovies.slice(2,8)} item={string.MOST_WATCHED()}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    isArabic={prop.isArabic}
+                                    linkMore={'/list-movies'}
+                                    list={prop.listMovies.slice(0,6)} item={string.MOVIES()}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    isArabic={prop.isArabic}
+                                    linkMore={'/list-series'}
+                                    list={prop.listSeries} item={string.SERIES()}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    isArabic={prop.isArabic}
+                                    linkMore={'/list-theaters'}
+                                    list={prop.listTheaters} item={string.THEATER()}/>
+                <MovieCardsChain    selectorClicker={prop.selectorClicker}
+                                    isArabic={prop.isArabic}
+                                    linkMore={'/list-wwe'}
+                                    list={prop.listWWE} item={string.WWE()}/>
             </Box>
         </Box>
 
