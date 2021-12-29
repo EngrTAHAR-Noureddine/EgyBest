@@ -36,7 +36,7 @@ export default class String{
     LATEST_ADDITIONS = ()=> ((this.isArabic)?'اخر الاضافات':'Latest Additions');
     MOST_WATCHED = ()=> ((this.isArabic)?'الاكثر مشاهدة':'Most Watched');
     //*********************************************************************************************
-    SEARCH = ()=> ((this.isArabic)?'البحث :':'Search :');
+    SEARCH = ()=> ((this.isArabic)?': البحث':'Search :');
     SEARCH_PLACEHOLDER = ()=> ((this.isArabic)?'بحث':'Search...');
     //******************************************************************************************
     PAGE_NOT_FOUND = ()=> ((this.isArabic)?'الصفحة غير موجودة':'Page not found');

@@ -120,7 +120,7 @@ function App(props) {
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listWWE}/>
                   </Route>
                   <Route exact path="/search">
-                      <Search isArabic={props.isArabic} list={listSearch}/>
+                      <Search isArabic={props.isArabic} list={listSeries}/>
                   </Route>
                   <Route exact path="/actor">
                       <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>
