@@ -6,20 +6,21 @@ import {useState} from "react";
 
 
 function ListMovies(prop) {
-    //const list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
-    const [listFiltred,setlistFiltred] = useState(prop.list);
+    const [listFiltred,setlistFiltred] = useState([]);
     const onFilter = (filter)=>{
-        const list = listFiltred;
-
-
+        console.log(filter.Language,filter.Year);
+        const l = prop.list;
+        const list = l.filter((item)=>((item.language===filter.Language)||(item.year===filter.Year)));
+        console.log('list: ', list);
+        setlistFiltred(list);
     }
 
     return(
         <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
             <Seperator_Bar/>
             <Menu_Board onFilter={onFilter} isArabic={prop.isArabic}/>
-            <Result_List selectorClicker={prop.selectorClicker} list={prop.list}/>
+            <Result_List selectorClicker={prop.selectorClicker} list={(listFiltred.length===0)?prop.list:listFiltred}/>
         </Box>
     )
 }

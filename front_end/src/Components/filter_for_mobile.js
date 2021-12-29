@@ -36,7 +36,7 @@ export function FilterButton (prop){
 
     return(
         <Box width={'inherit'} height={'inherit'} style={flex_styles.col_center}>
-            <FILTER_BUTTON onClicked={()=>(matches)?()=>prop.onFilter(prop.selector):handleClickOpen()}/>
+            <FILTER_BUTTON onClicked={()=>(matches)?prop.onFilter(prop.selector):handleClickOpen()}/>
             <CustomDialogOfFilter onClear={onClear} setSelect={prop.setSelect}
                                   open={open} handleClose={handleClose}
                                   onFilter={prop.onFilter}

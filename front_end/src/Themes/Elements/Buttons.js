@@ -64,7 +64,7 @@ export const MORE_BUTTON = (prop) => (
 );
 
 export const SHORTCUT_LIST_BUTTON = (prop)=>(
-    <Button fullWidth={true}
+    <Button  onClick={(prop.index===0)?()=>prop.cleared():()=>{}} fullWidth={true}
             sx={{height:'100%', borderRadius:2 , textTransform:'none',
 
                 backgroundColor:white_20,

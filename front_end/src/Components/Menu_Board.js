@@ -23,6 +23,19 @@ export default function Menu_Board(prop) {
         Translate:'Translate'
     });
 
+    const cleared = ()=>{
+        setSelect({
+            Language:'Language',
+            Status:'Status',
+            Quality:'Quality',
+            Year:'Year',
+            Country:'Country',
+            Category:'Category',
+            Type:'Type',
+            Translate:'Translate'
+        })
+    }
+
 
     return(
         <Box sx={{height:{xs:'20vh', md:'50vh'},flexGrow: 1, padding:0,margin:0 ,mb:{xs:2, lg:5}}}
@@ -39,6 +52,7 @@ export default function Menu_Board(prop) {
                     <Filter_List   filterList={FilterList} selector={selector} setSelect={setSelect} />
 
                     <ListMenu onFilter={prop.onFilter}
+                              cleared={cleared}
                               list={LIST_SHORTCUTS}
                               setSelect={setSelect}
                               selector={selector}
@@ -69,11 +83,11 @@ function ListMenu(prop){
                               justifyContent='left' alignItems='center'
                               height={'100%'} width={'100%'}>
                             {
-                                prop.list.map((item)=>(
+                                prop.list.map((item,index)=>(
                                     <Grid borderRadius={2} item xs={3} lg={2} mb={1} mr={1}
                                           height={'inherit'}
                                           width={'inherit'}>
-                                        <SHORTCUT_LIST_BUTTON item={item}/>
+                                        <SHORTCUT_LIST_BUTTON cleared={prop.cleared} item={item} index={index}/>
                                     </Grid>
                                 ))
                             }
