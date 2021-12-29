@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Box, Link, Typography} from "@mui/material";
 import {AmiriFont} from "../Fonts/Fonts";
 import {FORGET_PASSWORD} from "../String/String_eng";
 import {ThemeProvider} from "@emotion/react";
@@ -12,6 +12,7 @@ import Strings from '../String/String';
 const string = new Strings();
 
 export const  TYPOGRAPHY_LOGO = ()=>(
+    <Link href={'/'} sx={{textDecoration:'none'}}>
     <ThemeProvider theme={RESPONSIVE_THEME}>
         <Typography fontFamily={AmiriFont} fontWeight={900} fontStyle={'italic'} variant="h3" component="div"
                     sx={{flexGrow: 1}} style={flex_styles.row_left} >
@@ -21,7 +22,7 @@ export const  TYPOGRAPHY_LOGO = ()=>(
                 color={blue_0A}>{string.LOGO_BEST}</Typography>
         </Typography>
     </ThemeProvider>
-
+    </Link>
 );
 
 
