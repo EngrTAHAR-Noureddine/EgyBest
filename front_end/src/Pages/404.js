@@ -4,9 +4,9 @@ import {flex_styles} from "../Themes/Styles/styles";
 import {IMAGE} from "../Themes/Elements/IMAGE";
 import pageNotFound from '../Asset/404.jpg';
 import {TYPOGRAPHY_PAGE_NOT_FOUND} from "../Themes/Styles/Typographies";
-import {PAGE_NOT_FOUND} from "../Themes/String/String_eng";
 
-export function PageNotFound() {
+
+export function PageNotFound(prop) {
     return(
         <Box flexGrow={1}>
             <Seperator_Bar/>
@@ -14,7 +14,7 @@ export function PageNotFound() {
                 <Box width={'50vw'} height={'30vw'} >
                     <IMAGE url={pageNotFound}/>
                 </Box>
-                <TYPOGRAPHY_PAGE_NOT_FOUND title={PAGE_NOT_FOUND}/>
+                <TYPOGRAPHY_PAGE_NOT_FOUND title={prop.notFound}/>
             </Box>
 
         </Box>

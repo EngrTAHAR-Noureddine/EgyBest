@@ -142,7 +142,7 @@ function App(props) {
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_UP()}/>
                   </Route>
                   <Route path="/">
-                      <PageNotFound/>
+                      <PageNotFound notFound={string.PAGE_NOT_FOUND()}/>
                   </Route>
               </Switch>
               <Footer isArabic={props.isArabic}/>
