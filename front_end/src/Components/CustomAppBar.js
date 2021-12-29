@@ -67,11 +67,11 @@ function CustomAppBar(prop) {
                                           justifyContent={'center'}>
                                         <div>
                                             <ThemeProvider theme={SIGN_GROUP_THEME}>
-                                                <ButtonGroup variant="text">
-                                                    <Button sx={{textTransform: 'none'}}>
+                                                <ButtonGroup variant="text" sx={{display:(prop.SignedIN)?'none':'flex'}}>
+                                                    <Button href={'/sign-in'} sx={{textTransform: 'none'}}>
                                                         <TYPOGRAPHY_MENU_XL item={string.SIGNIN()}/>
                                                     </Button>
-                                                    <Button sx={{textTransform: 'none'}}>
+                                                    <Button href={'/sign-up'} sx={{textTransform: 'none'}}>
                                                         <TYPOGRAPHY_MENU_XL item={string.SIGNUP()}/>
                                                     </Button>
                                                 </ButtonGroup>

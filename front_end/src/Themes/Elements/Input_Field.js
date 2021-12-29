@@ -8,7 +8,7 @@ import {white_100} from "../Styles/Color";
 export  function InputField(prop) {
     return(
         <Box flexGrow={1} px={{xs:1,sm:2,md:5}}>
-            <TYPOGRAPHY_STYLE_EMAIL_PASSWORD title={prop.title}/>
+            <TYPOGRAPHY_STYLE_EMAIL_PASSWORD direction={prop.direction} title={prop.title}/>
             <OutlinedInput
                 fullWidth={true}
                 disabled={prop.disabled}
@@ -45,7 +45,7 @@ export function PasswordField(prop) {
     };
     return(
         <Box flexGrow={1} px={{xs:1,sm:2,md:5}}>
-            <TYPOGRAPHY_STYLE_EMAIL_PASSWORD title={prop.title}/>
+            <TYPOGRAPHY_STYLE_EMAIL_PASSWORD direction={prop.direction} title={prop.title}/>
             <OutlinedInput
                 fullWidth={true}
                 disabled={prop.disabled}

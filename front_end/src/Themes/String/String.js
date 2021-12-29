@@ -16,6 +16,7 @@ export default class String{
     LOGO_BEST = 'Best';
 
     JUSTIFY_DIRECTION = ()=> ((this.isArabic)?'right':'left');
+    RIGHT_LEFT = ()=> ((this.isArabic)?'right':'left');
     ROW_REVERSE = ()=> ((this.isArabic)?'row-reverse':'row');
     REVERSE_ROW = ()=> ((this.isArabic)?'row':'row-reverse');
     FLEX_STYLE_ROW_DIRECTION =()=> ((this.isArabic)?flex_styles.row_right:flex_styles.row_left);
@@ -41,22 +42,22 @@ export default class String{
     PAGE_NOT_FOUND = ()=> ((this.isArabic)?'الصفحة غير موجودة':'Page not found');
     //******************************************************************************************
     SIGN_UP = ()=> ((this.isArabic)?'تسجيل الاشتراك':'Sign Up');
-    SIGN_IN = ()=> ((this.isArabic)?'تسجيل الدخول':'SIGN_IN');
+    SIGN_IN = ()=> ((this.isArabic)?'تسجيل الدخول':'SIGN IN');
     //**********************************************************************************************
-    EMAIL = ()=> ((this.isArabic)?'عنوان الالكتروني :':'Email:');
-    PASSWORD = ()=> ((this.isArabic)?'كلمة السر :':'Password:');
-    NAME = ()=> ((this.isArabic)?'الاسم :':'Name:');
+    EMAIL = ()=> ((this.isArabic)?':عنوان الالكتروني':'Email:');
+    PASSWORD = ()=> ((this.isArabic)?':كلمة السر':'Password:');
+    NAME = ()=> ((this.isArabic)?':الاسم':'Name:');
     FORGET_PASSWORD = ()=> ((this.isArabic)?'هل نسيت كلمة السر؟':'do you forget a password?');
-    OR_SIGN_IN_WITH = ()=> ((this.isArabic)?'أو التسجبل ب:':'or sign in with:');
+    OR_SIGN_IN_WITH = ()=> ((this.isArabic)?':أو التسجبل ب':'or sign in with:');
     DONT_HAVE_ACCOUNT = ()=> ((this.isArabic)?'ليس لديك حساب؟':'don\'t have account?');
-    OR_SIGN_UP_WITH = ()=> ((this.isArabic)?'أو الاشتراك ب:':'or sign up with');
+    OR_SIGN_UP_WITH = ()=> ((this.isArabic)?':أو الاشتراك ب':'or sign up with');
     HAVE_ACCOUNT = ()=> ((this.isArabic)?'هل لديك حساب؟':'do you have an account?');
     //*******************************************************************************************
-    REMOVE_ACCOUNT_ASKING = ()=> ((this.isArabic)?'هل تريد إزالة الحساب؟':'do you want to remove your account?');
+    REMOVE_ACCOUNT_ASKING = ()=> ((this.isArabic)?'؟هل تريد إزالة الحساب':'do you want to remove your account?');
     REMOVE_ACCOUNT = ()=> ((this.isArabic)?'إزالة الحساب':'Remove account');
-    Old_PASSWORD = ()=> ((this.isArabic)?'كلمة المرور الحالية:':'Old Password:');
-    NEW_PASSWORD= ()=> ((this.isArabic)?'كلمة المرور الجديدة:':'New Password:');
-    REWRITE_PASSWORD = ()=> ((this.isArabic)?'إعادة كلمة المرور:':'Rewrite Password:');
+    Old_PASSWORD = ()=> ((this.isArabic)?':كلمة المرور الحالية':'Old Password:');
+    NEW_PASSWORD= ()=> ((this.isArabic)?':كلمة المرور الجديدة':'New Password:');
+    REWRITE_PASSWORD = ()=> ((this.isArabic)?':إعادة كلمة المرور':'Rewrite Password:');
     EDIT = ()=> ((this.isArabic)?'تغيير':'Edit');
     SAVE = ()=> ((this.isArabic)?'حفظ':'Save');
     //*************************************************************************************

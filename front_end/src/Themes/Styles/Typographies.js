@@ -134,13 +134,14 @@ export const TYPOGRAPHY_SIGN_TITLE = (prop)=>(
     </ThemeProvider>
 );
 
-export const TYPOGRAPHY_FORGET_PASSWORD =()=>(
+export const TYPOGRAPHY_FORGET_PASSWORD =(prop)=>(
     <Typography variant={'body2'} color={blue_0A} fontFamily={AmiriFont} fontWeight={'lighter'} textAlign={'right'} px={5}>
-        {FORGET_PASSWORD}
+        {prop.title}
     </Typography>
 );
 export  const TYPOGRAPHY_STYLE_EMAIL_PASSWORD = (prop)=>(
     <Typography variant={'h6'} flexGrow={1} height={'auto'}
+                textAlign={prop.direction}
                 color={white_100}
                 fontFamily={AmiriFont} px={1}>
         {prop.title}
@@ -159,15 +160,15 @@ export const TYPOGRAPHY_SIGN_WITH = (prop) => (
 
 export const TYPOGRAPHY_IF_HAVE_ACCOUNT = (prop) => (
     <ThemeProvider theme={RESPONSIVE_THEME}>
-        <Box style={flex_styles.row_center} flexGrow={1} px={{xs:0, md:10}}>
+        <Box display={'flex'} justifyContent={'center'} flexDirection={prop.direction} flexGrow={1} px={{xs:0, md:10}}>
             <Typography flexGrow={1} variant={'subtitle1'}
                         color={white_100}
-                        fontFamily={AmiriFont} textAlign={'right'} pr={1}>
+                        fontFamily={AmiriFont} textAlign={(prop.isArabic)?'left':'right'} px={1}>
                 {prop.text}
             </Typography>
             <Typography flexGrow={1} variant={'subtitle1'}
                         color={blue_0A}
-                        fontFamily={AmiriFont} sx={{textDecoration:'underline'}} textAlign={'left'}>
+                        fontFamily={AmiriFont} sx={{textDecoration:'underline'}} textAlign={(prop.isArabic)?'right':'left'}>
                 {prop.linkText}
             </Typography>
         </Box>

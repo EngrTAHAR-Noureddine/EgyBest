@@ -122,9 +122,11 @@ export const SIGN_BUTTON = (prop)=>(
     <Box width={'90%'} height={'100%'} style={flex_styles.col_center} alignItems={'center'}
                 sx={{borderBottom:1, borderColor:divider_B1,
                 }}>
-        <Button sx={{textTransform: 'none',px:10,mb:1, backgroundColor:(prop.type === SIGN_IN)?blue_0A:green_34, color:white_100, borderRadius:1000,
+        <Button onClick={prop.click} href={'/'} sx={{textTransform: 'none',px:10,mb:1,
+            backgroundColor:(prop.type === prop.item)?blue_0A:green_34,
+            color:white_100, borderRadius:1000,
             "& , &:focus, &:hover":{
-                backgroundColor:(prop.type === SIGN_IN)?blue_0A:green_34
+                backgroundColor:(prop.type === prop.item)?blue_0A:green_34
             }}}>
             <TYPOGRAPHY_SIGN_TITLE title={prop.type}/>
         </Button>

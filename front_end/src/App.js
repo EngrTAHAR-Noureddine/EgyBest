@@ -32,6 +32,18 @@ function App(props) {
     const [SignedIN, setSignIn] = useState(false);
     const [actorState, setActor] = useState({});
 
+    const setUser = ()=>{
+        if(SignedIN){
+            localStorage.setItem('user', 'false');
+
+        }else{
+            localStorage.setItem('user', 'true');
+
+        }
+        setSignIn(!SignedIN)
+
+    }
+
     const [selectorForDetails, setSelectorForDetails] = useState({});
 
     const selectorClicker = (obj)=>{ // may be serie, movie , theater or wwe selector
@@ -61,6 +73,9 @@ function App(props) {
         setSelectorForDetails(JSON.parse(obj));
         const obj1 = localStorage.getItem('actor');
         setActor(JSON.parse(obj1));
+        const obj2 = localStorage.getItem('user');
+        if(obj2==='true'){ setSignIn(true)} else setSignIn(false);
+
 
     },[])
 
@@ -82,7 +97,7 @@ function App(props) {
       <Router>
           <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
               backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
-              <CustomAppBar string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
+              <CustomAppBar SignedIN={SignedIN} string={string} isArabic={props.isArabic} toggleLanguage={ToggleArabic}/>
               <Switch>
                   <Route exact path="/">
                       <Home isArabic={props.isArabic}
@@ -121,10 +136,10 @@ function App(props) {
                       <Settings/>
                   </Route>
                   <Route exact path="/sign-in">
-                      <Sign type={SIGN_IN}/>
+                      <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_IN()}/>
                   </Route>
                   <Route exact path="/sign-up">
-                      <Sign type={SIGN_UP}/>
+                      <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_UP()}/>
                   </Route>
                   <Route path="/">
                       <PageNotFound/>
