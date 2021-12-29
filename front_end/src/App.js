@@ -7,7 +7,6 @@ import Actor from "./Pages/Actor";
 import Profile from "./Pages/Profile";
 import {PageNotFound} from "./Pages/404";
 import {Sign} from "./Pages/Sign";
-import {SIGN_IN, SIGN_UP} from "./Themes/String/String_eng";
 import {Movie_Details} from "./Pages/Movie_Details";
 import {Settings} from "./Pages/Settings";
 import {Footer} from "./Components/Footer";
@@ -127,7 +126,12 @@ function App(props) {
                       <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>
                   </Route>
                   <Route exact path="/profile">
-                      <Profile/>
+                      <Profile isArabic={props.isArabic}
+                               listMovies={listMovies}
+                               listSeries={listSeries}
+                               listTheaters={listTheaters}
+                               listWWE={listWWE}
+                      />
                   </Route>
                   <Route exact path="/details">
                       <Movie_Details selectorActor={selectorActor} signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>

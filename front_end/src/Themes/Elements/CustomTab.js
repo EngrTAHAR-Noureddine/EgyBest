@@ -1,7 +1,6 @@
 import {themeTab} from "../Theme/Themes";
 import {Tab, Tabs} from "@mui/material";
 import {blue_36, white_100, white_EC} from "../Styles/Color";
-import {ANIME, MOVIES, SERIES, WWE} from "../String/String_eng";
 import {AmiriFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import * as React from "react";
@@ -10,19 +9,19 @@ export function CustomTab(prop){
 
     const tabs_name = [
         {
-            tab:MOVIES,
+            tab:prop.string.MOVIES(),
             number : prop.list[0]
         },
         {
-            tab:SERIES,
+            tab:prop.string.SERIES(),
             number : prop.list[1]
         },
         {
-            tab:ANIME,
+            tab:prop.string.THEATER(),
             number : prop.list[2]
         },
         {
-            tab:WWE,
+            tab:prop.string.WWE(),
             number : prop.list[3]
         }
         ]
