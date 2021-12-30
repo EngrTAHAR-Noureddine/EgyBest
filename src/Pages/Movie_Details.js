@@ -10,6 +10,8 @@ import {TYPOGRAPHY_NOT_EXIST} from "../Themes/Styles/Typographies";
 import {RatingUser} from "../Components/Rate_user";
 import {CommentUser} from "../Themes/Elements/Comment_user";
 import String from '../Themes/String/String';
+import {MovieCard} from "../Themes/Elements/MovieCard";
+import {flex_styles} from "../Themes/Styles/styles";
 
 
 
@@ -55,6 +57,24 @@ export function Movie_Details(prop) {
                 </SectionDetail>
             )}else return (<div></div>)
     }
+    const mapListSimilar = (list) => (
+        list.map((cusItem)=>(
+
+            <MovieCard selectorClicker={()=>{}} item={cusItem}/>
+
+        ))
+    )
+    const funSimular = ()=>{
+        if(prop.selector.similar){
+            return(
+                <SectionDetail  title={string.SIMILAR()} alignement={string.JUSTIFY_DIRECTION()}>
+                    <Box width={'fit-content'} height={'fit-content'} p={1} sx={{float:string.JUSTIFY_DIRECTION()}}>
+                        {mapListSimilar(prop.selector.similar)}
+                    </Box>
+
+                </SectionDetail>
+            )}else return (<div></div>)
+    }
 
     return(
         <Box flexGrow={1} width={'100%'} height={'100%'}>
@@ -83,7 +103,8 @@ export function Movie_Details(prop) {
 
 
             <WatchDownloadMovie isArabic={prop.isArabic} items={['1080p','720p','480p']} movie={prop.selector.linkMovie}/>
-            <CommentUser signedIn={prop.signedIn} alignement={string.JUSTIFY_DIRECTION()}/>
+            {funSimular()}
+            <CommentUser signedIn={prop.signedIn} comment={string.COMMENT()} alignement={string.JUSTIFY_DIRECTION()}/>
             <SectionDetail title={string.COMMENTS()} alignement={string.JUSTIFY_DIRECTION()}>
                 <TYPOGRAPHY_NOT_EXIST text={string.COMMENTS_NOT_EXIST()}/>
             </SectionDetail>

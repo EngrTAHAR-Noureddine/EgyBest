@@ -70,16 +70,16 @@ function App(props) {
     }
 
     useEffect(()=>{
-        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/movies.json")
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/src/DataJSON/movies.json")
             .then(res => res.json())
             .then(data => setListMovies(data))
-        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/series.json")
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/src/DataJSON/series.json")
             .then(res => res.json())
             .then(data => setListSeries(data))
-        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/theater.json")
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/src/DataJSON/theater.json")
             .then(res => res.json())
             .then(data => setListTheaters(data))
-        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/front_end/src/DataJSON/wwe.json")
+        fetch("https://raw.githubusercontent.com/EngrTAHAR-Noureddine/EgyBest/master/src/DataJSON/wwe.json")
             .then(res => res.json())
             .then(data => setListWWE(data))
 

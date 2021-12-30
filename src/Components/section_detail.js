@@ -6,6 +6,7 @@ import {TYPOGRAPHY_SEARCH_RESULT} from "../Themes/Styles/Typographies";
 export function SectionDetail(prop){
     return(
         <Box flexGrow={1} m={1} mx={5} height={'auto'}>
+
             <Box flexGrow={1} height={{xs:'10vh',lg:'5vh'}} style={flex_styles.col_center} px={2} bgcolor={grey_36}
                  sx={{borderTopRightRadius:10,borderTopLeftRadius:10}}>
                 <TYPOGRAPHY_SEARCH_RESULT alignement={prop.alignement} item={prop.title}/>
