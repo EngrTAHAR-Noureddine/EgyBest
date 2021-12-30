@@ -3,12 +3,6 @@
     "name": "The Tomorrow War",
     "rate": "6.6",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "حرب الغد",
     "story": "When a group of time travellers from the future tell people about a war they are fighting with aliens, Dan, a school teacher, decides to help them win it in order to secure his daughter's future.",
     "storyAR": "عندما تخبر مجموعة من المسافرين عبر الزمن من المستقبل الناس عن حرب يخوضونها مع كائنات فضائية ، يقرر دان ، مدرس المدرسة ، مساعدتهم على الفوز بها من أجل تأمين مستقبل ابنته.",
@@ -76,7 +70,7 @@
         "name": "John Wick: Chapter 3",
         "rate": "7.5",
         "date": "2019",
-        "coverphoto": "https://m.media-amazon.com/images/M/MV5BZjRkZWI5MDYtNWViNC00OWQ5LThkYzktZDU2NTQ4Zjk4NDMwXkEyXkFqcGdeQXVyNDIzMTQwODY@._V1_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/M/MV5BZjRkZWI5MDYtNWViNC00OWQ5LThkYzktZDU2NTQ4Zjk4NDMwXkEyXkFqcGdeQXVyNDIzMTQwODY@._V1_.jpg"
       }
     ],
     "bigPicture": "https://images.thequint.com/thequint/2021-07/48d887b7-0e73-44fa-bf49-f8be279a6936/The_Tomorrow_War_banner_image.jpg",
@@ -88,12 +82,6 @@
     "name": "Red Notice",
     "rate": "6.4",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "إشعار أحمر",
     "story": "In the world of international crime, an Interpol agent attempts to hunt down and capture the world's most wanted art thief.",
     "storyAR": ".في عالم الجريمة الدولية ، يحاول أحد عملاء الإنتربول تعقب أكثر لصوص الفن المطلوبين في العالم والقبض عليه",
@@ -161,7 +149,7 @@
         "name": "Jungle Cruise",
         "rate": "6.6",
         "date": "2021",
-        "coverphoto": "https://lumiere-a.akamaihd.net/v1/images/p_junglecruise_21740_v2_bb7f0ae4.jpeg"
+        "coverPicture": "https://lumiere-a.akamaihd.net/v1/images/p_junglecruise_21740_v2_bb7f0ae4.jpeg"
       }
     ],
     "bigPicture": "https://www.vibesofindia.com/wp-content/uploads/2021/11/Red-Notice.jpg",
@@ -173,12 +161,6 @@
     "name": "Army of Thieves",
     "rate": "6.4",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "جيش اللصوص",
     "story": "In this prequel to \"Army of the Dead,\" a mysterious woman recruits bank teller Dieter to assist in a heist of impossible-to-crack safes across Europe.",
     "storyAR": "في مقدمة فيلم \"جيش الموتى\" ، تقوم امرأة غامضة بتجنيد صراف البنك ديتر للمساعدة في سرقة خزائن من المستحيل كسرها في جميع أنحاء أوروبا.",
@@ -246,7 +228,7 @@
         "name": "Army of the Dead",
         "rate": "5.7",
         "date": "2021",
-        "coverphoto": "https://m.media-amazon.com/images/M/MV5BNGY0NzgzYzctYWQwMC00MzM2LThjNGMtZjFjMWUyNzg0ZmM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/M/MV5BNGY0NzgzYzctYWQwMC00MzM2LThjNGMtZjFjMWUyNzg0ZmM0XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
       }
     ],
     "bigPicture": "https://imgsrc.cineserie.com/2021/10/army-of-thieves-new-trailer.jpg?ver=1",
@@ -258,12 +240,6 @@
     "name": "Without Remorse",
     "rate": "5.8",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "بدون ندم",
     "story": "Seeking justice for the murder of his pregnant wife, an elite Navy SEAL uncovers a covert plot that threatens to engulf the United States and Russia in an all-out war.",
     "storyAR": "سعيًا لتحقيق العدالة لقتل زوجته الحامل ، يكشف أحد أفراد قوات البحرية الخاصة من النخبة عن مؤامرة سرية تهدد بإغراق الولايات المتحدة وروسيا في حرب شاملة.",
@@ -332,7 +308,7 @@
         "name": "The Tomorrow War",
         "rate": "6.6",
         "date": "2021",
-        "coverphoto": "https://pics.filmaffinity.com/Army_of_Thieves-679536224-mmed.jpg"
+        "coverPicture": "https://pics.filmaffinity.com/Army_of_Thieves-679536224-mmed.jpg"
       }
     ],
     "bigPicture": "http://www.dipowrites.com/wp-content/uploads/2021/05/michael-b-jordan-without-remorse-social.png",
@@ -344,12 +320,6 @@
     "name": "Taken",
     "rate": "7.8",
     "year": "2008",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "تؤخذ",
     "story": "An ex-Secret Service agent's teenage daughter is abducted by human traffickers while on a trip to Paris. With almost no information on her whereabouts, he travels to Paris to find and save her.",
     "storyAR": "يتم اختطاف ابنة مراهقة عميل سابق في الخدمة السرية من قبل مهربي البشر أثناء رحلة إلى باريس. مع عدم وجود معلومات تقريبًا عن مكان وجودها ، يسافر إلى باريس للعثور عليها وإنقاذها.",
@@ -419,7 +389,7 @@
         "name": "taken 2",
         "rate": "7",
         "date": "2021",
-        "coverphoto": "https://m.media-amazon.com/images/I/91hHYQptXTL._SL1500_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/I/91hHYQptXTL._SL1500_.jpg"
       }
     ],
     "bigPicture": "https://images6.alphacoders.com/336/thumb-1920-336253.jpg",
@@ -431,12 +401,6 @@
     "name": "Ip Man 4: The Finale",
     "rate": "7",
     "year": "2019",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "ايب مان 4: النهاية",
     "story": "Ip Man and his son encounter racial discrimination after travelling to the United States to seek a better life.",
     "storyAR": "يواجه \"إيب مان\" وابنه تمييزًا عنصريًا بعد سفرهم إلى الولايات المتحدة بحثًا عن حياة أفضل.",
@@ -504,7 +468,7 @@
         "name": "ip man 3",
         "rate": "7",
         "date": "2015",
-        "coverphoto": "https://m.media-amazon.com/images/M/MV5BMTkxNzc0MjgwN15BMl5BanBnXkFtZTgwMzY3Nzk1NzE@._V1_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/M/MV5BMTkxNzc0MjgwN15BMl5BanBnXkFtZTgwMzY3Nzk1NzE@._V1_.jpg"
       }
     ],
     "bigPicture": "https://www.flixwatch.co/wp-content/uploads/81227536.jpg",
@@ -516,12 +480,6 @@
     "name": "Venom",
     "rate": "6.7",
     "year": "2018",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "السم",
     "story": "While trying to take down Carlton, the CEO of Life Foundation, Eddie, a journalist, investigates experiments of human trials. Unwittingly, he gets merged with a symbiotic alien with lethal abilities.",
     "storyAR": "أثناء محاولته الإطاحة بكارلتون ، الرئيس التنفيذي لمؤسسة Life Foundation ، يحقق إيدي ، وهو صحفي ، في تجارب التجارب البشرية. عن غير قصد ، يتم دمجه مع أجنبي تكافلي بقدرات مميتة.",
@@ -589,7 +547,7 @@
         "name": "Venom: Let There Be Carnage",
         "rate": "6",
         "date": "2021",
-        "coverphoto": "https://m.media-amazon.com/images/M/MV5BNTFiNzBlYmEtMTcxZS00ZTEyLWJmYmQtMjYzYjAxNGQwODAzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/M/MV5BNTFiNzBlYmEtMTcxZS00ZTEyLWJmYmQtMjYzYjAxNGQwODAzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
       }
     ],
     "bigPicture": "https://cdn.slashgear.com/wp-content/uploads/2021/11/venom-let-there-be-carnage-pandemic-box-office-1280x720.jpg",
@@ -601,12 +559,6 @@
     "name": "The Guilty",
     "rate": "6.3",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "المذنب",
     "story": "A troubled police detective demoted to 911 operator duty scrambles to save a distressed caller during a harrowing day of revelations -- and reckonings.",
     "storyAR": ".محقق شرطة مضطرب تم تخفيض رتبته إلى خدمة عامل تشغيل 911 يندفع لإنقاذ متصل متعثر خلال يوم مروّع من الإكتشافات - والحسابات",
@@ -673,7 +625,7 @@
         "name": "The Call",
         "rate": "6.7",
         "date": "2013",
-        "coverphoto": "https://b.egycdn.com/blogimg/big/bk9SblRNblY.jpg"
+        "coverPicture": "https://b.egycdn.com/blogimg/big/bk9SblRNblY.jpg"
       }
     ],
     "bigPicture": "https://sysfilessacbe149174fee.blob.core.windows.net/public-container/clients/worthingtheatres/files/cdd6b58a-0331-4edc-8efd-3263873e25d9.jpg",
@@ -685,12 +637,6 @@
     "name": "Outside the Wire",
     "rate": "5.4",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "خارج السلك",
     "story": "Leo, an android super-soldier, and Harp, a drone pilot, face several difficulties while trying to stop a nuclear attack.",
     "storyAR": ".يواجه ليو ، جندي الروبوت الخارق ، وهارب ، طيار طائرة بدون طيار ، العديد من الصعوبات أثناء محاولتهما إيقاف هجوم نووي",
@@ -758,7 +704,7 @@
         "name": "The Tomorrow War",
         "rate": "6.6",
         "date": "2021",
-        "coverphoto": "https://m.media-amazon.com/images/M/MV5BNTI2YTI0MWEtNGQ4OS00ODIzLWE1MWEtZGJiN2E3ZmM1OWI1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg"
+        "coverPicture": "https://m.media-amazon.com/images/M/MV5BNTI2YTI0MWEtNGQ4OS00ODIzLWE1MWEtZGJiN2E3ZmM1OWI1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg"
       }
     ],
     "bigPicture": "https://plainsimpletomreviews.files.wordpress.com/2021/01/outside-the-wire-wide.jpg",
@@ -770,12 +716,6 @@
     "name": "Red Dot",
     "rate": "5.5",
     "year": "2021",
-    "episodes": [
-      1
-    ],
-    "seasons": [
-      1
-    ],
     "nameAR": "نقطة حمراء",
     "story": "On a trip to rekindle their marriage, a young couple find themselves fleeing for their lives in the unforgiving wilderness as an unknown shooter hunts them.",
     "storyAR": ".في رحلة لإحياء زواجهما ، يجد زوجان شابان نفسيهما يفران للنجاة بحياتهما في البرية التي لا ترحم بينما يطاردهما مطلق النار المجهول",
@@ -843,7 +783,7 @@
         "name": "Blood Red Sky",
         "rate": "6.1",
         "date": "2021",
-        "coverphoto": "https://1.bp.blogspot.com/-cVo2W7IAciM/YRbDHC4hkvI/AAAAAAAE2OQ/_lb13oVN_oMzKSy1GpmhX5SYxPVL-nWSwCLcBGAsYHQ/s1280/2123167516.jpeg"
+        "coverPicture": "https://1.bp.blogspot.com/-cVo2W7IAciM/YRbDHC4hkvI/AAAAAAAE2OQ/_lb13oVN_oMzKSy1GpmhX5SYxPVL-nWSwCLcBGAsYHQ/s1280/2123167516.jpeg"
       }
     ],
     "bigPicture": "https://www.heavenofhorror.com/wp-content/uploads/2021/02/red-dot-netflix.jpg",
