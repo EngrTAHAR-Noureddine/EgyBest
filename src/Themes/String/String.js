@@ -76,7 +76,7 @@ export default class String{
     ACTOR = ()=> ((this.isArabic)?'الممثلين':'Actors');
     SEASONS = ()=> ((this.isArabic)?'المواسم':'Seasons');
     EPISODES = ()=> ((this.isArabic)?'الحلقات':'Episodes');
-    SIMILAR = ()=> ((this.isArabic)?'المتشابهة':'Similar');
+    SIMILAR = ()=> ((this.isArabic)?'المشابهة':'Similar');
     COMMENTS = ()=> ((this.isArabic)?'التعليقات':'Comments');
     COMMENT = ()=> ((this.isArabic)?'تعليق':'Comment');
     COMMENT_PLACEHOLDER = ()=> ((this.isArabic)?'تعليق...':'Comment...');
