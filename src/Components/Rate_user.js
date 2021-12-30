@@ -11,13 +11,17 @@ import React from "react";
 export function RatingUser(prop) {
 
 
+
+
+
     return(
         <Box flexGrow={1} height={'10vh'} display={(prop.signedIn)?'flex':'none'} borderRadius={5} mt={2}
+             flexDirection={(prop.isArabic)?'row-reverse':'row'}
              justifyContent={'space-between'} alignItems={'center'} bgcolor={white_10} mx={5}>
 
             <Box width={{xs:'40%', lg:'20%'}} height={'100%'}
                  style={flex_styles.row_center} alignItems={'center'}>
-                <TYPOGRAPHY_YOUR_RATING title={YOUR_RATING}/>
+                <TYPOGRAPHY_YOUR_RATING title={prop.youRating}/>
             </Box>
             <Box
                 width={{lg:'60%', xl:'50%'}}
@@ -31,11 +35,11 @@ export function RatingUser(prop) {
                                 color={white_100}
                                 width={'100%'}
                                 sx={{wordWrap: "break-word" }}>
-                        {HATE_IT}
+                        {prop.hateIt}
                     </Typography>
                 </Box>
                 <Box width={'60%'} height={'100%'}>
-                    <RatingBar/>
+                    <RatingBar rate={prop.rate} reverse={prop.isArabic}/>
                 </Box>
                 <Box width={'20%'} height={'100%'} style={flex_styles.col_center}>
                     <Typography variant={'h6'}
@@ -44,7 +48,7 @@ export function RatingUser(prop) {
                                 color={white_100}
                                 width={'100%'}
                                 sx={{wordWrap: "break-word" }}>
-                        {LIKE_IT}
+                        {prop.likeIt}
                     </Typography>
                 </Box>
 

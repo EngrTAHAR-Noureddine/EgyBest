@@ -64,7 +64,9 @@ export function Movie_Details(prop) {
                                     image={prop.selector.bigPicture}/>
 
 
-            <RatingUser signedIn={prop.signedIn}/>
+            <RatingUser isArabic={prop.isArabic} signedIn={prop.signedIn}
+                        rate={(prop.selector.rate)?prop.selector.rate:1}
+                        youRating={string.YOUR_RATING()} likeIt={string.LIKE_IT()} hateIt={string.HATE_IT()}/>
 
 
             <Detail_movie isArabic={prop.isArabic} item={prop.selector}/>
