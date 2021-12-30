@@ -1,6 +1,5 @@
 import {Box, Link, Typography} from "@mui/material";
 import {AmiriFont} from "../Fonts/Fonts";
-import {FORGET_PASSWORD} from "../String/String_eng";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
@@ -106,7 +105,7 @@ export const TYPOGRAPHY_GIG_TITLE_UNDERLINED = (prop)=>(
     <Box flexGrow={1} px={5} >
         <Typography variant={'h5'} textAlign={'center'} fontFamily={AmiriFont}
                     color={'white'} sx={{borderBottom:1, borderColor:'white'}} mb={5}>
-            {prop.what} ({prop.number})
+            {prop.what}
         </Typography>
     </Box>
 )

@@ -9,7 +9,7 @@ export default function Actor(prop) {
         <Box>
             <Seperator_Bar/>
             <BoxPersonPhoto name={prop.actor.name} photo={prop.actor.photo}/>
-            <TYPOGRAPHY_GIG_TITLE_UNDERLINED what={prop.work} number={30}/>
+            <TYPOGRAPHY_GIG_TITLE_UNDERLINED what={prop.work}/>
             <Result_List list={prop.list}/>
         </Box>
     )
