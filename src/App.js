@@ -20,6 +20,7 @@ import { connect } from 'react-redux';
 import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic';
 import String from "./Themes/String/String";
 import {useEffect, useState} from "react";
+import Notification from "./Pages/Notification";
 
 
 function App(props) {
@@ -158,6 +159,9 @@ function App(props) {
                   </Route>
                   <Route exact path="/settings">
                       <Settings isArabic={props.isArabic}/>
+                  </Route>
+                  <Route exact path={"/notification"}>
+                      <Notification isArabic={props.isArabic}/>
                   </Route>
                   <Route exact path="/sign-in">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_IN()}/>

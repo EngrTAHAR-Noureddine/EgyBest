@@ -135,7 +135,13 @@ function CustomAppBar(prop) {
 
                                             >
                                                 <Box sx={{width:'inherit', height:'inherit',px:1}}>
-
+                                                    <MenuItem  key={'notification'}
+                                                               sx={{color:white_100, "&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
+                                                               onClick={handleCloseNavMenu}>
+                                                        <Link href={'/notification'} sx={{textDecoration:'none'}}>
+                                                            <Typography fontFamily={AmiriFont} color={white_100} textAlign="center">{string.NOTIFICATIONS()}</Typography>
+                                                        </Link>
+                                                    </MenuItem>
                                                     <MenuItem  key={'library'}
                                                                sx={{color:white_100, "&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
 

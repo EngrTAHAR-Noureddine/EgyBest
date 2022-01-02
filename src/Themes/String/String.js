@@ -32,12 +32,16 @@ export default class String{
     SIGNIN = ()=> ((this.isArabic)?'تسجيل':'SignIn');
     SIGNOUT = ()=>((this.isArabic)?'الخروج':'SignOut');
     LIBRARY = ()=>((this.isArabic)?'مكتبتي':'Library');
+    NOTIFICATIONS = ()=>((this.isArabic)?'إشعارات':'Notifications');
     SETTINGS=()=>((this.isArabic)?'اعدادات':'Settings');
     HOME = ()=> ((this.isArabic)?'الرئيسية':'Home');
     //**************************************************************************************************
     MORE = ()=> ((this.isArabic)?'المزيد':'MORE');
     LATEST_ADDITIONS = ()=> ((this.isArabic)?'اخر الاضافات':'Latest Additions');
     MOST_WATCHED = ()=> ((this.isArabic)?'الاكثر مشاهدة':'Most Watched');
+    //*********************************************************************************************
+    NOTIFICATION_TEXT = ()=> ((this.isArabic)?'The blacklist تم اضافة حلقة جديدة لمسلسل ':'A new episode has been added to the series The blacklist');
+    NOTIFICATION_NOT_EXIST = ()=> ((this.isArabic)?'ﻻ توجد إشعارات':'There are no notification');
     //*********************************************************************************************
     SEARCH = ()=> ((this.isArabic)?': البحث':'Search :');
     SEARCH_PLACEHOLDER = ()=> ((this.isArabic)?'بحث':'Search...');
