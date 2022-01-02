@@ -15,7 +15,7 @@ import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";
 import {SIGN_GROUP_THEME} from "../Themes/Theme/Themes";
 import {SearchBar} from "../Themes/Elements/SearchBar";
-import {LANGUAGE_BUTTON, MENU_BUTTON, USER_BUTTON} from "../Themes/Elements/IconButton";
+import {LANGUAGE_BUTTON, MENU_BUTTON, NOTIFICATION_BUTTON, USER_BUTTON} from "../Themes/Elements/IconButton";
 import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
@@ -97,6 +97,7 @@ function CustomAppBar(prop) {
                                     <Grid item xs={12} xl={9} style={flex_styles.row_right}>
                                         <SearchBar setResearch={prop.setResearch} isArabic={prop.isArabic}/>
                                         <LANGUAGE_BUTTON isArabic={prop.isArabic} click={prop.toggleLanguage}/>
+                                        <NOTIFICATION_BUTTON/>
                                     </Grid>
 
                                     <Grid item

@@ -1,8 +1,9 @@
-import {MenuRounded, SearchRounded} from "@mui/icons-material";
+import {MenuRounded, Notifications, SearchRounded} from "@mui/icons-material";
 import {Avatar, Box, IconButton} from "@mui/material";
 import USA_Flag from "../../Asset/united-states-of-america.png";
 import ARABIC_Flag from "../../Asset/saudi-arabia.png";
 import actor from '../../Asset/Actor.jpg';
+import {white_100} from "../Styles/Color";
 
 export const MENU_BUTTON = (prop) => (
     <IconButton
@@ -35,6 +36,11 @@ export const LANGUAGE_BUTTON = (prop)=>(
                 width={20}
                 alt="img"
                 src={(prop.isArabic)?ARABIC_Flag:USA_Flag}/>
+    </IconButton>
+)
+export const NOTIFICATION_BUTTON = ()=>(
+    <IconButton href={'/notification'} sx={{display:{xs:'flex',xl:'none'}}}>
+        <Notifications sx={{color:white_100}}/>
     </IconButton>
 )
 export const USER_BUTTON = (prop)=>(
