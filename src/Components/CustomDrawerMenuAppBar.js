@@ -1,13 +1,14 @@
 
 import {Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from "@mui/material";
-import {black_60, black_80, blue_0A, green_34, red_e5, white_100} from "../Themes/Styles/Color";
+import {black_60, black_80, blue_0A, green_34, grey_36, red_e5, white_100} from "../Themes/Styles/Color";
 import {AmiriFont} from "../Themes/Fonts/Fonts";
 
 import String from "../Themes/String/String";
+import {makeStyles} from "@mui/styles";
 
 function List_Menu(prop){
     return(
-        <List  sx={{ borderRadius:2, mt:2, px:1}}>
+        <List  sx={{ px:1}}>
             {prop.list.map((item,index)=>(
                 <Button fullWidth href={prop.listLinks[index]} sx={{textDecoration:'none',textTransform:'none',
                     "&,&:hover,&:focus":{
@@ -28,10 +29,18 @@ function List_Menu(prop){
     )
 }
 
+const useStyles = makeStyles(() => ({
+    menu: {
+        "& .MuiPaper-root": {
+            backgroundColor: grey_36
+        }
+    }
+}));
+
 export function CustomDrawerMenuAppBar(prop) {
     const string = new String(prop.isArabic);
 
-    const list =(prop.SignedIN)?
+    const list =(!prop.SignedIN)?
                     [   string.HOME(),
                         string.MOVIES(),
                         string.SERIES(),
@@ -49,7 +58,7 @@ export function CustomDrawerMenuAppBar(prop) {
                         string.LIBRARY(),
                         string.SETTINGS(),
                         string.SIGNOUT()];
-    const listColor =(prop.SignedIN)?
+    const listColor =(!prop.SignedIN)?
         [   'transparent',
             'transparent',
             'transparent',
@@ -67,7 +76,7 @@ export function CustomDrawerMenuAppBar(prop) {
             'transparent',
             'transparent',
             red_e5];
-    const listLinks =(prop.SignedIN)?
+    const listLinks =(!prop.SignedIN)?
         [   '/',
             '/list-movies',
             '/list-series',
@@ -85,15 +94,17 @@ export function CustomDrawerMenuAppBar(prop) {
             '/profile',
             '/settings',
             '/'];
+    const classes = useStyles();
     return(
         <Drawer
+            className={classes.menu}
             anchor='left'
             open={prop.open}
             onClose={prop.handleClose}
             sx={{display:{xs:'block', xl:'none'}}}
         >
             <Box
-                sx={{ width: 300, height:'100%', backgroundColor:black_80}}
+                sx={{ width: 300, height:'inherit'}}
                 onClick={prop.handleClose}
                 onKeyDown={prop.handleClose}
             >
