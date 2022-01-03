@@ -20,10 +20,11 @@ export function WatchDownloadMovie(prop) {
 
             >
                 <Grid item height={'100%'} width={'100%'} xs={3} sm={3} lg={3} xl={2}>
-                    <ListDownload download={string.DOWNLOAD()} list={prop.items}/>
+                    <ListDownload isArabic={prop.isArabic} download={string.DOWNLOAD()} watchtogether={string.WATCH_TOGETHER()} list={prop.items}/>
+
                 </Grid>
                 <Grid item  height={'100%'} width={'100%'} xs={9} sm={9} lg={9} xl={10}>
-                    <VideoPlay linkMovie={prop.movie} next={string.NEXT()} previous={string.PREVIOUS()}/>
+                    <VideoPlay episodes={prop.episodes} linkMovie={prop.movie} next={string.NEXT()} previous={string.PREVIOUS()}/>
                 </Grid>
             </Grid>
         </Box>

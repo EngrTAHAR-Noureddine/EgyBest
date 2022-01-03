@@ -86,6 +86,7 @@ export default class String{
     COMMENT_PLACEHOLDER = ()=> ((this.isArabic)?'تعليق...':'Comment...');
     COMMENTS_NOT_EXIST = ()=> ((this.isArabic)?'ﻻ توجد تعليقات':'There are no comments');
     DOWNLOAD = ()=> ((this.isArabic)?'التحميل':'Download');
+    WATCH_TOGETHER = ()=> ((this.isArabic)?'مشاهدة جماعية':'Watch together');
     MINUTE = ()=> ((this.isArabic)?'دقيقة':'min');
     //**************************************************************************
     NAME_MOVIE = ()=> ((this.isArabic)?' :الاسم بالعربي ':'Name: ');
@@ -104,6 +105,8 @@ export default class String{
     LIKE_IT = ()=> ((this.isArabic)?'أعجبني':'I like it');
     HATE_IT = ()=> ((this.isArabic)?'لم يعجبني':'I hate it');
     YOUR_RATING = ()=> ((this.isArabic)?'تقييمك':'Your rating');
+    ADD_INTO_LIBRARY = ()=> ((this.isArabic)?'حفظ في المكتبة':'Add to library');
+    ADDED_INTO_LIBRARY = ()=> ((this.isArabic)?'تم الحفظ في المكتبة':'Saved in the library');
 
     //***********************************************************************
     FILTER = ()=> ((this.isArabic)?'بحث':'Filter');

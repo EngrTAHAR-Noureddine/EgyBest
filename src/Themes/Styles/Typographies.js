@@ -150,7 +150,7 @@ export  const TYPOGRAPHY_STYLE_EMAIL_PASSWORD = (prop)=>(
 export const TYPOGRAPHY_SIGN_WITH = (prop) => (
     <ThemeProvider theme={RESPONSIVE_THEME}>
     <Typography variant={'h6'} width={'100%'}
-                color={white_100}
+                color={(prop.color)?prop.color:white_100}
                 fontFamily={AmiriFont} textAlign={'center'}>
         {prop.text}
     </Typography>
@@ -254,7 +254,7 @@ export const TYPOGRAPHY_NOT_EXIST = (prop) =>(
 )
 export const TYPOGRAPHY_YOUR_RATING = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-        <Typography variant={'h5'} color={white_100} fontFamily={AmiriFont} sx={{wordWrap: "break-word" }}>
+        <Typography variant={(prop.variant)?prop.variant:'h5'} color={(prop.color)?prop.color:white_100} fontFamily={AmiriFont} sx={{wordWrap: "break-word" }}>
             {prop.title}
         </Typography>
     </ThemeProvider>

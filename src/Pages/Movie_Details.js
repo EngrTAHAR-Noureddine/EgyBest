@@ -11,7 +11,7 @@ import {RatingUser} from "../Components/Rate_user";
 import {CommentUser} from "../Themes/Elements/Comment_user";
 import String from '../Themes/String/String';
 import {MovieCard} from "../Themes/Elements/MovieCard";
-import {flex_styles} from "../Themes/Styles/styles";
+import AddToLibrary from "../Components/add_to_library";
 
 
 
@@ -88,6 +88,12 @@ export function Movie_Details(prop) {
                         rate={(prop.selector.rate)?prop.selector.rate:1}
                         youRating={string.YOUR_RATING()} likeIt={string.LIKE_IT()} hateIt={string.HATE_IT()}/>
 
+            <AddToLibrary isArabic={prop.isArabic}
+                          watch_together={string.WATCH_TOGETHER()}
+                          signedIn={prop.signedIn}
+                          Add_In_Library={string.ADD_INTO_LIBRARY()}
+                          added_In_library={string.ADDED_INTO_LIBRARY()}
+                            />
 
             <Detail_movie isArabic={prop.isArabic} item={prop.selector}/>
             <SectionDetail title={string.ACTOR()} alignement={string.JUSTIFY_DIRECTION()}>
@@ -102,7 +108,7 @@ export function Movie_Details(prop) {
                 {funEpisode()}
 
 
-            <WatchDownloadMovie isArabic={prop.isArabic} items={['1080p','720p','480p']} movie={prop.selector.linkMovie}/>
+            <WatchDownloadMovie episodes={prop.selector.episodes}  isArabic={prop.isArabic} items={['1080p','720p','480p']} movie={prop.selector.linkMovie}/>
             {funSimular()}
             <CommentUser signedIn={prop.signedIn} comment={string.COMMENT()} alignement={string.JUSTIFY_DIRECTION()}/>
             <SectionDetail title={string.COMMENTS()} alignement={string.JUSTIFY_DIRECTION()}>

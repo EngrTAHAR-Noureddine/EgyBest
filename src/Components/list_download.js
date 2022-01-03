@@ -1,14 +1,13 @@
 import {flex_styles} from "../Themes/Styles/styles";
 import {
-    Box, Drawer,
+    Box,  Drawer,
     List,
     ListItem,
     ListItemButton,
     ListItemText,
-    ListSubheader,Typography
+    ListSubheader, Typography
 } from "@mui/material";
-import {DOWNLOAD} from "../Themes/String/String_eng";
-import { useState} from "react";
+import React, { useState} from "react";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {DOWNLOAD_BUTTON} from "../Themes/Elements/Buttons";
@@ -65,7 +64,7 @@ export function ListDownload(prop) {
     const matches = useMediaQuery(theme.breakpoints.up('lg'));
 
     return(
-        <Box sx={{ width: '100%', height:'100%'}} style={flex_styles.row_center}>
+        <Box sx={{ width: '100%', height:'100%'}} style={flex_styles.col_up}>
             <List
                 sx={{width:'90%', height:'auto', p:2}}
                 subheader={
