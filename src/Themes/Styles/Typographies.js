@@ -80,7 +80,7 @@ export const TYPOGRAPHY_POPUP_MENU = (prop) => (
 
 export const TYPOGRAPHY_SEARCH_RESULT = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-    <Typography variant={'h5'} width={'inherit'} height={'auto'} textAlign={prop.alignement}
+    <Typography variant={'h5'} width={'inherit'} height={'auto'} textAlign={'center'}
                 color={white_EC}
                 fontFamily={AmiriFont}
                 fontWeight={prop.Weight}

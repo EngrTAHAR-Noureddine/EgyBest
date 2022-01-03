@@ -2,7 +2,6 @@ import { Box} from "@mui/material";
 import React from "react";
 import {Header_Movie_Details} from "../Components/Header_Movie_Details";
 import {Detail_movie} from "../Components/detail_movie";
-import {AvatarActor} from "../Themes/Elements/Avatar_Actor";
 import {SectionDetail} from "../Components/section_detail";
 import {CONTAINER_NUMBER_BUTTON} from "../Themes/Elements/Buttons";
 import {WatchDownloadMovie} from "../Themes/Elements/movie_watch_&_ download_section";
@@ -12,6 +11,9 @@ import {CommentUser} from "../Themes/Elements/Comment_user";
 import String from '../Themes/String/String';
 import {MovieCard} from "../Themes/Elements/MovieCard";
 import AddToLibrary from "../Components/add_to_library";
+import EpisodesCaroussel from "../Components/episode_caroussel";
+import ActorsCaroussel from "../Components/actor_caroussel";
+import {flex_styles} from "../Themes/Styles/styles";
 
 
 
@@ -19,16 +21,11 @@ import AddToLibrary from "../Components/add_to_library";
 export function Movie_Details(prop) {
     const string = new String(prop.isArabic);
 
-
     const funActor = ()=>{
         console.log('Movie detail : ',prop.selector);
         if(prop.selector.actors){
         return(
-            prop.selector.actors.map((item)=>(
-
-                <AvatarActor selectorActor={prop.selectorActor} item={item} floatIt={string.JUSTIFY_DIRECTION()}/>
-
-            ))
+            <ActorsCaroussel list={prop.selector.actors} selectorActor={prop.selectorActor} />
         )}else return (<div></div>)
     }
     const mapListItems = (list) => (
@@ -43,7 +40,8 @@ export function Movie_Details(prop) {
             return(
                 <SectionDetail title={string.SEASONS()}
                                alignement={string.JUSTIFY_DIRECTION()}>
-                    {mapListItems(prop.selector.seasons)}
+
+                    <EpisodesCaroussel list={prop.selector.seasons}/>
 
                 </SectionDetail>
             )
@@ -53,7 +51,7 @@ export function Movie_Details(prop) {
         if(prop.selector.episodes){
             return(
                 <SectionDetail  title={string.EPISODES()} alignement={string.JUSTIFY_DIRECTION()}>
-                    {mapListItems(prop.selector.episodes)}
+                    <EpisodesCaroussel list={prop.selector.episodes}/>
                 </SectionDetail>
             )}else return (<div></div>)
     }
@@ -68,7 +66,8 @@ export function Movie_Details(prop) {
         if(prop.selector.similar){
             return(
                 <SectionDetail  title={string.SIMILAR()} alignement={string.JUSTIFY_DIRECTION()}>
-                    <Box width={'fit-content'} height={'fit-content'} p={1} sx={{float:string.JUSTIFY_DIRECTION()}}>
+
+                    <Box flexGrow={1} height={'fit-content'} p={1} style={flex_styles.row_center}>
                         {mapListSimilar(prop.selector.similar)}
                     </Box>
 
