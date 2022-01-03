@@ -15,15 +15,15 @@ function Home(prop) {
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     linkMore={'/list-movies'}
                                     isArabic={prop.isArabic}
-                                    list={prop.listMovies.slice(4,10)} item={string.LATEST_ADDITIONS()}/>
+                                    list={prop.listMovies} item={string.LATEST_ADDITIONS()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
                                     linkMore={'/list-movies'}
-                                    list={prop.listMovies.slice(2,8)} item={string.MOST_WATCHED()}/>
+                                    list={prop.listMovies} item={string.MOST_WATCHED()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
                                     linkMore={'/list-movies'}
-                                    list={prop.listMovies.slice(0,6)} item={string.MOVIES()}/>
+                                    list={prop.listMovies} item={string.MOVIES()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
                                     linkMore={'/list-series'}
