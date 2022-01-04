@@ -27,4 +27,6 @@ export const black_1212 = '#121212';
 export const grey_36 = '#363638';
 export const red_e5 = '#e50914';
 
+export const yellow_fe = '#febb39';
+
 

@@ -1,7 +1,7 @@
 import {Box, IconButton} from "@mui/material";
-import {CircleRounded} from "@mui/icons-material";
+import { Star} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
-import {blue_0A, white_30} from "../Styles/Color";
+import {white_30, yellow_fe} from "../Styles/Color";
 
 export function RatingBar(prop) {
 
@@ -60,7 +60,7 @@ export function RatingBar(prop) {
                     <IconButton onMouseEnter={()=>mouseEnter(index)}
                                 onMouseLeave={()=>mouseLeave(index)}
                                 onClick={()=>onCLicked(index)} key={index}>
-                        <CircleRounded sx={{color:(item==="true")?blue_0A:white_30}}/>
+                        <Star sx={{color:(item==="true")?yellow_fe:white_30}}/>
                     </IconButton>
                 ))
             }
