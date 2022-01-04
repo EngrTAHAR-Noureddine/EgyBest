@@ -40,7 +40,7 @@ export default class String{
     LATEST_ADDITIONS = ()=> ((this.isArabic)?'اخر الاضافات':'Latest Additions');
     MOST_WATCHED = ()=> ((this.isArabic)?'الاكثر مشاهدة':'Most Watched');
     //*********************************************************************************************
-    NOTIFICATION_TEXT = ()=> ((this.isArabic)?'The blacklist تم اضافة حلقة جديدة لمسلسل ':'A new episode has been added to the series The blacklist');
+    NOTIFICATION_TEXT = ()=> ((this.isArabic)?'تم اضافة حلقة جديدة لمسلسل القائمة السوداء':'A new episode has been added to the series The blacklist');
     NOTIFICATION_NOT_EXIST = ()=> ((this.isArabic)?'ﻻ توجد إشعارات':'There are no notification');
     //*********************************************************************************************
     SEARCH = ()=> ((this.isArabic)?': البحث':'Search :');

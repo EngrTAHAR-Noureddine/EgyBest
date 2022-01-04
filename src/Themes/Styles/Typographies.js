@@ -262,7 +262,7 @@ export const TYPOGRAPHY_YOUR_RATING = (prop)=>(
 
 export const TYPOGRAPHY_NOTIFICATION = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-    <Typography variant={'h6'} fontFamily={AmiriFont} color={white_100} sx={{wordWrap: "break-word" }}>
+    <Typography variant={'h6'} fontFamily={AmiriFont} textAlign={prop.align} color={white_100} sx={{wordWrap: "break-word" }}>
         {prop.notification}
     </Typography>
     </ThemeProvider>
