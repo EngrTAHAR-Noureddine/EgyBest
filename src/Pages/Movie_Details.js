@@ -1,26 +1,24 @@
-import { Box} from "@mui/material";
+import { Box, Container} from "@mui/material";
 import React from "react";
 import {Header_Movie_Details} from "../Components/Header_Movie_Details";
 import {Detail_movie} from "../Components/detail_movie";
 import {SectionDetail} from "../Components/section_detail";
-import {CONTAINER_NUMBER_BUTTON} from "../Themes/Elements/Buttons";
 import {WatchDownloadMovie} from "../Themes/Elements/movie_watch_&_ download_section";
-import {TYPOGRAPHY_NOT_EXIST} from "../Themes/Styles/Typographies";
 import {RatingUser} from "../Components/Rate_user";
 import {CommentUser} from "../Themes/Elements/Comment_user";
 import String from '../Themes/String/String';
-import {MovieCard} from "../Themes/Elements/MovieCard";
 import AddToLibrary from "../Components/add_to_library";
 import EpisodesCaroussel from "../Components/episode_caroussel";
 import ActorsCaroussel from "../Components/actor_caroussel";
 import {flex_styles} from "../Themes/Styles/styles";
+import Comments from "../Components/Comments";
+import CardCaroussel from "../Components/card_caroussel";
 
 
 
 
 export function Movie_Details(prop) {
     const string = new String(prop.isArabic);
-
     const funActor = ()=>{
         console.log('Movie detail : ',prop.selector);
         if(prop.selector.actors){
@@ -28,13 +26,6 @@ export function Movie_Details(prop) {
             <ActorsCaroussel list={prop.selector.actors} selectorActor={prop.selectorActor} />
         )}else return (<div></div>)
     }
-    const mapListItems = (list) => (
-        list.map((cusItem)=>(
-
-            <CONTAINER_NUMBER_BUTTON item={cusItem} floatIt={string.JUSTIFY_DIRECTION()}/>
-
-        ))
-    )
     const funSeason = ()=>{
         if(prop.selector.seasons){
             return(
@@ -55,20 +46,13 @@ export function Movie_Details(prop) {
                 </SectionDetail>
             )}else return (<div></div>)
     }
-    const mapListSimilar = (list) => (
-        list.map((cusItem)=>(
-
-            <MovieCard selectorClicker={()=>{}} item={cusItem}/>
-
-        ))
-    )
     const funSimular = ()=>{
         if(prop.selector.similar){
             return(
                 <SectionDetail  title={string.SIMILAR()} alignement={string.JUSTIFY_DIRECTION()}>
 
                     <Box flexGrow={1} height={'fit-content'} p={1} style={flex_styles.row_center}>
-                        {mapListSimilar(prop.selector.similar)}
+                        <CardCaroussel list={prop.selector.similar}/>
                     </Box>
 
                 </SectionDetail>
@@ -110,22 +94,20 @@ export function Movie_Details(prop) {
             <WatchDownloadMovie episodes={prop.selector.episodes}  isArabic={prop.isArabic} items={['1080p','720p','480p']} movie={prop.selector.linkMovie}/>
             {funSimular()}
             <CommentUser signedIn={prop.signedIn} comment={string.COMMENT()} alignement={string.JUSTIFY_DIRECTION()}/>
+
             <SectionDetail title={string.COMMENTS()} alignement={string.JUSTIFY_DIRECTION()}>
-                <TYPOGRAPHY_NOT_EXIST text={string.COMMENTS_NOT_EXIST()}/>
+
+               <Container maxWidth={'xl'} p={10} sx={{height:'auto'}}>
+
+                   <Box flexGrow={1}  height={'2vh'}/>
+                   <Comments/>
+                   <Box flexGrow={1}  height={'2vh'}/>
+
+               </Container>
+
+
             </SectionDetail>
         </Box>
     )
 }
-//isDisplay={(prop.selector.episodes)?'flex':'none'}
 
-/*
-
-
-
-
-
-
-
-
-
-* */

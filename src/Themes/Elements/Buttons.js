@@ -3,13 +3,13 @@ import {
     TYPOGRAPHY_CONTENT_CARD_MOVIE,
     TYPOGRAPHY_MENU_XL,
     TYPOGRAPHY_POPUP_MENU,
-    TYPOGRAPHY_SHORTCUT_LIST, TYPOGRAPHY_SIGN_TITLE, TYPOGRAPHY_SIGN_WITH
+    TYPOGRAPHY_SHORTCUT_LIST, TYPOGRAPHY_SIGN_TITLE, TYPOGRAPHY_SIGN_WITH, TYPOGRAPHY_YOUR_RATING
 } from "../Styles/Typographies";
 import {
     ArrowBackIosOutlined,
     ArrowDropDown,
     ArrowDropUp,
-    ArrowForwardIosOutlined,
+    ArrowForwardIosOutlined, LibraryAdd, LibraryAddCheck, People,
     Star
 } from "@mui/icons-material";
 import React from "react";
@@ -171,3 +171,18 @@ export const NEXT_PLAY_BUTTON = (prop)=>(
         {prop.item}
     </Button>
 )
+
+export  const ButtonLG_WATCH = (prop)=>(
+    <Button onClick={prop.handleClickOpen} endIcon={<People sx={{width:36, height:36, color:'#FEBB39'}}/>}
+            style={flex_styles.row_center} alignItems={'center'} mx={2}>
+        <TYPOGRAPHY_YOUR_RATING  color={'#FEBB39'} title={prop.watch_together}/>
+    </Button>
+)
+
+export  const ButtonLG_LIBRARY =(prop) =>(
+    <Button onClick={prop.onAddIt} endIcon={(!prop.addLibrary)?<LibraryAdd sx={{width:36, height:36, color:white_100}}/>
+        :<LibraryAddCheck sx={{width:36, height:36, color:green_34}}/>}
+            style={flex_styles.row_center} alignItems={'center'} mx={2}>
+        <TYPOGRAPHY_YOUR_RATING color={(prop.addLibrary)?green_34:blue_0A} title={(!prop.addLibrary)?prop.Add_In_Library:prop.added_In_library}/>
+    </Button>
+);

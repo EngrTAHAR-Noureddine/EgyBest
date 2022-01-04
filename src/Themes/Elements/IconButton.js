@@ -1,9 +1,10 @@
-import {MenuRounded, Notifications, SearchRounded} from "@mui/icons-material";
+import {LibraryAdd, LibraryAddCheck, MenuRounded, Notifications, People, SearchRounded} from "@mui/icons-material";
 import {Avatar, Box, IconButton} from "@mui/material";
 import USA_Flag from "../../Asset/united-states-of-america.png";
 import ARABIC_Flag from "../../Asset/saudi-arabia.png";
 import actor from '../../Asset/Actor.jpg';
-import {white_100} from "../Styles/Color";
+import {green_34, white_100} from "../Styles/Color";
+import React from "react";
 
 export const MENU_BUTTON = (prop) => (
     <IconButton
@@ -49,4 +50,15 @@ export const USER_BUTTON = (prop)=>(
                 alt="img"
                 src={actor}/>
     </IconButton>
+)
+
+export const LIBRARY_BUTTON=(prop)=>(
+    <IconButton onClick={prop.onAddIt} >
+        {(prop.addLibrary)?<LibraryAddCheck sx={{width:{xs:24, xl:36}, height:{xs:24, xl:36}, color:green_34}}/>
+            :<LibraryAdd sx={{width:{xs:24, xl:36}, height:{xs:24, xl:36}, color:white_100}}/>}
+    </IconButton>
+)
+
+export const WATCH_BUTTON = (prop)=>(
+    <IconButton onClick={prop.handleClickOpen}><People sx={{width:{xs:24, xl:36}, height:{xs:24, xl:36}, color:'#FEBB39'}}/></IconButton>
 )
