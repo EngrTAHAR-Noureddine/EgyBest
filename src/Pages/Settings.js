@@ -1,14 +1,14 @@
 import {Seperator_Bar} from "../Themes/Elements/Seperator_Bar";
 import {Avatar, Box, Button, Grid, IconButton, Typography} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
-import {NAME, REMOVE_ACCOUNT, SIGN_IN} from "../Themes/String/String_eng";
+import { SIGN_IN} from "../Themes/String/String_eng";
 import {black_30, blue_0A, green_34, white_05, white_100, white_EC} from "../Themes/Styles/Color";
 import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {Edit} from '@mui/icons-material';
-import {AmiriFont} from "../Themes/Fonts/Fonts";
 import actorPhoto from '../Asset/Actor.jpg';
 import React, {useState} from "react";
 import String from '../Themes/String/String';
+import {CustomSingleton} from "../Themes/Styles/Typographies";
 
 export function Settings(prop){
 
@@ -87,13 +87,15 @@ export function Settings(prop){
                                                             <Button disabled={disable} onClick={saveEdit} sx={{
                                                                         textTransform:'none',
                                                                         "&,&:hover":{backgroundColor:green_34, color:white_100},
-                                                                        fontFamily:AmiriFont, fontWeight:'bolder',
+                                                                        fontFamily:CustomSingleton.getIt(), fontWeight:'bolder',
                                                                         p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                                                 {string.SAVE()}
                                                             </Button>
-                                                            <Button onClick={enableEdit} sx={{       textTransform:'none',
+                                                            <Button onClick={enableEdit}
+                                                                    sx={{       textTransform:'none',
                                                                                 "&,&:hover":{backgroundColor:blue_0A, color:white_100},
-                                                                                fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
+                                                                                fontFamily:CustomSingleton.getIt(),
+                                                                                fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                                                 {string.EDIT()}
                                                             </Button>
 
@@ -104,12 +106,12 @@ export function Settings(prop){
                                             </Grid>
                                     </Box>
                                 <Box width={'100%'} display={'flex'} flexDirection={string.ROW_REVERSE()} justifyContent={'space-between'} alignItems={'center'} height={'auto'}  mt={5} mb={5}>
-                                    <Typography color={white_100} fontFamily={AmiriFont}>
+                                    <Typography color={white_100} fontFamily={CustomSingleton.getIt()}>
                                         {string.REMOVE_ACCOUNT_ASKING()}
                                     </Typography>
                                     <Button sx={{       textTransform:'none',
                                         "&,&:hover":{backgroundColor:'red', color:white_100},
-                                        fontFamily:AmiriFont,fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
+                                        fontFamily:CustomSingleton.getIt(),fontWeight:'bolder',p:2,px:{xs:2,md:5}, borderRadius:2}}>
                                         {string.REMOVE_ACCOUNT()}
                                     </Button>
 

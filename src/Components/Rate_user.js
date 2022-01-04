@@ -1,8 +1,6 @@
 import {Box, Typography} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
-import {TYPOGRAPHY_YOUR_RATING} from "../Themes/Styles/Typographies";
-import {HATE_IT, LIKE_IT, YOUR_RATING} from "../Themes/String/String_eng";
-import {AmiriFont} from "../Themes/Fonts/Fonts";
+import {CustomSingleton, TYPOGRAPHY_YOUR_RATING} from "../Themes/Styles/Typographies";
 import {white_10, white_100} from "../Themes/Styles/Color";
 import {RatingBar} from "../Themes/Elements/rating_bar";
 import {ScoreCounter} from "../Themes/Elements/Score_counter";
@@ -31,7 +29,7 @@ export function RatingUser(prop) {
                 <Box width={'20%'} height={'100%'} style={flex_styles.col_center}>
                     <Typography variant={'h6'}
                                 textAlign={'right'}
-                                fontFamily={AmiriFont}
+                                fontFamily={CustomSingleton.getIt()}
                                 color={white_100}
                                 width={'100%'}
                                 sx={{wordWrap: "break-word" }}>
@@ -44,7 +42,7 @@ export function RatingUser(prop) {
                 <Box width={'20%'} height={'100%'} style={flex_styles.col_center}>
                     <Typography variant={'h6'}
                                 textAlign={'left'}
-                                fontFamily={AmiriFont}
+                                fontFamily={CustomSingleton.getIt()}
                                 color={white_100}
                                 width={'100%'}
                                 sx={{wordWrap: "break-word" }}>

@@ -2,9 +2,9 @@ import {Box, Grid, IconButton, Typography} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
 import {white_10, white_100} from "../Themes/Styles/Color";
 import String from '../Themes/String/String';
-import {AmiriFont} from "../Themes/Fonts/Fonts";
 import CardCaroussel from "./card_caroussel";
 import {Add} from "@mui/icons-material";
+import {CustomSingleton} from "../Themes/Styles/Typographies";
 
 
 export function MovieCardsChain(prop) {
@@ -22,7 +22,7 @@ export function MovieCardsChain(prop) {
                     </Grid>
                     <Grid item xs={8} height={"100%"}
                           style={flex_styles.row_center}>
-                        <Typography variant={'h5'} fontFamily={AmiriFont} style={flex_styles.col_center}
+                        <Typography variant={'h5'} fontFamily={CustomSingleton.getIt()} style={flex_styles.col_center}
                                     color={white_100}
                                     >
                             {prop.item}
@@ -45,17 +45,3 @@ export function MovieCardsChain(prop) {
         </Box>
     )
 }
-
-/*
-
-<Grid container xs={12} flexGrow={1} spacing={2} style={flex_styles.row_center}>
-                    {
-
-                        prop.list.map((item)=>(
-                            <Grid item xs={12} sm={6} md={4} xl={2} style={flex_styles.row_center}>
-                                <MovieCard selectorClicker={prop.selectorClicker} item={item}/>
-                            </Grid>))
-
-                    }
-                </Grid>
-* */

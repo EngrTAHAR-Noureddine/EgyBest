@@ -10,7 +10,7 @@ import {
     Toolbar,
     Typography
 } from '@mui/material';
-import {TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
+import {CustomSingleton, TYPOGRAPHY_LOGO, TYPOGRAPHY_MENU_XL} from "../Themes/Styles/Typographies";
 import {MENU_BUTTON_XL} from "../Themes/Elements/Buttons";
 import {ThemeProvider} from "@emotion/react";
 import {SIGN_GROUP_THEME} from "../Themes/Theme/Themes";
@@ -20,10 +20,8 @@ import {ScrollToColor} from '../Themes/Animation/ScrollToColor';
 import {flex_styles} from "../Themes/Styles/styles";
 import {CustomDrawerMenuAppBar} from "./CustomDrawerMenuAppBar";
 import {useState} from "react";
-
 import String from "../Themes/String/String";
 import {black_60, grey_36, red_e5, white_100, white_7070} from "../Themes/Styles/Color";
-import {AmiriFont} from "../Themes/Fonts/Fonts";
 import { makeStyles } from '@mui/styles';
 
 
@@ -140,7 +138,7 @@ function CustomAppBar(prop) {
                                                                sx={{color:white_100, "&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
                                                                onClick={handleCloseNavMenu}>
                                                         <Link href={'/notification'} sx={{textDecoration:'none'}}>
-                                                            <Typography fontFamily={AmiriFont} color={white_100} textAlign="center">{string.NOTIFICATIONS()}</Typography>
+                                                            <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.NOTIFICATIONS()}</Typography>
                                                         </Link>
                                                     </MenuItem>
                                                     <MenuItem  key={'library'}
@@ -148,7 +146,7 @@ function CustomAppBar(prop) {
 
                                                                onClick={handleCloseNavMenu}>
                                                         <Link href={'/profile'} sx={{textDecoration:'none'}}>
-                                                        <Typography fontFamily={AmiriFont} color={white_100} textAlign="center">{string.LIBRARY()}</Typography>
+                                                        <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.LIBRARY()}</Typography>
                                                         </Link>
                                                     </MenuItem>
 
@@ -158,14 +156,14 @@ function CustomAppBar(prop) {
                                                                sx={{"&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
                                                                onClick={handleCloseNavMenu}>
                                                         <Link href={'/settings'} sx={{textDecoration:'none'}}>
-                                                        <Typography fontFamily={AmiriFont} color={white_100} textAlign="center">{string.SETTINGS()}</Typography>
+                                                        <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.SETTINGS()}</Typography>
                                                         </Link>
                                                     </MenuItem>
                                                     <Divider color={white_7070}/>
                                                     <MenuItem sx={{backgroundColor:red_e5, borderRadius:100, "&:hover":{backgroundColor:red_e5}}}
                                                               key={'LogOut'}  onClick={logOUT}>
                                                         <Link href={'/'} sx={{textDecoration:'none'}}>
-                                                        <Typography  fontFamily={AmiriFont} color={white_100} textAlign="center">{string.SIGNOUT()}</Typography>
+                                                        <Typography  fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.SIGNOUT()}</Typography>
                                                         </Link>
                                                     </MenuItem>
                                                 </Box>

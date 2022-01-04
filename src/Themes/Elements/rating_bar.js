@@ -1,7 +1,6 @@
 import {Box, IconButton} from "@mui/material";
 import {CircleRounded} from "@mui/icons-material";
 import React, {useEffect, useState} from "react";
-import {flex_styles} from "../Styles/styles";
 import {blue_0A, white_30} from "../Styles/Color";
 
 export function RatingBar(prop) {
@@ -48,7 +47,6 @@ export function RatingBar(prop) {
     }, []);
 
     window.onload = ev => {
-       // const t = parseInt(prop.rate);
         setRate(parseInt(prop.rate));
         const items = changeToTrue(point, parseInt(prop.rate));
         setPoint(items);

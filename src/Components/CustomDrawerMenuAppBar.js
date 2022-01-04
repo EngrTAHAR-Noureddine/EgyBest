@@ -1,10 +1,8 @@
-
 import {Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from "@mui/material";
-import {black_60, black_80, blue_0A, green_34, grey_36, red_e5, white_100} from "../Themes/Styles/Color";
-import {AmiriFont} from "../Themes/Fonts/Fonts";
-
+import {black_60, blue_0A, green_34, grey_36, red_e5, white_100} from "../Themes/Styles/Color";
 import String from "../Themes/String/String";
 import {makeStyles} from "@mui/styles";
+import {CustomSingleton} from "../Themes/Styles/Typographies";
 
 function List_Menu(prop){
     return(
@@ -20,7 +18,7 @@ function List_Menu(prop){
                     borderRadius:2, mb:1 , '&:hover':{backgroundColor:black_60}}}>
                     <ListItemButton
                                     onClick={(index===8)?prop.log:(index===5)?prop.click:()=>{}}>
-                        <ListItemText><Typography variant={'h6'} fontFamily={AmiriFont} textAlign={'center'}>{`${item}`}</Typography></ListItemText>
+                        <ListItemText><Typography variant={'h6'} fontFamily={CustomSingleton.getIt()} textAlign={'center'}>{`${item}`}</Typography></ListItemText>
                     </ListItemButton>
                 </ListItem>
                 </Button>

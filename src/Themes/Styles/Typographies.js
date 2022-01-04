@@ -20,6 +20,9 @@ export var CustomSingleton = (function () {
         getIt:function (){
 
             return font;
+        },
+        justEnglish:function (){
+            return MontserratFont
         }
     }
 })();
@@ -59,7 +62,7 @@ export const TYPOGRAPHY_CONTENT_CARD_MOVIE = (prop)=>(
     <Typography variant={'h5'} color={'white'} fontWeight={'bolder'}
                 textAlign={'center'}
                 fontStyle={"normal"}
-                fontFamily={CustomSingleton.getIt()}
+                fontFamily={CustomSingleton.justEnglish()}
                 style={{ wordWrap: "break-word" }}
     >
         {prop.item}
@@ -193,7 +196,7 @@ export const TYPOGRAPHY_TITLE_MOVIE = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
     <Typography variant={'h3'} width={'inherit'} textAlign={'left'}
                 color={white_EC}
-                fontFamily={CustomSingleton.getIt()}
+                fontFamily={CustomSingleton.justEnglish()}
                 fontWeight={prop.Weight}
                 style={{ wordWrap: "break-word" }}
     >

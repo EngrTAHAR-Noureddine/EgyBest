@@ -2,7 +2,7 @@ import {Box, InputBase} from "@mui/material";
 import {black_80, white_05, white_10, white_100} from "../Styles/Color";
 import {flex_styles} from "../Styles/styles";
 import React from "react";
-import {AmiriFont} from "../Fonts/Fonts";
+import {CustomSingleton} from "../Styles/Typographies";
 
 export function CommentUser (prop){
     return(
@@ -17,7 +17,7 @@ export function CommentUser (prop){
                 borderBottom={1}
             >
                 <InputBase
-                    sx={{height:"100%",width:"100%", color:'white',px:2, backgroundColor:'transparent',fontFamily:AmiriFont}}
+                    sx={{height:"100%",width:"100%", color:'white',px:2, backgroundColor:'transparent',fontFamily:CustomSingleton.getIt()}}
 
                     inputMode={"text"}
                     placeholder="Comment…"
@@ -27,7 +27,7 @@ export function CommentUser (prop){
             <Box component={'button'} width={{xs:'30%',lg:'20%'}} height={'80%'} bgcolor={black_80}
                  borderRadius={2}
                  style={flex_styles.row_center} alignItems={'center'}
-                 fontFamily={AmiriFont}
+                 fontFamily={CustomSingleton.getIt()}
                  fontSize={'1.2rem'}
                  sx={{color:white_100,border: "none",
                      cursor:'pointer',

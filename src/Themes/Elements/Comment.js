@@ -7,9 +7,9 @@ import {
     white_100,
     white_80
 } from "../Styles/Color";
-import {AmiriFont} from "../Fonts/Fonts";
 import {ThumbDown, ThumbDownAltOutlined, ThumbUp, ThumbUpAltOutlined} from "@mui/icons-material";
 import React, {useState} from "react";
+import {CustomSingleton} from "../Styles/Typographies";
 
 export default function Comment(prop) {
     const [countLike, setCountLike] = useState(0);
@@ -28,14 +28,14 @@ export default function Comment(prop) {
             <Box flexGrow={1} height={'auto'} style={flex_styles.col_up} bgcolor={black_30} sx={{borderRadius:{xs:1,xl:2}}}>
                 <Typography variant={'h6'}
                             color={white_100} px={1} style={{ wordWrap: "break-word" }}
-                            fontFamily={AmiriFont} fontWeight={'bold'} >USER_01</Typography>
+                            fontFamily={CustomSingleton.justEnglish()} fontWeight={'bold'} >USER_01</Typography>
                 <Typography variant={'subtitle2'} color={divider_B1}
-                            fontFamily={AmiriFont}
+                            fontFamily={CustomSingleton.justEnglish()}
                             px={3} style={{ wordWrap: "break-word" }}
                             fontStyle={'italic'} >07/09/2021</Typography>
                 <Box flexGrow={1}>
                     <Typography variant={'body1'} color={white_80} px={2}
-                                fontFamily={AmiriFont}
+                                fontFamily={CustomSingleton.justEnglish()}
                                  style={{ wordWrap: "break-word" }}
                     >thanks for uploading.</Typography>
                 </Box>

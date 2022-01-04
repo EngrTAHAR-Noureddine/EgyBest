@@ -1,5 +1,6 @@
 import {Box, Button} from "@mui/material";
 import {
+    CustomSingleton,
     TYPOGRAPHY_CONTENT_CARD_MOVIE,
     TYPOGRAPHY_MENU_XL,
     TYPOGRAPHY_POPUP_MENU,
@@ -24,7 +25,6 @@ import {
     white_20,
     yellow_100
 } from "../Styles/Color";
-import {AmiriFont} from "../Fonts/Fonts";
 import {flex_styles} from "../Styles/styles";
 
 
@@ -55,7 +55,7 @@ export const MORE_BUTTON = (prop) => (
         sx={{
             color:more_AE,
             textTransform: 'none',
-            fontFamily:AmiriFont,
+            fontFamily:CustomSingleton.getIt(),
         }}>
         {prop.more}
     </Button>
@@ -107,7 +107,7 @@ export const FILTER_BUTTON = (prop) => (
                 "&,&:focus,&:hover,&:active":{
                     backgroundColor:green_34
                 },
-                fontFamily:AmiriFont,
+                fontFamily:CustomSingleton.getIt(),
                 fontWeight:'900',
                 fontSize:'1.2rem'
             }}
@@ -160,7 +160,7 @@ export const NEXT_PLAY_BUTTON = (prop)=>(
         width:'90%',
         height:'90%',
         textTransform:'none',
-        fontFamily:AmiriFont,
+        fontFamily:CustomSingleton.getIt(),
         fontSize:'1rem',
         borderRadius:2,
         "&, &:hover":{
@@ -174,7 +174,7 @@ export const NEXT_PLAY_BUTTON = (prop)=>(
 
 export  const ButtonLG_WATCH = (prop)=>(
     <Button onClick={prop.handleClickOpen} endIcon={<People sx={{width:36, height:36, color:'#FEBB39'}}/>}
-            style={flex_styles.row_center} alignItems={'center'} mx={2}>
+            style={flex_styles.row_center} alignItems={'center'} mx={2} sx={{textTransform:'none'}}>
         <TYPOGRAPHY_YOUR_RATING  color={'#FEBB39'} title={prop.watch_together}/>
     </Button>
 )
@@ -182,6 +182,7 @@ export  const ButtonLG_WATCH = (prop)=>(
 export  const ButtonLG_LIBRARY =(prop) =>(
     <Button onClick={prop.onAddIt} endIcon={(!prop.addLibrary)?<LibraryAdd sx={{width:36, height:36, color:white_100}}/>
         :<LibraryAddCheck sx={{width:36, height:36, color:green_34}}/>}
+            sx={{textTransform:'none'}}
             style={flex_styles.row_center} alignItems={'center'} mx={2}>
         <TYPOGRAPHY_YOUR_RATING color={(prop.addLibrary)?green_34:blue_0A} title={(!prop.addLibrary)?prop.Add_In_Library:prop.added_In_library}/>
     </Button>

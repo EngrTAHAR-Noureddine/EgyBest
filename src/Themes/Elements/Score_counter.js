@@ -1,6 +1,6 @@
-import {Box, Button, Grid, Typography} from "@mui/material";
+import {Box, Grid, Typography} from "@mui/material";
 import {flex_styles} from "../Styles/styles";
-import {grey_36, white_05, white_100, white_30, white_80} from "../Styles/Color";
+import {grey_36, white_100, white_80} from "../Styles/Color";
 import {useEffect, useState} from "react";
 
 export function ScoreCounter(prop) {

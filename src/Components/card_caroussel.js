@@ -1,7 +1,6 @@
 import {Box, IconButton} from "@mui/material";
 import {MovieCard} from "../Themes/Elements/MovieCard";
 import { ArrowBackIosOutlined, ArrowForwardIos} from "@mui/icons-material";
-
 import React from 'react';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import '../App.css';

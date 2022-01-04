@@ -6,16 +6,6 @@ import {
     TYPOGRAPHY_IF_HAVE_ACCOUNT,
     TYPOGRAPHY_SIGN_TITLE
 } from "../Themes/Styles/Typographies";
-import {
-    DONT_HAVE_ACCOUNT,
-    EMAIL,
-    HAVE_ACCOUNT,
-    NAME,
-    OR_SIGN_IN_WITH, OR_SIGN_UP_WITH,
-    PASSWORD,
-    SIGN_IN,
-    SIGN_UP
-} from "../Themes/String/String_eng";
 import {blue_0A, green_34, white_05} from "../Themes/Styles/Color";
 import {InputField, PasswordField} from "../Themes/Elements/Input_Field";
 import {SIGN_BUTTON} from "../Themes/Elements/Buttons";
