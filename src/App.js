@@ -21,6 +21,8 @@ import {actionArabicVersion, actionEnglishVersion} from './Redux/actions/arabic'
 import String from "./Themes/String/String";
 import {useEffect, useState} from "react";
 import Notification from "./Pages/Notification";
+import {CustomSingleton} from "./Themes/Styles/Typographies";
+
 
 
 function App(props) {
@@ -33,6 +35,8 @@ function App(props) {
     const [actorState, setActor] = useState({});
     const [selectorForDetails, setSelectorForDetails] = useState({});
     const [wordSearch,setWordSearch] = useState('');
+
+
 
     const setUser = ()=>{
         if(SignedIN){
@@ -97,7 +101,6 @@ function App(props) {
     },[])
 
     const string = new String(props.isArabic);
-
     const ToggleArabic = ()=>{
             if(props.isArabic){
                 props.actionEnglishVersion();
@@ -105,12 +108,15 @@ function App(props) {
                 props.actionArabicVersion()
             }
         string.toggle(props.isArabic);
+            console.log('is arabic : ',props.isArabic);
+        CustomSingleton.setIt(props.isArabic);
     }
 
 
 
 
   return (
+
       <Router>
           <Paper  elevation={0} sx={{flexGrow:1, height:'auto',
               backgroundColor:"transparent" , border:'none', borderRadius:'none', padding:0, margin:0}}>
@@ -174,10 +180,8 @@ function App(props) {
                   </Route>
               </Switch>
               <Footer isArabic={props.isArabic}/>
-
           </Paper>
       </Router>
-
 
   );
 }

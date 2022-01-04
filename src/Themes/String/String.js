@@ -1,4 +1,5 @@
 import {flex_styles} from "../Styles/styles";
+import {AmiriFont, MontserratFont} from "../Fonts/Fonts";
 
 
 export default class String{
@@ -20,6 +21,8 @@ export default class String{
     ROW_REVERSE = ()=> ((this.isArabic)?'row-reverse':'row');
     REVERSE_ROW = ()=> ((this.isArabic)?'row':'row-reverse');
     FLEX_STYLE_ROW_DIRECTION =()=> ((this.isArabic)?flex_styles.row_right:flex_styles.row_left);
+    FONT_PREFER = ()=>((this.isArabic)?AmiriFont:MontserratFont);
+
 
 
 

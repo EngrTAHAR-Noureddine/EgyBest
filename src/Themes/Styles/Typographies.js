@@ -1,5 +1,5 @@
 import {Box, Link, Typography} from "@mui/material";
-import {AmiriFont} from "../Fonts/Fonts";
+import {AmiriFont, MontserratFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
@@ -9,6 +9,21 @@ import Strings from '../String/String';
 
 
 const string = new Strings();
+
+export var CustomSingleton = (function () {
+    var font = AmiriFont;
+    return {
+        setIt:function (it){
+            font=(!it)?AmiriFont:MontserratFont
+
+        },
+        getIt:function (){
+
+            return font;
+        }
+    }
+})();
+
 
 export const  TYPOGRAPHY_LOGO = ()=>(
     <Link href={'/'} sx={{textDecoration:'none'}}>
@@ -32,7 +47,7 @@ export const TYPOGRAPHY_MENU_XL = (prop)=>(
     <Typography
     variant={'h6'}
     fontStyle={"normal"}
-    fontFamily={AmiriFont}
+    fontFamily={CustomSingleton.getIt()}
     >
         {prop.item}
     </Typography>
@@ -44,7 +59,7 @@ export const TYPOGRAPHY_CONTENT_CARD_MOVIE = (prop)=>(
     <Typography variant={'h5'} color={'white'} fontWeight={'bolder'}
                 textAlign={'center'}
                 fontStyle={"normal"}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 style={{ wordWrap: "break-word" }}
     >
         {prop.item}
@@ -57,7 +72,7 @@ export const TYPOGRAPHY_SHORTCUT_LIST = (prop)=>(
     <Typography variant={'h5'} color={'white'} fontWeight={'bolder'}
                 textAlign={'center'}
                 fontStyle={"normal"}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 style={{ wordWrap: "break-word" }}
     >
         {prop.item}
@@ -70,7 +85,7 @@ export const TYPOGRAPHY_POPUP_MENU = (prop) => (
     <Typography variant={'h6'} color={'white'} fontWeight={'bolder'}
                 textAlign={'center'}
                 fontStyle={"normal"}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 style={{ wordWrap: "break-word" }}
     >
         {prop.item}
@@ -82,7 +97,7 @@ export const TYPOGRAPHY_SEARCH_RESULT = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
     <Typography variant={'h5'} width={'inherit'} height={'auto'} textAlign={'center'}
                 color={white_EC}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 fontWeight={prop.Weight}
                 style={{ wordWrap: "break-word" }}
                 >
@@ -93,7 +108,7 @@ export const TYPOGRAPHY_SEARCH_RESULT = (prop)=>(
 export const TYPOGRAPHY_NAME_PERSON = (prop)=>(
     <Typography variant={'h4'} width={'100%'} height={'100%'} textAlign={'center'}
                 color={white_EC}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 fontWeight={prop.Weight}
                 style={{ wordWrap: "break-word"}}
     >
@@ -103,7 +118,7 @@ export const TYPOGRAPHY_NAME_PERSON = (prop)=>(
 
 export const TYPOGRAPHY_GIG_TITLE_UNDERLINED = (prop)=>(
     <Box flexGrow={1} px={5} >
-        <Typography variant={'h5'} textAlign={'center'} fontFamily={AmiriFont}
+        <Typography variant={'h5'} textAlign={'center'} fontFamily={CustomSingleton.getIt()}
                     color={'white'} sx={{borderBottom:1, borderColor:'white'}} mb={5}>
             {prop.what}
         </Typography>
@@ -113,7 +128,7 @@ export const TYPOGRAPHY_PAGE_NOT_FOUND = (prop)=>(
 
     <Box flexGrow={1} px={5}>
         <ThemeProvider theme={RESPONSIVE_THEME}>
-        <Typography variant={'h2'} textAlign={'center'} fontFamily={AmiriFont}
+        <Typography variant={'h2'} textAlign={'center'} fontFamily={CustomSingleton.getIt()}
                     color={white_7070}>
             {prop.title}
         </Typography>
@@ -126,7 +141,7 @@ export const TYPOGRAPHY_SIGN_TITLE = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
     <Typography variant={'h4'} width={'100%'}
                 color={white_100}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 height={'100%'} style={flex_styles.col_center} textAlign={'center'}>
         {prop.title}
     </Typography>
@@ -134,24 +149,24 @@ export const TYPOGRAPHY_SIGN_TITLE = (prop)=>(
 );
 
 export const TYPOGRAPHY_FORGET_PASSWORD =(prop)=>(
-    <Typography variant={'body2'} color={blue_0A} fontFamily={AmiriFont} fontWeight={'lighter'} textAlign={'right'} px={5}>
+    <Typography variant={'body2'} color={blue_0A} fontFamily={CustomSingleton.getIt()} fontWeight={'lighter'} textAlign={'right'} px={5}>
         {prop.title}
     </Typography>
 );
 export  const TYPOGRAPHY_STYLE_EMAIL_PASSWORD = (prop)=>(
     <Typography variant={'h6'} flexGrow={1} height={'auto'}
-                textAlign={prop.direction}
+                textAlign={prop.direction} fontFamily={CustomSingleton.getIt()}
                 color={white_100}
-                fontFamily={AmiriFont} px={1}>
+                 px={1}>
         {prop.title}
     </Typography>
 );
 
 export const TYPOGRAPHY_SIGN_WITH = (prop) => (
     <ThemeProvider theme={RESPONSIVE_THEME}>
-    <Typography variant={'h6'} width={'100%'}
+    <Typography variant={'h6'} width={'100%'} fontFamily={CustomSingleton.getIt()}
                 color={(prop.color)?prop.color:white_100}
-                fontFamily={AmiriFont} textAlign={'center'}>
+                 textAlign={'center'}>
         {prop.text}
     </Typography>
     </ThemeProvider>
@@ -161,13 +176,13 @@ export const TYPOGRAPHY_IF_HAVE_ACCOUNT = (prop) => (
     <ThemeProvider theme={RESPONSIVE_THEME}>
         <Box display={'flex'} justifyContent={'center'} flexDirection={prop.direction} flexGrow={1} px={{xs:0, md:10}}>
             <Typography flexGrow={1} variant={'subtitle1'}
-                        color={white_100}
-                        fontFamily={AmiriFont} textAlign={(prop.isArabic)?'left':'right'} px={1}>
+                        color={white_100} fontFamily={CustomSingleton.getIt()}
+                         textAlign={(prop.isArabic)?'left':'right'} px={1}>
                 {prop.text}
             </Typography>
             <Typography flexGrow={1} variant={'subtitle1'}
-                        color={blue_0A}
-                        fontFamily={AmiriFont} sx={{textDecoration:'underline'}} textAlign={(prop.isArabic)?'right':'left'}>
+                        color={blue_0A} fontFamily={CustomSingleton.getIt()}
+                         sx={{textDecoration:'underline'}} textAlign={(prop.isArabic)?'right':'left'}>
                 {prop.linkText}
             </Typography>
         </Box>
@@ -178,7 +193,7 @@ export const TYPOGRAPHY_TITLE_MOVIE = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
     <Typography variant={'h3'} width={'inherit'} textAlign={'left'}
                 color={white_EC}
-                fontFamily={AmiriFont}
+                fontFamily={CustomSingleton.getIt()}
                 fontWeight={prop.Weight}
                 style={{ wordWrap: "break-word" }}
     >
@@ -191,7 +206,7 @@ export const TYPOGRAPHY_STORY = (prop)=>(
     <ThemeProvider theme={themeTypH6}>
         <Typography variant={'h6'} width={'inherit'} textAlign={'center'}
                     color={white_EC}
-                    fontFamily={AmiriFont}
+                    fontFamily={CustomSingleton.getIt()}
                     fontWeight={'normal'}
                     style={{ wordWrap: "break-word" }}
         >
@@ -206,20 +221,20 @@ export const TYPOGRAPHY_DETAILS = (prop)=>(
                     flexDirection={prop.rowRev}
                     justifyContent={prop.alignement}
                     color={white_EC}
-                    fontFamily={AmiriFont}
+                    fontFamily={CustomSingleton.getIt()}
                     fontWeight={'normal'}
                     sx={{ wordWrap: "break-word" }}
         >
             <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
                         color={white_EC}
-                        fontFamily={AmiriFont}
+                        fontFamily={CustomSingleton.getIt()}
                         fontWeight={'normal'}
                         style={{ wordWrap: "break-word" }}>
                 {prop.title}
             </Typography>
             <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
                         color={white_EC}
-                        fontFamily={AmiriFont}
+                        fontFamily={CustomSingleton.getIt()}
                         fontWeight={'normal'}
                         style={{ wordWrap: "break-word" }}>
                 {prop.item}
@@ -232,8 +247,8 @@ export const TYPOGRAPHY_DETAILS = (prop)=>(
 export const TYPOGRAPHY_NAME_ACTOR = (prop)=>(
     <Link href={'/actor'} width={'inherit'} onClick={()=>prop.selectorActor(prop.item)}>
     <ThemeProvider theme={themeTyp}>
-    <Typography  variant={'h5'} width={'90%'} textAlign={'center'} color={blue_0A}
-                fontFamily={AmiriFont} fontWeight={'bold'} sx={{textDecoration:'underline',width:'90%',px:1}}
+    <Typography  variant={'h5'} width={'90%'} textAlign={'center'} color={blue_0A} fontFamily={CustomSingleton.getIt()}
+                 fontWeight={'bold'} sx={{textDecoration:'underline',width:'90%',px:1}}
                 style={{ wordWrap: "break-word" }}>
         {prop.name}
     </Typography>
@@ -242,19 +257,21 @@ export const TYPOGRAPHY_NAME_ACTOR = (prop)=>(
 );
 export const TYPOGRAPHY_PLAY_ACTOR = prop =>(
     <ThemeProvider theme={themeTypH6}>
-    <Typography variant={'h6'} width={'90%'} textAlign={'center'}
-                color={white_EC} fontFamily={AmiriFont} fontWeight={'normal'} style={{ wordWrap: "break-word" }}>
+    <Typography variant={'h6'} width={'90%'} textAlign={'center'} fontFamily={CustomSingleton.getIt()}
+                color={white_EC}  fontWeight={'normal'} style={{ wordWrap: "break-word" }}>
         {prop.name}
     </Typography>
     </ThemeProvider>
 );
 
 export const TYPOGRAPHY_NOT_EXIST = (prop) =>(
-    <Typography p={1} variant={'h6'} color={white_100} fontFamily={AmiriFont} sx={{wordWrap: "break-word" }} textAlign={'center'}> {prop.text} </Typography>
+    <Typography p={1} variant={'h6'} color={white_100} fontFamily={CustomSingleton.getIt()}
+                sx={{wordWrap: "break-word" }} textAlign={'center'}> {prop.text} </Typography>
 )
 export const TYPOGRAPHY_YOUR_RATING = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-        <Typography variant={(prop.variant)?prop.variant:'h5'} color={(prop.color)?prop.color:white_100} fontFamily={AmiriFont} sx={{wordWrap: "break-word" }}>
+        <Typography variant={(prop.variant)?prop.variant:'h5'} fontFamily={CustomSingleton.getIt()}
+                    color={(prop.color)?prop.color:white_100}  sx={{wordWrap: "break-word" }}>
             {prop.title}
         </Typography>
     </ThemeProvider>
@@ -262,7 +279,7 @@ export const TYPOGRAPHY_YOUR_RATING = (prop)=>(
 
 export const TYPOGRAPHY_NOTIFICATION = (prop)=>(
     <ThemeProvider theme={RESPONSIVE_THEME}>
-    <Typography variant={'h6'} fontFamily={AmiriFont} textAlign={prop.align} color={white_100} sx={{wordWrap: "break-word" }}>
+    <Typography variant={'h6'} fontFamily={CustomSingleton.getIt()} textAlign={prop.align} color={white_100} sx={{wordWrap: "break-word" }}>
         {prop.notification}
     </Typography>
     </ThemeProvider>
