@@ -207,7 +207,7 @@ export const TYPOGRAPHY_TITLE_MOVIE = (prop)=>(
 
 export const TYPOGRAPHY_STORY = (prop)=>(
     <ThemeProvider theme={themeTypH6}>
-        <Typography variant={'h6'} width={'inherit'} textAlign={'center'}
+        <Typography variant={'body1'} width={'inherit'} textAlign={'center'}
                     color={white_EC}
                     fontFamily={CustomSingleton.getIt()}
                     fontWeight={'normal'}
