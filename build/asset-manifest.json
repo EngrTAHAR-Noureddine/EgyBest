@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/EgyBest/static/css/main.f5ceaa72.css",
-    "main.js": "/EgyBest/static/js/main.6efbec7e.js",
-    "static/js/787.7e9bc419.chunk.js": "/EgyBest/static/js/787.7e9bc419.chunk.js",
-    "static/media/Actor.jpg": "/EgyBest/static/media/Actor.c7b3f71ab02473a2beb7.jpg",
-    "static/media/404.jpg": "/EgyBest/static/media/404.8ffaccf3b56823461245.jpg",
-    "static/media/saudi-arabia.png": "/EgyBest/static/media/saudi-arabia.b5c523c0e4789cdc074e.png",
-    "static/media/united-states-of-america.png": "/EgyBest/static/media/united-states-of-america.d38b1cc751898b04eb26.png",
-    "index.html": "/EgyBest/index.html",
-    "main.f5ceaa72.css.map": "/EgyBest/static/css/main.f5ceaa72.css.map",
-    "main.6efbec7e.js.map": "/EgyBest/static/js/main.6efbec7e.js.map",
-    "787.7e9bc419.chunk.js.map": "/EgyBest/static/js/787.7e9bc419.chunk.js.map"
+    "main.css": "/static/css/main.f5ceaa72.css",
+    "main.js": "/static/js/main.059a0b3a.js",
+    "static/js/787.7e9bc419.chunk.js": "/static/js/787.7e9bc419.chunk.js",
+    "static/media/Actor.jpg": "/static/media/Actor.c7b3f71ab02473a2beb7.jpg",
+    "static/media/404.jpg": "/static/media/404.8ffaccf3b56823461245.jpg",
+    "static/media/saudi-arabia.png": "/static/media/saudi-arabia.b5c523c0e4789cdc074e.png",
+    "static/media/united-states-of-america.png": "/static/media/united-states-of-america.d38b1cc751898b04eb26.png",
+    "index.html": "/index.html",
+    "main.f5ceaa72.css.map": "/static/css/main.f5ceaa72.css.map",
+    "main.059a0b3a.js.map": "/static/js/main.059a0b3a.js.map",
+    "787.7e9bc419.chunk.js.map": "/static/js/787.7e9bc419.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5ceaa72.css",
-    "static/js/main.6efbec7e.js"
+    "static/js/main.059a0b3a.js"
   ]
 }

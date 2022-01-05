@@ -75,23 +75,23 @@ export function CustomDrawerMenuAppBar(prop) {
             'transparent',
             red_e5];
     const listLinks =(!prop.SignedIN)?
-        [   '/',
-            '/list-movies',
-            '/list-series',
-            '/list-theaters',
-            '/list-wwe',
+        [   '/EgyBest/',
+            '/EgyBest/list-movies',
+            '/EgyBest/list-series',
+            '/EgyBest/list-theaters',
+            '/EgyBest/list-wwe',
             '',
-            '/sign-in',
-            '/sign-up'] :
-        [   '/',
-            '/list-movies',
-            '/list-series',
-            '/list-theaters',
-            '/list-wwe',
+            '/EgyBest/sign-in',
+            '/EgyBest/sign-up'] :
+        [   '/EgyBest/',
+            '/EgyBest/list-movies',
+            '/EgyBest/list-series',
+            '/EgyBest/list-theaters',
+            '/EgyBest/list-wwe',
             '',
-            '/profile',
-            '/settings',
-            '/'];
+            '/EgyBest/profile',
+            '/EgyBest/settings',
+            '/EgyBest/'];
     const classes = useStyles();
     return(
         <Drawer

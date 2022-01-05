@@ -13,7 +13,7 @@ import {Footer} from "./Components/Footer";
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route, BrowserRouter
 } from "react-router-dom";
 
 import { connect } from 'react-redux';
@@ -126,6 +126,7 @@ function App(props) {
                             toggleLanguage={ToggleArabic}/>
               <Switch>
 
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/">
                       <Home isArabic={props.isArabic}
                             listMovies={listMovies}
@@ -135,24 +136,45 @@ function App(props) {
                             selectorClicker={selectorClicker}
                       />
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/list-movies">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listMovies}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/list-series">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listSeries}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/list-theaters">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listTheaters}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/list-wwe">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listWWE}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/search">
                       <Search isArabic={props.isArabic} list={listSearch} wordSearch={wordSearch}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/actor">
                       <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/profile">
                       <Profile isArabic={props.isArabic}
                                listMovies={listMovies}
@@ -161,24 +183,43 @@ function App(props) {
                                listWWE={listWWE}
                       />
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/details">
                       <Movie_Details selectorActor={selectorActor} signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/settings">
                       <Settings isArabic={props.isArabic}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path={"/notification"}>
                       <Notification isArabic={props.isArabic}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/sign-in">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_IN()}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route exact path="/sign-up">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_UP()}/>
                   </Route>
+                  </BrowserRouter>
+
+                  <BrowserRouter basename={window.location.pathname || ''}>
                   <Route path="/">
                       <PageNotFound notFound={string.PAGE_NOT_FOUND()}/>
                   </Route>
+                  </BrowserRouter>
               </Switch>
               <Footer isArabic={props.isArabic}/>
           </Paper>

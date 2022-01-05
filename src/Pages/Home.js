@@ -13,28 +13,28 @@ function Home(prop) {
             <Custom_Carrousel list={prop.listMovies.slice(0,6)} selectorClicker={prop.selectorClicker}/>
             <Box sx={{height:'auto',flexGrow: 1, padding:0,margin:0}}>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
-                                    linkMore={'/list-movies'}
+                                    linkMore={'/EgyBest/list-movies'}
                                     isArabic={prop.isArabic}
                                     list={prop.listMovies} item={string.LATEST_ADDITIONS()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
-                                    linkMore={'/list-movies'}
+                                    linkMore={'/EgyBest/list-movies'}
                                     list={prop.listMovies} item={string.MOST_WATCHED()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
-                                    linkMore={'/list-movies'}
+                                    linkMore={'/EgyBest/list-movies'}
                                     list={prop.listMovies} item={string.MOVIES()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
-                                    linkMore={'/list-series'}
+                                    linkMore={'/EgyBest/list-series'}
                                     list={prop.listSeries} item={string.SERIES()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
-                                    linkMore={'/list-theaters'}
+                                    linkMore={'/EgyBest/list-theaters'}
                                     list={prop.listTheaters} item={string.THEATER()}/>
                 <MovieCardsChain    selectorClicker={prop.selectorClicker}
                                     isArabic={prop.isArabic}
-                                    linkMore={'/list-wwe'}
+                                    linkMore={'/EgyBest/list-wwe'}
                                     list={prop.listWWE} item={string.WWE()}/>
             </Box>
         </Box>

@@ -21,7 +21,7 @@ export function MovieCard(prop) {
     }
 
     return(
-    <Link href={'/details'}>
+    <Link href={'/EgyBest/details'}>
         <Card sx={{ width:250, height:400, borderRadius:5 }}>
             <CardContent sx={{height:"inherit", width:"inherit", padding:0, borderRadius:5 }}
                 onMouseEnter={MouseEnter}

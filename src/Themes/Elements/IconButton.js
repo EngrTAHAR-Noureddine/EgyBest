@@ -21,7 +21,7 @@ export const MENU_BUTTON = (prop) => (
 
 export const SEARCH_BUTTON = (prop)=>(
     <IconButton
-        href={(prop.go)?'/search':''}
+        href={(prop.go)?'/EgyBest/search':''}
         onClick={prop.onClicked}
         size="large"
         sx={{color:'white'}}
