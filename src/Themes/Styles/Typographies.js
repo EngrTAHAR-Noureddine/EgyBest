@@ -3,7 +3,7 @@ import {AmiriFont, MontserratFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
-import {blue_0A, red_e5, white_100, white_50, white_7070, white_EC} from "./Color";
+import {blue_0A, divider_B1, red_e5, white_100, white_50, white_7070, white_EC} from "./Color";
 import {flex_styles} from "./styles";
 import Strings from '../String/String';
 
@@ -324,3 +324,11 @@ export const TYPOGRAPHY_TRANSLATE_LANGUAGES = (prop)=>(
 
     </Typography>
 )
+
+export const TYPOGRAPHY_TIME_LATEST_VUES = (prop)=>(
+    <Typography  p={1} variant={'subtitle1'}
+                 fontFamily={CustomSingleton.getIt()} sx={{wordWrap: "break-word",color:divider_B1 }}
+                 flexGrow={1} height={'fit-content'} textAlign={'center'}>
+        {prop.title}
+    </Typography>
+);

@@ -8,7 +8,7 @@ export function TabBarProfile(prop) {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    const list = [10,5,4,3];
+    const list = [10,10,5,4,3,];
 
 
     return (
@@ -17,9 +17,10 @@ export function TabBarProfile(prop) {
                 <CustomTab string={prop.string} value={value} handleChange={handleChange} list={list}/>
             </Box>
             <TabPanel value={value} index={0} list={prop.listMovies}/>
-            <TabPanel value={value} index={1} list={prop.listSeries}/>
-            <TabPanel value={value} index={2} list={prop.listTheaters}/>
-            <TabPanel value={value} index={3} list={prop.listWWE}/>
+            <TabPanel value={value} index={1} list={prop.listMovies}/>
+            <TabPanel value={value} index={2} list={prop.listSeries}/>
+            <TabPanel value={value} index={3} list={prop.listTheaters}/>
+            <TabPanel value={value} index={4} list={prop.listWWE}/>
         </Box>
     );
 

@@ -125,7 +125,8 @@ function App(props) {
                             string={string} isArabic={props.isArabic}
                             toggleLanguage={ToggleArabic}/>
               <Switch>
-                  <Route exact path="/">
+
+                  <Route exact path="/EgyBest/">
                       <Home isArabic={props.isArabic}
                             listMovies={listMovies}
                             listSeries={listSeries}
@@ -134,25 +135,25 @@ function App(props) {
                             selectorClicker={selectorClicker}
                       />
                   </Route>
-                  <Route exact path="/list-movies">
+                  <Route exact path="/EgyBest/list-movies">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listMovies}/>
                   </Route>
-                  <Route exact path="/list-series">
+                  <Route exact path="/EgyBest/list-series">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listSeries}/>
                   </Route>
-                  <Route exact path="/list-theaters">
+                  <Route exact path="/EgyBest/list-theaters">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listTheaters}/>
                   </Route>
-                  <Route exact path="/list-wwe">
+                  <Route exact path="/EgyBest/list-wwe">
                       <ListMovies selectorClicker={selectorClicker} isArabic={props.isArabic} list={listWWE}/>
                   </Route>
-                  <Route exact path="/search">
+                  <Route exact path="/EgyBest/search">
                       <Search isArabic={props.isArabic} list={listSearch} wordSearch={wordSearch}/>
                   </Route>
-                  <Route exact path="/actor">
+                  <Route exact path="/EgyBest/actor">
                       <Actor actor={actorState} work={string.WORKS()} list={listMovies}/>
                   </Route>
-                  <Route exact path="/profile">
+                  <Route exact path="/EgyBest/profile">
                       <Profile isArabic={props.isArabic}
                                listMovies={listMovies}
                                listSeries={listSeries}
@@ -160,19 +161,19 @@ function App(props) {
                                listWWE={listWWE}
                       />
                   </Route>
-                  <Route exact path="/details">
+                  <Route exact path="/EgyBest/details">
                       <Movie_Details selectorActor={selectorActor} signedIn={SignedIN} isArabic={props.isArabic} selector={selectorForDetails}/>
                   </Route>
-                  <Route exact path="/settings">
+                  <Route exact path="/EgyBest/settings">
                       <Settings isArabic={props.isArabic}/>
                   </Route>
-                  <Route exact path={"/notification"}>
+                  <Route exact path={"/EgyBest/notification"}>
                       <Notification isArabic={props.isArabic}/>
                   </Route>
-                  <Route exact path="/sign-in">
+                  <Route exact path="/EgyBest/sign-in">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_IN()}/>
                   </Route>
-                  <Route exact path="/sign-up">
+                  <Route exact path="/EgyBest/sign-up">
                       <Sign setUser={setUser} isArabic={props.isArabic} type={string.SIGN_UP()}/>
                   </Route>
                   <Route path="/">

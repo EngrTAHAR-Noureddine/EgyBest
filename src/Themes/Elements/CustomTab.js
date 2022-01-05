@@ -9,22 +9,26 @@ export function CustomTab(prop){
 
     const tabs_name = [
         {
-            tab:prop.string.MOVIES(),
+            tab:prop.string.LATEST_VUES(),
             number : prop.list[0]
         },
         {
-            tab:prop.string.SERIES(),
+            tab:prop.string.MOVIES(),
             number : prop.list[1]
         },
         {
-            tab:prop.string.THEATER(),
+            tab:prop.string.SERIES(),
             number : prop.list[2]
         },
         {
-            tab:prop.string.WWE(),
+            tab:prop.string.THEATER(),
             number : prop.list[3]
+        },
+        {
+            tab:prop.string.WWE(),
+            number : prop.list[4]
         }
-        ]
+    ]
 
     return(
         <ThemeProvider theme={themeTab}>

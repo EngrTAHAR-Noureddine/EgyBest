@@ -28,6 +28,7 @@ export default class String{
 
     LANGUAGE_TOGGLE = ()=> ((this.isArabic)?'عربي':'English');
     MOVIES = ()=> ((this.isArabic)?'أفلام':'Movies');
+    LATEST_VUES = ()=> ((this.isArabic)?'اخر مشاهدة':'History');
     SERIES = ()=> ((this.isArabic)?'مسلسلات':'Series');
     THEATER =()=> ((this.isArabic)?'مسرحيات':'Theater');
     WWE = ()=> ((this.isArabic)?'مصارعة':'Wwe');
