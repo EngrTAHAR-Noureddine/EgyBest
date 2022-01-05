@@ -68,26 +68,4 @@ export function Detail_movie(prop){
         </Box>
     )
 }
-//<PlayVideo url={prop.item.trailerMovie}/>
-/*
 
-                       <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.NAME_MOVIE()}
-                                             item={(prop.isArabic)?prop.item.nameAR:prop.item.name}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.CLASSIFICATION()}
-                                             item={prop.item.classification}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.COUNTRY()}
-                                             item={(prop.isArabic)?prop.item.countryAR:prop.item.country}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.LANGUAGE()}
-                                             item={(prop.isArabic)?prop.item.languageAR:prop.item.language}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                             item={(prop.item.typeAR && prop.item.type)?(prop.isArabic)?prop.item.typeAR.join(','):prop.item.type.join(','):'-------'}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.DURATION()}
-                                             item={prop.item.DurationMovie}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.QUALITY()}
-                                             item={'1080p,720p,480p'}/>
-                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                             item={(prop.item.TranslateMovieAR && prop.item.TranslateMovie)?(prop.isArabic)?prop.item.TranslateMovieAR.join(','):prop.item.TranslateMovie.join(','):'-----'} />
-
-
-
-* */

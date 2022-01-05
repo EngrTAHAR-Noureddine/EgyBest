@@ -10,7 +10,6 @@ import String from '../Themes/String/String';
 import AddToLibrary from "../Components/add_to_library";
 import EpisodesCaroussel from "../Components/episode_caroussel";
 import ActorsCaroussel from "../Components/actor_caroussel";
-import {flex_styles} from "../Themes/Styles/styles";
 import Comments from "../Components/Comments";
 import CardCaroussel from "../Components/card_caroussel";
 
@@ -51,9 +50,9 @@ export function Movie_Details(prop) {
             return(
                 <SectionDetail  title={string.SIMILAR()} alignement={string.JUSTIFY_DIRECTION()}>
 
-                    <Box flexGrow={1} height={'fit-content'} p={1} style={flex_styles.row_center}>
+
                         <CardCaroussel list={prop.selector.similar}/>
-                    </Box>
+
 
                 </SectionDetail>
             )}else return (<div></div>)

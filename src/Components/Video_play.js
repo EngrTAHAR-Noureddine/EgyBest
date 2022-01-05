@@ -1,30 +1,30 @@
-import {Box, Grid} from "@mui/material";
+import {Box} from "@mui/material";
 import {flex_styles} from "../Themes/Styles/styles";
 import {NEXT_PLAY_BUTTON} from "../Themes/Elements/Buttons";
 import {PlayVideo} from "../Themes/Elements/play_video";
+import AspectRatioBox from "./AspectRatioBox";
 export function VideoPlay(prop) {
     return(
-        <Grid container xs={12}
-              width={'100%'}
-              height={'100%'}
-              direction={'column'}
-              justifyContent="flex-start"
-              alignItems="flex-start"
+        <Box  flexGrow={1}
+              height={'auto'}
+              display={'flex'}
+              flexDirection={'column'}
+              justifyContent={'center'}
             >
             <Grid_Play_Video linkMovie={prop.linkMovie}/>
             <Previous_next_button episodes={prop.episodes} next={prop.next} previous={prop.previous}/>
-        </Grid>
+        </Box>
     )
 
 }
 
 function Grid_Play_Video(prop) {
     return(
-        <Grid item xs={10} xl={11} width={'100%'} height={'100%'} style={flex_styles.col_center} alignItems={'center'}>
-        <Box width={'90%'} height={'90%'} bgcolor={'whitesmoke'} >
+
+        <AspectRatioBox ratio={16/9}>
             <PlayVideo url={prop.linkMovie}/>
-        </Box>
-        </Grid>
+        </AspectRatioBox>
+
     )
 
 }
@@ -32,16 +32,14 @@ function Grid_Play_Video(prop) {
 function Previous_next_button(prop) {
 
     return(
-        <Grid item xs={2} xl={1} width={'100%'} height={'100%'}>
-            <Grid container xs={12} flexGrow={1} height={'100%'} style={flex_styles.row_center}>
-                <Grid item xs={3} style={flex_styles.col_center} alignItems={'center'}>
+
+            <Box flexGrow={1} height={'auto'} style={flex_styles.row_space_btn} mt={2}>
+
                     {(prop.episodes)?<NEXT_PLAY_BUTTON item={prop.previous}/>:<div></div>}
-                </Grid>
-                <Grid item xs={5} />
-                <Grid item xs={3}  style={flex_styles.col_center} alignItems={'center'}>
+
                     {(prop.episodes)?<NEXT_PLAY_BUTTON item={prop.next}/>:<div></div>}
-                </Grid>
-            </Grid>
-        </Grid>
+
+            </Box>
+
     )
 }

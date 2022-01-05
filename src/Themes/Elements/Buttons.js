@@ -157,12 +157,14 @@ export  const DOWNLOAD_BUTTON = (prop)=>(
 
 export const NEXT_PLAY_BUTTON = (prop)=>(
     <Button sx={{
-        width:'90%',
-        height:'90%',
+        width:'fit-content',
+        height:'fit-content',
         textTransform:'none',
         fontFamily:CustomSingleton.getIt(),
         fontSize:'1rem',
         borderRadius:2,
+        p:1,
+        px:{xs:1,xl:5},
         "&, &:hover":{
             backgroundColor:black_60,
             color:white_100
