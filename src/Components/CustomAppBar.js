@@ -82,10 +82,10 @@ function CustomAppBar(prop) {
                               flexDirection={string.ROW_REVERSE()} alignItems={'center'}
                               justifyContent={'center'}>
 
-                                <MENU_BUTTON_XL link={'/EgyBest/list-movies'} item={string.MOVIES()}/>
-                                <MENU_BUTTON_XL link={'/EgyBest/list-series'} item={string.SERIES()}/>
-                                <MENU_BUTTON_XL link={'/EgyBest/list-theaters'} item={string.THEATER()}/>
-                                <MENU_BUTTON_XL link={'/EgyBest/list-wwe'} item={string.WWE()}/>
+                                <MENU_BUTTON_XL link={'/list-movies'} item={string.MOVIES()}/>
+                                <MENU_BUTTON_XL link={'/list-series'} item={string.SERIES()}/>
+                                <MENU_BUTTON_XL link={'/list-theaters'} item={string.THEATER()}/>
+                                <MENU_BUTTON_XL link={'/list-wwe'} item={string.WWE()}/>
 
                         </Grid>
                         <Grid item xs={6} xl={4} style={flex_styles.col_center}>
@@ -106,10 +106,10 @@ function CustomAppBar(prop) {
                                         <div>
                                             <ThemeProvider theme={SIGN_GROUP_THEME}>
                                                 <ButtonGroup variant="text" sx={{display:(prop.SignedIN)?'none':'flex'}}>
-                                                    <Button href={'/EgyBest/sign-in'} sx={{textTransform: 'none'}}>
+                                                    <Button href={'/sign-in'} sx={{textTransform: 'none'}}>
                                                         <TYPOGRAPHY_MENU_XL item={string.SIGNIN()}/>
                                                     </Button>
-                                                    <Button href={'/EgyBest/sign-up'} sx={{textTransform: 'none'}}>
+                                                    <Button href={'/sign-up'} sx={{textTransform: 'none'}}>
                                                         <TYPOGRAPHY_MENU_XL item={string.SIGNUP()}/>
                                                     </Button>
                                                 </ButtonGroup>
@@ -137,7 +137,7 @@ function CustomAppBar(prop) {
                                                     <MenuItem  key={'notification'}
                                                                sx={{color:white_100, "&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
                                                                onClick={handleCloseNavMenu}>
-                                                        <Link href={'/EgyBest/notification'} sx={{textDecoration:'none'}}>
+                                                        <Link href={'/notification'} sx={{textDecoration:'none'}}>
                                                             <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.NOTIFICATIONS()}</Typography>
                                                         </Link>
                                                     </MenuItem>
@@ -145,7 +145,7 @@ function CustomAppBar(prop) {
                                                                sx={{color:white_100, "&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
 
                                                                onClick={handleCloseNavMenu}>
-                                                        <Link href={'/EgyBest/profile'} sx={{textDecoration:'none'}}>
+                                                        <Link href={'/profile'} sx={{textDecoration:'none'}}>
                                                         <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.LIBRARY()}</Typography>
                                                         </Link>
                                                     </MenuItem>
@@ -155,14 +155,14 @@ function CustomAppBar(prop) {
 
                                                                sx={{"&:hover":{backgroundColor:grey_36,borderRadius:100,color:white_100}}}
                                                                onClick={handleCloseNavMenu}>
-                                                        <Link href={'/EgyBest/settings'} sx={{textDecoration:'none'}}>
+                                                        <Link href={'/settings'} sx={{textDecoration:'none'}}>
                                                         <Typography fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.SETTINGS()}</Typography>
                                                         </Link>
                                                     </MenuItem>
                                                     <Divider color={white_7070}/>
                                                     <MenuItem sx={{backgroundColor:red_e5, borderRadius:100, "&:hover":{backgroundColor:red_e5}}}
                                                               key={'LogOut'}  onClick={logOUT}>
-                                                        <Link href={'/EgyBest/'} sx={{textDecoration:'none'}}>
+                                                        <Link href={'/'} sx={{textDecoration:'none'}}>
                                                         <Typography  fontFamily={CustomSingleton.getIt()} color={white_100} textAlign="center">{string.SIGNOUT()}</Typography>
                                                         </Link>
                                                     </MenuItem>

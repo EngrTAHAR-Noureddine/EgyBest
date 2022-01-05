@@ -29,7 +29,7 @@ export var CustomSingleton = (function () {
 
 
 export const  TYPOGRAPHY_LOGO = ()=>(
-    <Link href={'/EgyBest/'} sx={{textDecoration:'none'}}>
+    <Link href={'/'} sx={{textDecoration:'none'}}>
     <ThemeProvider theme={RESPONSIVE_THEME}>
         <Typography fontFamily={AmiriFont} fontWeight={900} fontStyle={'italic'} variant="h3" component="div"
                     sx={{flexGrow: 1}} style={flex_styles.row_left} >
@@ -251,7 +251,7 @@ export const TYPOGRAPHY_DETAILS = (prop)=>(
 );
 
 export const TYPOGRAPHY_NAME_ACTOR = (prop)=>(
-    <Link href={'/EgyBest/actor'} width={'inherit'} onClick={()=>prop.selectorActor(prop.item)}>
+    <Link href={'/actor'} width={'inherit'} onClick={()=>prop.selectorActor(prop.item)}>
     <ThemeProvider theme={themeTyp}>
     <Typography  variant={'h5'} width={'90%'} textAlign={'center'} color={blue_0A} fontFamily={CustomSingleton.getIt()}
                  fontWeight={'bold'} sx={{textDecoration:'underline',width:'90%',px:1}}
