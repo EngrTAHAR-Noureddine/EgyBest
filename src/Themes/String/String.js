@@ -99,7 +99,7 @@ export default class String{
     TYPE = ()=> ((this.isArabic)?':النوع ':'Type: ');
     QUALITY = ()=> ((this.isArabic)?' :الجودة ':'Quality: ');
     DURATION = ()=> ((this.isArabic)?':المدة ':'Duration: ');
-    SUBTITLES = ()=> ((this.isArabic)?':الترجمة ':'Subtitles: ');
+    SUBTITLES = ()=> ((this.isArabic)?'الترجمة : ':'Subtitles : ');
 
     NEXT = ()=> ((this.isArabic)?'التالي':'Next');
     PREVIOUS = ()=> ((this.isArabic)?'السابق':'Previous');

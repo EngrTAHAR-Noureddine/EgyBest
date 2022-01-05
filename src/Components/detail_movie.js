@@ -1,70 +1,93 @@
-import {white_05} from "../Themes/Styles/Color";
-import {Box, Grid} from "@mui/material";
-import {TYPOGRAPHY_DETAILS} from "../Themes/Styles/Typographies";
+import {
+    white_05,
+} from "../Themes/Styles/Color";
+import {Box, Container} from "@mui/material";
+import {
+    TYPOGRAPHY_CLASSIFICATION_YEAR,
+    TYPOGRAPHY_DETAILS, TYPOGRAPHY_MOVIE_TITLE,
+    TYPOGRAPHY_TRANSLATE_LANGUAGES
+} from "../Themes/Styles/Typographies";
 import React from "react";
 import {PlayVideo} from "../Themes/Elements/play_video";
 import String from '../Themes/String/String';
+import {flex_styles} from "../Themes/Styles/styles";
+import {IMAGE} from "../Themes/Elements/IMAGE";
+import {BUTTON_TYPES_MOVIE} from "../Themes/Elements/Buttons";
 
 export function Detail_movie(prop){
     const string = new String(prop.isArabic);
 
+    const listType = (prop.isArabic)?prop.item.typeAR:prop.item.type;
+    const listTranslate=(prop.isArabic)?prop.item.TranslateMovieAR:prop.item.TranslateMovie;
+
 
     return(
-        <Box flexGrow={1} m={1} mx={5} height={{xs:'70vh', md:'50vh'}}
+        <Box flexGrow={1} m={1} mx={5} height={'auto'}
+             display={'flex'}
+             flexDirection={{xs:'column-reverse', lg:string.REVERSE_ROW()}}
+             justifyContent={'space-between'}
              borderRadius={5} bgcolor={white_05}>
+                <Container maxWidth={'sm'} sx={{height:'auto', p:1}}>
+                    <PlayVideo url={prop.item.trailerMovie}/>
+                </Container>
+                <Box  flexGrow={1} height={'auto'} p={1}>
 
-            <Grid container xs={12} width={'100%'} height={'100%'}
-                  direction={{xs:'column-reverse', md:string.REVERSE_ROW()}}
-                  justifyContent='space-between' alignItems='center'
-                  p={2}
-            >
-                <Grid item  xs={5} width={'100%'} height={'100%'} p={1}  >
-                    <Box width={'100%'} height={'100%'} >
-                        <PlayVideo url={prop.item.trailerMovie}/>
-                    </Box>
-                </Grid>
-                <Grid item  xs ={6} width={'100%'} height={'100%'}  p={1}>
-                    <Box width={'100%'} height={'100%'}>
-                        <Grid container xs={12} width={'100%'} height={'100%'}
-                              direction={'column'} justifyContent='center' alignItems='center'>
-                            <Grid item xs={1} width={'100%'} height={'100%'} >
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.NAME_MOVIE()}
-                                                    item={(prop.isArabic)?prop.item.nameAR:prop.item.name}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'} >
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.CLASSIFICATION()}
-                                                    item={prop.item.classification}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'} >
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.COUNTRY()}
-                                                    item={(prop.isArabic)?prop.item.countryAR:prop.item.country}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'} >
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.LANGUAGE()}
-                                                    item={(prop.isArabic)?prop.item.languageAR:prop.item.language}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'}>
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                                    item={(prop.item.typeAR && prop.item.type)?(prop.isArabic)?prop.item.typeAR.join(','):prop.item.type.join(','):'-------'}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'}>
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.DURATION()}
-                                                    item={prop.item.DurationMovie}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'}>
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.QUALITY()}
-                                                    item={'1080p,720p,480p'}/>
-                            </Grid>
-                            <Grid item xs={1} width={'100%'} height={'100%'}>
-                                <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
-                                                    item={(prop.item.TranslateMovieAR && prop.item.TranslateMovie)?(prop.isArabic)?prop.item.TranslateMovieAR.join(','):prop.item.TranslateMovie.join(','):'-----'} />
-                            </Grid>
+                     <Box flexGrow={1} height={'auto'} style={flex_styles.col_center}
+                           p={2}>
 
-                        </Grid>
-                    </Box>
-                </Grid>
-            </Grid>
+                        <Box flexGrow={1} height={'auto'} py={1}
+                             style={(prop.isArabic)?flex_styles.row_right:flex_styles.row_left}>
+
+                            {
+                                (listType && listType.length>0 )?
+                                    listType.map((item)=>(
+                                        <BUTTON_TYPES_MOVIE item={item}/>
+                                    ))
+                                    :<div></div>
+                            }
+                        </Box>
+
+                         <TYPOGRAPHY_MOVIE_TITLE title={(prop.isArabic)?prop.item.nameAR:prop.item.name} align={string.JUSTIFY_DIRECTION()}/>
+
+                         <TYPOGRAPHY_CLASSIFICATION_YEAR item={prop.item} align={string.JUSTIFY_DIRECTION()}/>
+
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.COUNTRY()}
+                                             item={(prop.isArabic)?prop.item.countryAR:prop.item.country}
+                                                item2={(prop.isArabic)?prop.item.languageAR:prop.item.language}/>
+                         <TYPOGRAPHY_TRANSLATE_LANGUAGES title={string.SUBTITLES()} align={string.JUSTIFY_DIRECTION()} listTranslate={listTranslate}/>
+
+                     </Box>
+
+
+                </Box>
+
+                <Box display={{xs:'none', lg:'flex'}} width={300} sx={{ height:400,p:1}}>
+                    <IMAGE url={prop.item.coverPicture}/>
+                </Box>
 
         </Box>
     )
 }
+//<PlayVideo url={prop.item.trailerMovie}/>
+/*
+
+                       <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.NAME_MOVIE()}
+                                             item={(prop.isArabic)?prop.item.nameAR:prop.item.name}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.CLASSIFICATION()}
+                                             item={prop.item.classification}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.COUNTRY()}
+                                             item={(prop.isArabic)?prop.item.countryAR:prop.item.country}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.LANGUAGE()}
+                                             item={(prop.isArabic)?prop.item.languageAR:prop.item.language}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
+                                             item={(prop.item.typeAR && prop.item.type)?(prop.isArabic)?prop.item.typeAR.join(','):prop.item.type.join(','):'-------'}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.DURATION()}
+                                             item={prop.item.DurationMovie}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.QUALITY()}
+                                             item={'1080p,720p,480p'}/>
+                         <TYPOGRAPHY_DETAILS alignement={string.JUSTIFY_DIRECTION()} rowRev={string.ROW_REVERSE()} title={string.TYPE()}
+                                             item={(prop.item.TranslateMovieAR && prop.item.TranslateMovie)?(prop.isArabic)?prop.item.TranslateMovieAR.join(','):prop.item.TranslateMovie.join(','):'-----'} />
+
+
+
+* */

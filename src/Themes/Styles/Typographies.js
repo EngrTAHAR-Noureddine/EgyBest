@@ -3,7 +3,7 @@ import {AmiriFont, MontserratFont} from "../Fonts/Fonts";
 import {ThemeProvider} from "@emotion/react";
 import {RESPONSIVE_THEME, themeTyp, themeTypH6} from "../Theme/Themes";
 import React from "react";
-import {blue_0A, red_e5, white_100, white_7070, white_EC} from "./Color";
+import {blue_0A, red_e5, white_100, white_50, white_7070, white_EC} from "./Color";
 import {flex_styles} from "./styles";
 import Strings from '../String/String';
 
@@ -218,30 +218,33 @@ export const TYPOGRAPHY_STORY = (prop)=>(
     </ThemeProvider>
 );
 export const TYPOGRAPHY_DETAILS = (prop)=>(
-    <ThemeProvider theme={themeTypH6}>
-        <Typography variant={'h6'} width={'inherit'}
+    <ThemeProvider theme={RESPONSIVE_THEME}>
+        <Typography variant={'h6'} flexGrow={1} px={2}
                     display={'flex'}
                     flexDirection={prop.rowRev}
                     justifyContent={prop.alignement}
                     color={white_EC}
                     fontFamily={CustomSingleton.getIt()}
-                    fontWeight={'normal'}
+                    fontWeight={'bold'}
                     sx={{ wordWrap: "break-word" }}
         >
             <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
                         color={white_EC}
                         fontFamily={CustomSingleton.getIt()}
-                        fontWeight={'normal'}
+                        fontWeight={'inherit'}
                         style={{ wordWrap: "break-word" }}>
                 {prop.title}
             </Typography>
+            &nbsp;
             <Typography variant={'h6'} width={'fit-content'} textAlign={prop.alignement}
                         color={white_EC}
                         fontFamily={CustomSingleton.getIt()}
-                        fontWeight={'normal'}
+                        fontWeight={'inherit'}
                         style={{ wordWrap: "break-word" }}>
                 {prop.item}
             </Typography>
+            &nbsp;<b>.</b>&nbsp;
+            {prop.item2}
 
         </Typography>
     </ThemeProvider>
@@ -286,4 +289,38 @@ export const TYPOGRAPHY_NOTIFICATION = (prop)=>(
         {prop.notification}
     </Typography>
     </ThemeProvider>
+)
+
+export const TYPOGRAPHY_BUTTON_TYPE = (prop)=>(
+    <ThemeProvider theme={RESPONSIVE_THEME}>
+        <Typography fontFamily={CustomSingleton.getIt()} color={white_100} sx={{wordWrap: "break-word" }}>
+            {prop.item}
+        </Typography>
+    </ThemeProvider>
+);
+
+export const TYPOGRAPHY_MOVIE_TITLE = (prop)=>(
+    <Typography  px={2} variant={'h2'} color={white_100} fontFamily={CustomSingleton.getIt()} sx={{wordWrap: "break-word" }}
+                 flexGrow={1} height={'fit-content'} textAlign={prop.align}>
+        {prop.title}
+    </Typography>
+);
+export const TYPOGRAPHY_CLASSIFICATION_YEAR = (prop)=>(
+    <Typography  px={2} variant={'subtitle1'} color={white_50} fontFamily={CustomSingleton.getIt()} sx={{wordWrap: "break-word" }}
+                 flexGrow={1} height={'fit-content'} textAlign={prop.align}>
+        {prop.item.classification}<b> . </b>{prop.item.DurationMovie}<b> . </b>{prop.item.year}
+    </Typography>
+)
+
+export const TYPOGRAPHY_TRANSLATE_LANGUAGES = (prop)=>(
+    <Typography px={2} variant={'h6'} color={white_100}
+                textAlign={prop.align} sx={{wordWrap: "break-word" }}
+                fontFamily={CustomSingleton.getIt()}
+                fontWeight={'lighter'} fontStyle={'italic'}>
+        {prop.title}&nbsp;
+        {(prop.listTranslate && prop.listTranslate.length>0)?
+            prop.listTranslate.join(' . ')
+            :<div></div>}
+
+    </Typography>
 )

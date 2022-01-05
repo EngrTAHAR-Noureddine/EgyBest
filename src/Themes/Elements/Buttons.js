@@ -1,6 +1,6 @@
 import {Box, Button} from "@mui/material";
 import {
-    CustomSingleton,
+    CustomSingleton, TYPOGRAPHY_BUTTON_TYPE,
     TYPOGRAPHY_CONTENT_CARD_MOVIE,
     TYPOGRAPHY_MENU_XL,
     TYPOGRAPHY_POPUP_MENU,
@@ -187,3 +187,12 @@ export  const ButtonLG_LIBRARY =(prop) =>(
         <TYPOGRAPHY_YOUR_RATING color={(prop.addLibrary)?green_34:blue_0A} title={(!prop.addLibrary)?prop.Add_In_Library:prop.added_In_library}/>
     </Button>
 );
+
+export const BUTTON_TYPES_MOVIE=(prop)=>(
+            <Button sx={{   borderRadius:1000,
+                textTransform:'none',mx:1,p:1,
+                '&,&:hover':{backgroundColor:black_80, color:white_100},
+            }}>
+                    <TYPOGRAPHY_BUTTON_TYPE item={prop.item} />
+            </Button>
+)

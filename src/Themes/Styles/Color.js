@@ -13,6 +13,7 @@ export const white_05 = alpha('#FFFFFF',0.05);
 export const white_10 = alpha('#FFFFFF',0.1);
 export const white_20 = alpha('#FFFFFF',0.2);
 export const white_30 = alpha('#FFFFFF',0.3);
+export const white_50 = alpha('#FFFFFF',0.5);
 export const white_80 = alpha('#FFFFFF',0.8);
 // -------------- other Colors  -------------
 export const divider_B1 = '#B1B1B3';
